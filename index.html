@@ -1,1 +1,249 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini‑Wiki — Web‑App</title>
+  <style>
+    :root{--bg:#f7f8fb;--card:#fff;--accent:#0b74de;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#111}
+    header{background:linear-gradient(90deg,#0b74de22,transparent); padding:18px 24px; display:flex;align-items:center;gap:12px}
+    header h1{font-size:18px;margin:0}
+    .container{max-width:980px;margin:22px auto;padding:0 18px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .grid{display:grid;gap:12px}
+    .home-grid{grid-template-columns:1fr 320px}
+    .category-list button{display:block;width:100%;text-align:left;padding:12px;border-radius:8px;border:1px solid #eef2ff;background:#fff;margin-bottom:8px}
+    .chapter-list{display:flex;flex-direction:column;gap:8px}
+    .chapter-item{padding:10px;border-radius:8px;border:1px solid #eee;cursor:pointer}
+    .search{display:flex;gap:8px}
+    .search input{flex:1;padding:10px;border-radius:8px;border:1px solid #ddd}
+    nav{display:flex;gap:8px}
+    nav a{color:var(--accent);text-decoration:none;font-weight:600}
+    .meta{color:var(--muted);font-size:13px}
+    .diagram{border-radius:8px;padding:12px;border:1px dashed #e6eefc;background:#fbfdff}
+    footer{margin:26px 0;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:880px){.home-grid{grid-template-columns:1fr} .container{padding:12px}}
+  </style>
+</head>
+<body>
+  <header>
+    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <rect width="24" height="24" rx="6" fill="#0b74de" />
+      <text x="12" y="16" font-size="11" fill="white" text-anchor="middle" font-family="Arial">W</text>
+    </svg>
+    <h1>Mini‑Wiki</h1>
+    <nav style="margin-left:auto">
+      <a href="#" onclick="goTo('home');return false">Start</a> ·
+      <a href="#" onclick="goTo('info');return false">Info</a> ·
+      <a href="#" onclick="goTo('faq');return false">FAQ</a>
+    </nav>
+  </header>
 
+  <main class="container">
+    <div id="app"></div>
+    <footer class="meta">Diese Demo speichert Daten lokal im Browser (kein Server). Zum Deploy: GitHub Pages / Vercel.</footer>
+  </main>
+
+  <script>
+    // -----------------------------
+    // DATEN: hier pflegst du Kapitel/Kategorien
+    // -----------------------------
+    const DATA = {
+      categories: [
+        { id: 'cat1', title: 'Kategorie A' },
+        { id: 'cat2', title: 'Kategorie B' }
+      ],
+      chapters: [
+        { id: 'c1', cat: 'cat1', title: 'Kapitel 1', excerpt: 'Einführung zu Kapitel 1', content: `
+          <h2>Kapitel 1 — Text</h2>
+          <p>Das ist ein Beispieltext. Hier kannst du längere Inhalte in HTML schreiben.</p>
+          <h3>Diagramm</h3>
+          <div class="diagram"> <!-- einfaches SVG Diagramm -->
+            <svg width="100%" height="120" viewBox="0 0 300 120" preserveAspectRatio="none">
+              <polyline points="0,100 50,70 100,80 150,40 200,50 250,20 300,40" fill="none" stroke="#0b74de" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3>Tabelle</h3>
+          <table>
+            <tr><th>Item</th><th>Wert</th></tr>
+            <tr><td>Alpha</td><td>10</td></tr>
+            <tr><td>Beta</td><td>20</td></tr>
+          </table>
+          <h3>Bilder</h3>
+          <p><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='180'><rect width='100%' height='100%' fill='%23eef6ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%230b74de' font-size='20'>Platzhalter‑Bild</text></svg>" alt="Platzhalter" style="max-width:100%;border-radius:8px" /></p>
+        `},
+        { id: 'c2', cat: 'cat1', title: 'Kapitel 2', excerpt: 'Vertiefung', content: '<h2>Kapitel 2</h2><p>Mehr Text & Tabellen.</p>' },
+        { id: 'c3', cat: 'cat2', title: 'Kapitel 3', excerpt: 'Kategorie B Einführung', content: '<h2>Kapitel 3</h2><p>Inhalte für Kategorie B.</p>' }
+      ],
+      faq: [
+        {q:'Wie benutze ich die App?', a:'Wähle auf der Startseite eine Kategorie und dann ein Kapitel.'},
+        {q:'Wo werden Daten gespeichert?', a:'Aktuell lokal im Browser (keine Server).'}
+      ]
+    };
+
+    // -----------------------------
+    // Einfacher Router / Renderer
+    // -----------------------------
+    const app = document.getElementById('app');
+
+    function goTo(page, payload){
+      if(page === 'home') renderHome();
+      if(page === 'info') renderInfo();
+      if(page === 'faq') renderFAQ();
+      if(page === 'chapter') renderChapter(payload);
+      if(page === 'category') renderCategory(payload);
+    }
+
+    // Start: Home
+    function renderHome(){
+      app.innerHTML = `
+        <div class="grid home-grid">
+          <div class="card">
+            <h2>Willkommen</h2>
+            <p class="meta">Wähle zuerst eine Kategorie, dann das Kapitel.</p>
+
+            <div style="margin-top:12px;" class="search">
+              <input id="q" placeholder="Suchen... (z.B. Kapitelname)" />
+              <button onclick="search()">Suche</button>
+            </div>
+
+            <h3 style="margin-top:14px">Kategorien</h3>
+            <div class="category-list" id="category-list"></div>
+
+            <h3 style="margin-top:12px">Zuletzt angesehen</h3>
+            <div id="recent" class="meta">— noch nichts</div>
+          </div>
+
+          <aside>
+            <div class="card">
+              <h3>Quick‑Links</h3>
+              <div class="meta">Schnellzugriff auf Info & FAQ</div>
+              <div style="margin-top:12px"><button onclick="goTo('info')">Info</button> <button onclick="goTo('faq')">FAQ</button></div>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <h3>Kurze Kapitelübersicht</h3>
+              <div id="chap-preview" class="chapter-list"></div>
+            </div>
+          </aside>
+        </div>
+      `;
+
+      const cl = document.getElementById('category-list');
+      DATA.categories.forEach(cat=>{
+        const btn = document.createElement('button');
+        btn.textContent = cat.title;
+        btn.onclick = ()=> goTo('category', cat.id);
+        cl.appendChild(btn);
+      });
+
+      const cp = document.getElementById('chap-preview');
+      DATA.chapters.slice(0,5).forEach(ch=>{
+        const el = document.createElement('div'); el.className='chapter-item'; el.textContent = ch.title + ' — ' + ch.excerpt;
+        el.onclick = ()=> goTo('chapter', ch.id);
+        cp.appendChild(el);
+      });
+
+      // show recent from localStorage
+      const recent = JSON.parse(localStorage.getItem('recent')||'[]');
+      document.getElementById('recent').textContent = recent.length? recent.map(id=>DATA.chapters.find(c=>c.id===id)?.title||id).join(', '): '— noch nichts';
+
+      // wire search enter
+      const q = document.getElementById('q'); q.addEventListener('keydown', (e)=>{ if(e.key==='Enter') search(); });
+    }
+
+    function renderCategory(catId){
+      const cat = DATA.categories.find(c=>c.id===catId);
+      const chapters = DATA.chapters.filter(ch=>ch.cat===catId);
+      app.innerHTML = `
+        <div class="card">
+          <a href="#" onclick="goTo('home');return false">← Zurück</a>
+          <h2>${cat.title}</h2>
+          <p class="meta">${chapters.length} Kapitel</p>
+          <div class="chapter-list" id="chap-list"></div>
+        </div>
+      `;
+      const list = document.getElementById('chap-list');
+      chapters.forEach(ch=>{
+        const el = document.createElement('div'); el.className='chapter-item'; el.innerHTML = `<strong>${ch.title}</strong><div class='meta'>${ch.excerpt}</div>`;
+        el.onclick = ()=> goTo('chapter', ch.id);
+        list.appendChild(el);
+      });
+    }
+
+    function renderChapter(chId){
+      const ch = DATA.chapters.find(c=>c.id===chId);
+      if(!ch){ app.innerHTML='<div class="card">Kapitel nicht gefunden</div>'; return }
+      // save recent
+      let recent = JSON.parse(localStorage.getItem('recent')||'[]');
+      recent = [chId, ...recent.filter(x=>x!==chId)].slice(0,6);
+      localStorage.setItem('recent', JSON.stringify(recent));
+
+      app.innerHTML = `
+        <div class="card">
+          <a href="#" onclick="goTo('home');return false">← Start</a>
+          <h2>${ch.title}</h2>
+          <div class="meta">Kategorie: ${DATA.categories.find(c=>c.id===ch.cat)?.title||'-'}</div>
+          <div style="margin-top:14px">${ch.content}</div>
+        </div>
+      `;
+    }
+
+    function renderInfo(){
+      app.innerHTML = `
+        <div class="card">
+          <a href="#" onclick="goTo('home');return false">← Zurück</a>
+          <h2>Info — Was kann die App?</h2>
+          <p>Diese kleine Demo zeigt ein einfaches Wiki/Kompendium. Funktionen:</p>
+          <ul>
+            <li>Kategorien & Kapitel (statisch per JavaScript)</li>
+            <li>Suche, Kapitelansicht mit Text, Diagrammen, Tabellen & Bildern</li>
+            <li>FAQ Bereich und Info‑Seite</li>
+            <li>Lokale Speicherung of 'Zuletzt angesehen'</li>
+          </ul>
+          <p class="meta">Hinweis: Für echte Produktion benötigst du ein Backend + Datenbank. Diese Version ist lokal / statisch.</p>
+        </div>
+      `;
+    }
+
+    function renderFAQ(){
+      app.innerHTML = `
+        <div class="card">
+          <a href="#" onclick="goTo('home');return false">← Zurück</a>
+          <h2>FAQ</h2>
+          <div id="faq-list"></div>
+        </div>
+      `;
+      const fl = document.getElementById('faq-list');
+      DATA.faq.forEach(f=>{
+        const q = document.createElement('div'); q.innerHTML = `<strong>${f.q}</strong><div class='meta'>${f.a}</div>`; q.style.marginBottom='10px'; fl.appendChild(q);
+      });
+    }
+
+    function search(){
+      const q = document.getElementById('q').value.trim().toLowerCase();
+      if(!q) return renderHome();
+      const hits = DATA.chapters.filter(c=> (c.title + ' ' + c.excerpt + ' ' + (c.content||'')).toLowerCase().includes(q));
+      app.innerHTML = `
+        <div class="card">
+          <a href="#" onclick="goTo('home');return false">← Zurück</a>
+          <h2>Suche: ${q}</h2>
+          <div id="results"></div>
+        </div>
+      `;
+      const results = document.getElementById('results');
+      if(!hits.length){ results.innerHTML = '<p class="meta">Keine Treffer</p>'; return }
+      hits.forEach(h=>{
+        const el = document.createElement('div'); el.className='chapter-item'; el.innerHTML = `<strong>${h.title}</strong><div class='meta'>${h.excerpt}</div>`;
+        el.onclick = ()=> goTo('chapter', h.id);
+        results.appendChild(el);
+      });
+    }
+
+    // init
+    renderHome();
+  </script>
+</body>
+</html>
