@@ -1,3 +1,4 @@
+<img width="397" height="150" alt="3 3 3 3" src="https://github.com/user-attachments/assets/1020149f-9219-4e01-a435-41d200f3203d" />
 <img width="397" height="150" alt="3 3 3 2" src="https://github.com/user-attachments/assets/e19e70b9-e8ab-476e-a00f-25b5b8543d36" />
 <img width="661" height="523" alt="Definition der Ebenen" src="https://github.com/user-attachments/assets/b5f9118a-1fa2-429d-b625-c63c76711b02" />
 <img width="961" height="605" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />
