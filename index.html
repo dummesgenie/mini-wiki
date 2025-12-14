@@ -1,255 +1,1631 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wiki</title>
-  <style>
-    :root{--bg:#f7f8fb;--card:#fff;--accent:#0b74de;--muted:#6b7280}
-    *{box-sizing:border-box}
-    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#111}
-    header{background:linear-gradient(90deg,#0b74de22,transparent); padding:18px 24px; display:flex;align-items:center;gap:12px}
-    header h1{font-size:18px;margin:0}
-    .container{max-width:980px;margin:22px auto;padding:0 18px}
-    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
-    .grid{display:grid;gap:12px}
-    .home-grid{grid-template-columns:1fr 320px}
-    .category-list button{display:block;width:100%;text-align:left;padding:12px;border-radius:8px;border:1px solid #eef2ff;background:#fff;margin-bottom:8px}
-    .chapter-list{display:flex;flex-direction:column;gap:8px}
-    .chapter-item{padding:10px;border-radius:8px;border:1px solid #eee;cursor:pointer}
-    .search{display:flex;gap:8px}
-    .search input{flex:1;padding:10px;border-radius:8px;border:1px solid #ddd}
-    nav{display:flex;gap:8px}
-    nav a{color:var(--accent);text-decoration:none;font-weight:600}
-    .meta{color:var(--muted);font-size:13px}
-    .diagram{border-radius:8px;padding:12px;border:1px dashed #e6eefc;background:#fbfdff}
-    footer{margin:26px 0;color:var(--muted);font-size:13px;text-align:center}
-    @media (max-width:880px){.home-grid{grid-template-columns:1fr} .container{padding:12px}}
-  </style>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>Wiki TWG</title>
+      <style>
+            :root{--bg:#f7f8fb;--card:#fff;--accent:#0b74de;--muted:#6b7280}
+            *{box-sizing:border-box}
+            body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#111}
+            header{background:linear-gradient(90deg,#0b74de22,transparent); padding:18px 24px; display:flex;align-items:center;gap:12px}
+            header h1{font-size:18px;margin:0}
+            .container{max-width:980px;margin:22px auto;padding:0 18px}
+            .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+            .grid{display:grid;gap:12px}
+            .home-grid{grid-template-columns:1fr 320px}
+            .category-list button{display:block;width:100%;text-align:left;padding:12px;border-radius:8px;border:1px solid #eef2ff;background:#fff;margin-bottom:8px}
+            .chapter-list{display:flex;flex-direction:column;gap:8px}
+            .chapter-item{padding:10px;border-radius:8px;border:1px solid #eee;cursor:pointer}
+            .search{display:flex;gap:8px}
+            .search input{flex:1;padding:10px;border-radius:8px;border:1px solid #ddd}
+            nav{display:flex;gap:8px}
+            nav a{color:var(--accent);text-decoration:none;font-weight:600}
+            .meta{color:var(--muted);font-size:13px}
+            .diagram{border-radius:8px;padding:12px;border:1px dashed #e6eefc;background:#fbfdff}
+            footer{margin:26px 0;color:var(--muted);font-size:13px;text-align:center}
+            @media (max-width:880px){.home-grid{grid-template-columns:1fr} .container{padding:12px}}
+      </style>
 </head>
 <body>
-  <header>
-    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
-      <rect width="24" height="24" rx="6" fill="#0b74de" />
-      <text x="12" y="16" font-size="11" fill="white" text-anchor="middle" font-family="Arial">W</text>
-    </svg>
-    <h1>Wiki-Datenbank für TWG</h1>
-    <nav style="margin-left:auto">
-      <a href="#" onclick="goTo('home');return false">Start</a> ·
-      <a href="#" onclick="goTo('info');return false">Info über die App</a> ·
-      <a href="#" onclick="goTo('faq');return false">FAQ</a>
-    </nav>
-  </header>
-
-  <main class="container">
-    <div id="app"></div>
-    <footer class="meta">Diese Demo speichert Daten lokal im Browser (kein Server). Weiterentwicklung läuft! Bitte Feedback abgeben. </footer>
-  </main>
-
-  <script>
-    // -----------------------------
-    // DATEN: hier pflegst du Kapitel/Kategorien
-    // -----------------------------
-    const DATA = {
-      categories: [
-        { id: 'cat1', title: 'Kategorie A' },
-        { id: 'cat2', title: 'Kategorie B' }
-      ],
-      chapters: [
-        { id: 'c1', cat: 'cat1', title: 'Kapitel 1', excerpt: 'Einführung zu Kapitel 1', content: `
-          <h2>Kapitel 1 — Text</h2>
-          <p>Das ist ein Beispieltext. Hier kannst du längere Inhalte in HTML schreiben.</p>
-          <h3>Diagramm</h3>
-          <div class="diagram"> <!-- einfaches SVG Diagramm -->
-            <svg width="100%" height="120" viewBox="0 0 300 120" preserveAspectRatio="none">
-              <polyline points="0,100 50,70 100,80 150,40 200,50 250,20 300,40" fill="none" stroke="#0b74de" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+      <header>
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="#0b74de" />
+            <text x="12" y="16" font-size="11" fill="white" text-anchor="middle" font-family="Arial">W</text>
             </svg>
-          </div>
-          <h3>Tabelle</h3>
-          <table>
-            <tr><th>Item</th><th>Wert</th></tr>
-            <tr><td>Alpha</td><td>10</td></tr>
-            <tr><td>Beta</td><td>20</td></tr>
-          </table>
-          <h3>Bilder</h3>
-          <p><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='180'><rect width='100%' height='100%' fill='%23eef6ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%230b74de' font-size='20'>Platzhalter‑Bild</text></svg>" alt="Platzhalter" style="max-width:100%;border-radius:8px" /></p>
-        `},
-        { id: 'c2', cat: 'cat1', title: 'Kapitel 2', excerpt: 'Vertiefung', content: '<h2>Kapitel 2</h2><p>Mehr Text & Tabellen.</p>' },
-        { id: 'c3', cat: 'cat2', title: 'Kapitel 3', excerpt: 'Kategorie B Einführung', content: '<h2>Kapitel 3</h2><p>Inhalte für Kategorie B.</p>' }
+            <h1>Einsetzprozedur gemäß TWG – empfohlene Vorgehensweise</h1>
+            <nav style="margin-left:auto">
+                  <a href="#" onclick="goTo('home');return false">Start</a> ·
+                  <a href="#" onclick="goTo('info');return false">Info über die App</a> ·
+                  <a href="#" onclick="goTo('faq');return false">FAQ</a>
+            </nav>
+      </header>
+
+<main class="container">
+      <div id="app"></div>
+      <footer class="meta">Diese Demo speichert Daten lokal im Browser (kein Server). Weiterentwicklung läuft! Bitte Feedback abgeben. </footer>
+</main>
+
+<script>
+      // -----------------------------
+      // DATEN: hier pflegst du Kapitel/Kategorien
+      // -----------------------------
+      const DATA = {
+            categories: [
+                  { id: 'cat1', title: 'Generelle Vorgehensweise'},
+                  { id: 'cat2', title: 'Sitz-integrierte Seitenairbags' }
       ],
-      faq: [
-        {q:'Wie benutze ich die App?', a:'Wähle auf der Startseite eine Kategorie und dann ein Kapitel.'},
-        {q:'Wo werden Daten gespeichert?', a:'Aktuell lokal im Browser (keine Server).'}
-      ]
-    };
+            chapters: [
+                  {id: 'c0', cat: 'cat1', title: 'Versuchsdurchführung', excerpt: ' ', 
+                  content: 'Die Prüf-Positionen nach TWG werden, wo vorgeschrieben, immer als Kombiversuche (FeAB/SAB) durchgeführt. Zur Detailanalyse können auch SAB only bzw. FeAB only Versuche durchgeführt werden.' + 
+                  ' Abschließend muss jedoch die Prüf-Position mit Kombiversuchen bestätigt werden.' +
+                  '<br> <br> Aufgrund moderner Fahrzeugbedingungen lassen sich nicht immer alle TWG-Einsetz-Anforderungen erfüllen oder es entstehen Interpretationsfragen.' +
+                  ' In solchen Fällen sollte zur Entscheidung des Weges das definierte Versuchsziel im Vordergrund stehen.'+
+                  '<br> <br> Sollte mehr als eine Möglichkeit der Interpretation existieren, gibt es zwei mögliche Vorgehensweisen:' +
+                  '<ol>' +
+                  '<li>Beurteilung der Varianten und Festlegung einer Worst case Variante, die getestet wird.</li>'+
+                  '<li>Prüfung mehrerer Positionier-Varianten in der Entwicklungsphase mit anschließender Worst Case Definition'+
+                  '</ol>'},
+                  {id: 'c1', cat: 'cat1', title: 'Dummy', excerpt: ' ', 
+                        content: `
+                        <style>                                                 
+                              .container {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 20px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 15px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 50px;
+                              }
+                              .info-column h2 { /*Überschriften Dummykabel und -tape*/
+                                    font-size: 1.2em;
+                                    padding: 2px 5px;
+                                    display: inline-block;
+                                    margin-top: 0;
+                                    margin-bottom: 0px;
+                              }
+                              
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns {
+                                    flex: 1; /* Nimmt den restlichen Platz ein */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 1px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title {
+                                    font-size: 0.8em;
+                                    margin-bottom: 5px;
+                                    height: 70px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                                    text-align: center;
+                                    
+                              }
+                              
+                              .info-column p, .info-column ul {
+                                    font-size: 0.9em;
+                                    margin-top: 5px;
+                                    margin-bottom: 0;
+                                    padding-left: 10px; /* Einrückung für die Liste */
+                                    }
+                              
+                        </style>
+                        
+                        <div class="container">
+                              <div class="main-row">
+                                    
+                                    <div class="info-column">
+                                    <h2>Dummykabel</h2>
+                                    <p display: inline; padding: 2px 0;">Die Dummykabel sind immer so zu verlegen, dass keine Beeinflussung der Dummykinematik oder Luftsackentfaltung möglich ist.</p>
+                                    </div>
 
-    // -----------------------------
-    // Einfacher Router / Renderer
-    // -----------------------------
-    const app = document.getElementById('app');
 
-    function goTo(page, payload){
-      if(page === 'home') renderHome();
-      if(page === 'info') renderInfo();
-      if(page === 'faq') renderFAQ();
-      if(page === 'chapter') renderChapter(payload);
-      if(page === 'category') renderCategory(payload);
-    }
+                                    <div class="image-columns">
+                                          <div class="image-block">
+                                                <div class="image-block-title">Mehrere Kabel, <br>Mehrfach ummantelt, <br>Schlaufen unnötig lang</div>
+                                                <img width="96" height="60" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />            
+                                          </div>
+                                          
+                                          <div class="image-block">
+                                                <div class="image-block-title">Dünnes Kopfkabel mit max. notwendiger Länge</div>
+                                                <img width="96" height="60" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+                                          
+                              
+                                          <div class="image-block">
+                                                <div class="image-block-title">ungünstige Kabelverlegung im SAB-Entfaltungsbereich</div>
+                                                <img width="96" height="60" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+                                          
+                                          
+                                          <div class="image-block">
+                                                <div class="image-block-title">Gute Kabelverlegung seitlich am Kopf und nicht im SAB-Bereich</div>
+                                                <img width="96" height="60" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+                                    </div>
+                              </div> 
 
-    // Start: Home
-    function renderHome(){
-      app.innerHTML = `
-        <div class="grid home-grid">
-          <div class="card">
-            <h2>Willkommen /USER </h2>            
-            <p class="meta">Wähle zuerst eine Kategorie, dann das Kapitel.</p>
+                              <div class="main-row">
+                                    <div class="info-column">
+                                          <h2>Dummy-Tape</h2>
+                                          <p>Das Dummy-Tape zur Abdeckung des Kopfplatten-Spaltes sollte folgende Eigenschaften haben:</p>
+                                          <ul>
+                                          <li>glattes PVC Isolierband</li>
+                                          <li>ca. 10mm breit</li>
+                                          </ul>
+                                    </div>
+                                    
+                                          <div class="image-block">
+                                                <img width="96" height="60" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                                </div>
+                                                
+                                          <div class="image-block">
+                                                <img width="96" height="60" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
 
-            <div style="margin-top:12px;" class="search">
-              <input id="q" placeholder="Suchen... (z.B. Kapitelname)" />
-              <button onclick="search()">Suche</button>
-            </div>
+                                          </div>
 
-            <h3 style="margin-top:14px">Kategorien</h3>
-            <div class="category-list" id="category-list"></div>
+                        </div>`    
 
-            <h3 style="margin-top:12px">Zuletzt angesehen</h3>
-            <div id="recent" class="meta">— noch nichts</div>
-          </div>
+                  },         
+                  {id: 'c2', cat: 'cat1', title: 'Kennzeichnungen am Sitz bzw. an den Verkleidungsteilen', excerpt: ' ', content: ` 
+                  Folgende Markierungen müssen mit einer guten Kontrastfarbe eindeutig und dauerhaft aufgebracht werden:
+                  <ul>
+                        <li>Sitz-Mitte</li>
+                        <li>Heel-Placement Points</li>
+                        <li>Oberkannte des Airbagmoduls</li>
+                        <li>Senkrechte Mitte des Airbagmoduls</li>
+                  </ul>
+                  Die Ermittlung der Markierungen müssen zu Projektbeginn mit dem BTV abgestimmt und im Prüfbericht detailliert dokumentiert werden.<br>
+                  Auf den folgenden Seiten sind Beispiele für „Airbagmodul-Oberkanten“ und „senkrechte Mittellinien“ und deren Besonderheiten beschrieben.<br>
 
-          <aside>
-            <div class="card">
-              <h3>Quick‑Links</h3>
-              <div class="meta">Schnellzugriff auf Info & FAQ</div>
-              <div style="margin-top:12px"><button onclick="goTo('info')">Info</button> <button onclick="goTo('faq')">FAQ</button></div>
-            </div>
+                  <h4>Beispiel 1: Airbag in <mark>MEGAPHON</mark> mit frontalem Austritt</h4>
+                        <div class="image-block">
+                              Bild Fahrzeug mit <mark>BARSCH</mark> und Moduloberkante frontal<br>
+                              <img width="500" height="250" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                        </div>
 
-            <div class="card" style="margin-top:12px">
-              <h3>Kurze Kapitelübersicht</h3>
-              <div id="chap-preview" class="chapter-list"></div>
-            </div>
-          </aside>
-        </div>
-      `;
+                        <style>
 
-      const cl = document.getElementById('category-list');
-      DATA.categories.forEach(cat=>{
-        const btn = document.createElement('button');
-        btn.textContent = cat.title;
-        btn.onclick = ()=> goTo('category', cat.id);
-        cl.appendChild(btn);
-      });
+                        /* Stil für den Pfeil und Text Block */
+                        .faltraumpaket-hinweis_1 {
+                              position: absolute; 
+                              display: flex; /* Richtet den Pfeil und den Text-Container nebeneinander aus */
+                              align-items: flex-start; /* Elemente oben ausrichten */
+                              margin-bottom: 20px; /* Abstand zum ersten grauen Balken */
+                              margin-top: -200px;
+                              padding-left: 500px; /* Ein bisschen Einrückung vom linken Rand */
+                        }
 
-      const cp = document.getElementById('chap-preview');
-      DATA.chapters.slice(0,5).forEach(ch=>{
-        const el = document.createElement('div'); el.className='chapter-item'; el.textContent = ch.title + ' — ' + ch.excerpt;
-        el.onclick = ()=> goTo('chapter', ch.id);
-        cp.appendChild(el);
-      });
+                        /* Container für den Pfeil */
+                        .pfeil-container_1 {
+                              flex-shrink: 0; /* Verhindert, dass der Pfeil-Container schrumpft */
+                              width: 30px; /* Feste Breite für den Pfeil */
+                        }
 
-      // show recent from localStorage
-      const recent = JSON.parse(localStorage.getItem('recent')||'[]');
-      document.getElementById('recent').textContent = recent.length? recent.map(id=>DATA.chapters.find(c=>c.id===id)?.title||id).join(', '): '— noch nichts';
+                        /* Der rote Pfeil */
+                        .pfeil_1 {
+                              font-size: 2em;
+                              color: red;
+                              display: block;
+                              transform: rotate(45deg); /* Optional: Passen Sie den Winkel an den Screenshot an */
+                        }
 
-      // wire search enter
-      const q = document.getElementById('q'); q.addEventListener('keydown', (e)=>{ if(e.key==='Enter') search(); });
-    }
+                        /* Text-Container */
+                        .text-container_1 {
+                              padding-left: 10px;
+                              line-height: 1.2;
+                        }
 
-    function renderCategory(catId){
-      const cat = DATA.categories.find(c=>c.id===catId);
-      const chapters = DATA.chapters.filter(ch=>ch.cat===catId);
-      app.innerHTML = `
-        <div class="card">
-          <a href="#" onclick="goTo('home');return false">← Zurück</a>
-          <h2>${cat.title}</h2>
-          <p class="meta">${chapters.length} Kapitel</p>
-          <div class="chapter-list" id="chap-list"></div>
-        </div>
-      `;
-      const list = document.getElementById('chap-list');
-      chapters.forEach(ch=>{
-        const el = document.createElement('div'); el.className='chapter-item'; el.innerHTML = `<strong>${ch.title}</strong><div class='meta'>${ch.excerpt}</div>`;
-        el.onclick = ()=> goTo('chapter', ch.id);
-        list.appendChild(el);
-      });
-    }
+                        /* Spezielle Formatierung für den obersten roten Text */
+                        .red-text {
+                              color: red;
+                              font-weight: bold;
+                              margin: 0;
+                              font-size: 1.1em;
+                        }
 
-    function renderChapter(chId){
-      const ch = DATA.chapters.find(c=>c.id===chId);
-      if(!ch){ app.innerHTML='<div class="card">Kapitel nicht gefunden</div>'; return }
-      // save recent
-      let recent = JSON.parse(localStorage.getItem('recent')||'[]');
-      recent = [chId, ...recent.filter(x=>x!==chId)].slice(0,6);
-      localStorage.setItem('recent', JSON.stringify(recent));
+                        /* Stil für den zweiten Text */
+                        .text-container_1 p:last-child {
+                              margin: 0;
+                              font-size: 1em;
+                        } 
+                        </style>
 
-      app.innerHTML = `
-        <div class="card">
-          <a href="#" onclick="goTo('home');return false">← Start</a>
-          <h2>${ch.title}</h2>
-          <div class="meta">Kategorie: ${DATA.categories.find(c=>c.id===ch.cat)?.title||'-'}</div>
-          <div style="margin-top:14px">${ch.content}</div>
-        </div>
-      `;
-    }
+                        <div class="faltraumpaket-hinweis_1">
+                              <div class="pfeil-container_1">
+                                    <span class="pfeil_1">&#11015;</span> 
+                              </div>
+                              <div class="text-container_1">
+                                    <p class="red-text">Oberkante Faltpaket im Gehäuse,</p>
+                                    <p>Horizontale Linie an oberer Faltraumbegrenzung</p>
+                              </div>
+                        </div>
+            
+                  
+                  
 
-    function renderInfo(){
-      app.innerHTML = `
-        <div class="card">
-          <a href="#" onclick="goTo('home');return false">← Zurück</a>
-          <h2>Info — Was kann die App?</h2>
-          <p>
-          <h3>Vorwort </h3>
-          In der „RECOMMENDED PROCEDURES FOR EVALUATING OCCUPANT INJURY RISK FROM DEPLOYING SIDE AIRBAGS”, prepared by the Side Airbag Out-of-Position Injury Technical Working Group, 
-          im Folgenden kurz “TWG” genannt, werden die verschiedenen OoP Prüf-Positionen beschrieben, dennoch ergeben sich in der täglichen Praxis häufig Fragestellungen, die in der TWG nicht 
-          final oder eindeutig beantwortet werden.
-          Diese Präsentation beschreibt eine abgestimmte Vorgehensweise für das Einsetzen der Dummys in den verschiedenen Prüfpositionen für alle BAUM Projekte.
-          </p>
-          <ul>
-            <li>Kategorien & Kapitel (statisch per JavaScript)</li>
-            <li>Suche, Kapitelansicht mit Text, Diagrammen, Tabellen & Bildern</li>
-            <li>FAQ Bereich und Info‑Seite</li>
-            <li>Lokale Speicherung of 'Zuletzt angesehen'</li>
-          </ul>
-          <p class="meta">Hinweis: Für echte Produktion benötigst du ein Backend + Datenbank. Diese Version ist lokal / statisch.</p>
-        </div>
-      `;
-    }
+                        <div class="image-block">
+                              Bild Fahrzeug mit <mark>BARSCH</mark> und Moduloberkante Seite<br>
+                              <img width="500" height="250" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                        </div>      
+                        
+                        <style>
 
-    function renderFAQ(){
-      app.innerHTML = `
-        <div class="card">
-          <a href="#" onclick="goTo('home');return false">← Zurück</a>
-          <h2>FAQ</h2>
-          <div id="faq-list"></div>
-        </div>
-      `;
+                        /* Stil für den Pfeil und Text Block */
+                        .faltraumpaket-hinweis_2 {
+                              position: absolute; 
+                              display: flex; /* Richtet den Pfeil und den Text-Container nebeneinander aus */
+                              align-items: flex-start; /* Elemente oben ausrichten */
+                              margin-bottom: 20px; /* Abstand zum ersten grauen Balken */
+                              margin-top: -200px;
+                              padding-left: 500px; /* Ein bisschen Einrückung vom linken Rand */
+                        }
+
+                        /* Container für den Pfeil */
+                              .pfeil-container_2 {
+                              flex-shrink: 0; /* Verhindert, dass der Pfeil-Container schrumpft */
+                              width: 30px; /* Feste Breite für den Pfeil */
+                              }
+
+                        /* Der blaue Pfeil */
+                              .pfeil_2 {
+                                    font-size: 2em;
+                                    color: blue;
+                                    display: block;
+                                    transform: rotate(225deg); /* Optional: Passen Sie den Winkel an den Screenshot an */
+                              }
+                        
+                              /* Text-Container */
+                              .text-container_2 {
+                                    padding-left: 10px;
+                                    line-height: 1.2;
+                              }
+
+                              /* Spezielle Formatierung für den obersten blauen Text */
+                              .blue-text {
+                                    color: blue;
+                                    font-weight: bold;
+                                    margin: 0;
+                                    font-size: 1.1em;
+                              }
+                        
+                              /* Stil für den zweiten Text */
+                              .text-container_2 p:last-child {
+                                    margin: 0;
+                                    font-size: 1em;
+                              }
+                        </style> 
+
+                        <div class="faltraumpaket-hinweis_2">
+                              <div class="pfeil-container_2">
+                                    <span class="pfeil_2">&#11015;</span> 
+                              </div>
+                              <div class="text-container_2">
+                                    <p class="blue-text">Senkrechte Modulmitte</p>
+                                    <p>Bei frontal nach vorne austretenden <mark>BARSCH</mark> <br>aus der <mark>SCHAF</mark> oder der 
+                                          <mark>MEGAPHON</mark> <br> ergibt sich <br>die senkrechte Modulmitte als <br>
+                                          Senkrechte durch den Schnittpunkt <br>der Mittellinien des Faltraumes in Längs-<br> und Querrichtung. <br>
+                                          Diese Linie muss im CAD ermittelt <br>und sicher auf den <mark>SCHAF</mark> übertragen werden.</p>
+                              </div>
+                        </div>
+                        
+                  <h4>Beispiel 2: Airbag in Gehäuse im <mark>SCHAF</mark> mit <mark>SCHARF</mark></h4>
+                        <style>
+                              .main-row_2 {
+                                    display: flex;
+                                    gap: 15px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    padding: 20px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_2 {
+                                    flex: 0 0 450px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 50px;
+                                    margin-top: -30px;
+                              }
+                                                
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_2 {
+                                    flex: 0 0 300px; 
+                                    padding-right: 50px;
+                                    margin-top: -30px;
+                              }
+                                    
+                              .faltraumpaket-hinweis_3 {
+                                    position: absolute; 
+                                    display: flex; /* Richtet den Pfeil und den Text-Container nebeneinander aus */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-bottom: 20px; /* Abstand zum ersten grauen Balken */
+                                    margin-top: -350px;
+                                    padding-left: 175px; /* Ein bisschen Einrückung vom linken Rand */
+                              }
+
+                              /* Container für den Pfeil */
+                              .pfeil-container_3 {
+                                    flex-shrink: 0; /* Verhindert, dass der Pfeil-Container schrumpft */
+                                    width: 30px; /* Feste Breite für den Pfeil */
+                              }
+
+                              /* Der blue Pfeil */
+                              .pfeil_3 {
+                                    font-size: 2em;
+                                    color: blue;
+                                    display: block;
+                                    transform: rotate(45deg); /* Optional: Passen Sie den Winkel an den Screenshot an */
+                              }
+
+                              /* Text-Container */
+                              .text-container_3 {
+                                    padding-left: 0px;
+                                    line-height: 1.2;
+                                    font-size: 
+                              }
+
+                              /* Spezielle Formatierung für den obersten blue Text */
+                              .blue-text {
+                                    color: blue;
+                                    font-weight: bold;
+                                    margin: 0;
+                                    font-size: 16px;
+                              }
+                              
+                              .faltraumpaket-hinweis_4 {
+                                    position: absolute; 
+                                    display: flex; /* Richtet den Pfeil und den Text-Container nebeneinander aus */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-bottom: 20px; /* Abstand zum ersten grauen Balken */
+                                    margin-top: -350px;
+                                    padding-left: 650px; /* Ein bisschen Einrückung vom linken Rand */
+                              }
+
+                              /* Container für den Pfeil */
+                              .pfeil-container_4 {
+                                    flex-shrink: 0; /* Verhindert, dass der Pfeil-Container schrumpft */
+                                    width: 30px; /* Feste Breite für den Pfeil */
+                              }
+
+                              /* Der rote Pfeil */
+                              .pfeil_4 {
+                                    font-size: 2em;
+                                    color: red;
+                                    display: block;
+                                    transform: rotate(45deg); /* Optional: Passen Sie den Winkel an den Screenshot an */
+                              }
+
+                              /* Text-Container */
+                              .text-container_4 {
+                                    padding-left: 0px;
+                                    line-height: 1.2;
+                              }
+
+                              /* Spezielle Formatierung für den obersten roten Text */
+                              .red-text {
+                                    color: red;
+                                    font-weight: bold;
+                                    margin: 0;
+                                    font-size: 16px;
+                              }
+
+                        </style>
+
+                        <div class="main-row_2">
+                              <div class="info-column_2">
+                                    Bild <mark>SCHAF</mark> mit <mark>BARSCH</mark> und Moduloberkante frontal<br>
+                                    <img width="150" height="360" alt="Blume" src="https://github.com/user-attachments/assets/4992a178-42f2-4ddd-9343-6e962bd2dde0" />
+                              </div>
+
+
+                              <div class="image-columns_2">
+                                    Bild <mark>SCHAF</mark> mit <mark>BARSCH</mark> und Moduloberkante Seite<br>
+                                    <img width="150" height="360" alt="Blume" src="https://github.com/user-attachments/assets/4992a178-42f2-4ddd-9343-6e962bd2dde0" />    
+                              </div>
+                        </div>
+
+                        <div class="faltraumpaket-hinweis_3">
+                              <div class="pfeil-container_3">
+                                    <span class="pfeil_3">&#11015;</span> 
+                              </div>
+                              <div class="text-container_3">
+                                    Ersatz für die senkrechte Modulmitte
+                                    <p class="blue-text">senkrechte Modulmitte</p>
+                              </div>
+                        </div>
+
+                        <div class="faltraumpaket-hinweis_4">
+                              <div class="pfeil-container_4">
+                                    <span class="pfeil_4">&#11015;</span> 
+                              </div>
+                              <div class="text-container_4">
+                                    <p class="red-text">Horizontale Modulmitte</p>
+                                    <p>Horizontale Linie an oberer Faltraumbegrenzung</p>
+                                    <p>Bei Bei <mark>BARSCH</mark> austretenden <mark>BARSCH</mark> 
+                                          wird aufgrund der Entfaltungskinematik und der davon abhängigen 
+                                          <mark>FERNSEHER</mark> eine „Ersatz-Mittellinie“ definiert. Der
+                                           Ersatz für die senkrechte Modulmitte ergibt sich als Senkrechte durch die
+                                            Mitte des kleinsten Abstandes <mark>SCHAF</mark> zur gegenüberliegenden Kontur der <mark>MEGAPHON</mark>. 
+                                            Der konstruktiv ermittelte Abstand <mark>MEGAPHON</mark> muss im Prüfbericht detailliert beschrieben und dokumentiert werden.</p>
+                              </div>
+                        </div>
+
+                        <div class="image-block">
+                              Bild <mark>SCHAF</mark> oben<br>
+                              <img width="500" height="250" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                        </div>  
+                  
+                  <h4>Beispiel 3: Airbag im <mark>SCHAF</mark> mit Airbagaustritt in Fahrrichtung am Beispiel <mark>SCHAF</mark></h4>
+                        <div class="image-block">
+                              Bild <mark>SCHAF</mark> mit <mark>BARSCH</mark> und Moduloberkante frontal und Seite<br>
+                              <img width="500" height="250" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                        </div> 
+
+                        <div class="image-block">
+                              Bild <mark>SCHAF</mark> oben und Seite<br>
+                              <img width="500" height="250" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                        </div> 
+                  
+                  <h4>Beispiel 4: Airbag in der <mark>MEGAPHON</mark> am Beispiel <mark>BÄR</mark> vorne <mark>AUTO</mark></h4>
+                        <div class="image-block">
+                              Bild <mark>MEGAPHON</mark> und Moduloberkante<br>
+                              <img width="500" height="250" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                        </div> 
+            `},
+                  {id: 'c3', cat: 'cat1', title: 'Definition der Ebenen', excerpt: ' ', content: `<h2>Definition der Ebenen</h2> 
+                        <style>               
+                              .bild-container {
+                                    display: flex;             /* Aktiviert Flexbox */
+                                    justify-content: center;   /* Zentriert Kinder horizontal (Hauptachse) */
+                                    align-items: center;       /* Zentriert Kinder vertikal (Querachse) */
+                              }
+                                    
+                        </style>
+
+                        <div class="bild-container">
+                              <img width="661" height="523" alt="Definition der Ebenen" src="https://github.com/user-attachments/assets/b5f9118a-1fa2-429d-b625-c63c76711b02" />
+                        </div>
+            `},
+                  {id: 'c4', cat: 'cat1', title: 'Grundeinstellungen', excerpt: ' ',content:`
+                  <h4><mark>SCHAF</mark></h4>
+                  <ul>
+                        <li>Die Grundeinstellung des <mark>SCHAFS</mark> erfolgt, insbesondere für die Zusatzfeatures gemäß der Konstruktionslage, die der <mark>SCHAF</mark>-Homologations-Zeichnung zu 
+                              entnehmen ist. </li>
+                        <li>Die <mark>SCHAF</mark> wird in die unterste Position gebracht, mögliche weitere Einstellungen erfolgen in Konstruktionslage.</li>
+                  </ul>
+
+                  <h4><mark>BALL</mark></h4>
+                  <ul>
+                        <li>Der <mark>BALL</mark>-Höhenversteller wird in die höchste Position gebracht, das <mark>BALL</mark> kann zur Vermeidung von Interaktion mit dem 
+                              <mark>BARSCH</mark> mit Klebeband an der <mark>MEGAPHONE</mark> befestigt werden. </li>
+                  </ul>
+
+                  <h4><mark>MEGAPHONE</mark></h4>
+                  <ul>
+                        <li>Alle <mark>MEGAPHONE</mark> auf der Seite der Testdurchführung müssen geschlossen sein, wenn nicht anders beschrieben.</li>
+                  </ul>
+
+                  `},
+                  {id:'c5', cat: 'cat1', title: 'Sitzeinstellung-Einstellanweisung', excerpt: ' ', content:`
+                  Der Ausgangspunkt der Sitzverstellung wird in der TWG, in der maximal hinteren und maximal unteren Position definiert. Zur sicheren Einstellung des Sitzes werden folgende Unterlagen in der letzten gültigen Ausführung benötigt:
+                  <ul>
+                        <li>Sitzverstelldiagramm des verwendeten Fahrzeugs mit Sitzreferenzpunkt (SRP)</li>
+                        <li>Homologationszeichnung des verwendeten Sitzes</li>
+                        <li>Einstellanweisung des SRP im Fahrzeug</li>
+                        <li><b>Informationen zu möglichen Zwangskinematiken über den Sitzverstellbereich (z.B. Lehne wird bei <mark>AUTO</mark> im hinteren Verstellbereich steiler gestellt)</b></li>
+                  </ul>
+
+                  Die hintere untere Position ergibt sich aus dem <mark>AUTO</mark> Sitz-Referenzpunkt (SRP), der zugehörigen Homologationszeichnung mit Einstelldaten des SRP sowie dem Sitzverstelldiagramm. <br>
+                 <br>
+                  <strong>Achtung!</strong> Die geforderte Ausgangs-Position des Sitzes kann sich durch verschiedene Sitzverstellfelder 
+                  zwischen links und rechts und durch versch. Sitzvarianten relativ zum Fahrzeug unterscheiden und muss deshalb für jeden 
+                  Sitz in der jeweiligen Prüfposition ermittelt und dokumentiert werden. OOP-Versuche auf der 1. Sitzreihe müssen bevorzugt auf 
+                  der <mark>AUTO</mark> durchgeführt werden. Wenn mit dem BTV eine Prüfungsdurchführung auch auf der <mark>AUTO</mark> abgestimmt wurde, 
+                  muss insbesondere die Vergleichbarkeit der Einsitzposition zwischen links und rechts gewährleistet und dokumentiert werden.
+                  <br>
+                  <ol>
+                        <li>Sitz auf SRP einstellen. Hierzu muss der Sitz gemäß den Vorgaben aus der Sitz-Homologationszeichnung eingestellt werden. 
+                        Die Einstellmaße in X und Z sind analog Homologationszeichnung zu dokumentieren. Der Lehnenwinkel wird zunächst vereinfacht 
+                        anhand des Hilfswinkels an der Lehnenrückseite auf den Konstruktionswinkel eingestellt. Der eingestellte Lehnenwinkel ist zu dokumentieren.<br> 
+                        <strong>ACHTUNG!</strong> Im weiteren Verlauf müssen alle Einstellmaße relativ zu den Einstellwerten des SRP ermittelt und dokumentiert werden.</li>
+                        <li>Vom SRP wird der Sitz im nächsten Schritt maximal nach unten (lediglich über die Sitzhöhenverstellung) auf den Punkt P5 im Sitzverstelldiagramm 
+                        verfahren. In diesem Schritt wird die Sitz-Längsverstellung nicht betätigt. Die Einstellmaße in X und Z sind zu dokumentieren und mit dem Sitzverstelldiagramm 
+                        zu vergleichen. Bei unterschiedlichen Maßen muss versucht werden die Maße aus dem Sitzverstelldiagramm einzustellen.</li>
+                        <li>Der Sitz wird anschließend mit der Sitzlängsverstellung auf den Punkt P6 im Sitzverstelldiagramm verfahren. Die Einstellmaße in X und Z sind zu 
+                        dokumentieren und mit dem Sitzverstelldiagramm zu vergleichen. Bei unterschiedlichen Maßen muss versucht werden die Maße aus dem Sitzverstelldiagramm einzustellen.
+                        <br><strong>ACHTUNG!</strong> Wenn der Sitz über eine Zwangskinematik verfügt, ist der hinterste Punkt anzufahren, bei der sich die Lehne noch unverändert in Konstruktionslage 
+                        befindet. Dieser Prozess und die daraus resultierende Ausgangsposition ist detailliert zu beschreiben und zu dokumentieren.</li>
+                        <li>In der, gemäß Sitzverstelldiagramm hintersten untersten Position muss nun die Einhaltung des Konstruktionswinkels der Lehne mit der SAE 
+                        J826 H-Punkt-Maschine kontrolliert und ggf. eingestellt werden. Das Ergebnis muss dokumentiert werden. Zusätzlich ist der Hilfswinkel an der Sitzrückseite 
+                        vor und nach der möglichen Einstellung mit der H-Punkt-Maschine zu dokumentieren.</li>
+                        <li>Muss der Sitz zur Erreichung des jeweiligen Versuchsziels verfahren werden, darf der Lehnenwinkel nicht mehr verändert werden. 
+                              Das Hilfsmaß des Lehnenwinkels an der Lehnenrückseite muss für die finale Prüfposition dokumentiert werden.</li>
+                  </ol>
+
+                  <h2 style="color: red">Sitzeinstellung - Beispiel </h2>
+                  <style>
+                              .main-row_3 {
+                                    display: flex;
+                                    gap: 15px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    padding: 20px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_3 {
+                                    flex: 0 0 450px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 50px;
+                                    margin-top: -30px;
+                              }
+                                                
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_3 {
+                                    flex: 0 0 300px; 
+                                    padding-right: 50px;
+                                    margin-top: -30px;
+                              }
+                                          
+                              .bild-container_2 {
+                                    display: flex;             /* Aktiviert Flexbox */
+                                    justify-content: left;   /* Zentriert Kinder horizontal (Hauptachse) */
+                                    align-items: left;       /* Zentriert Kinder vertikal (Querachse) */
+                                    margin-left: 15px;
+                                    
+                              }
+                                    
+                        </style>
+
+                        <div class="main-row_3">
+                              <div class="info-column_3">
+                                    Sitzverstellung Beispiel
+                                    <img width="300" height="160" alt="Blume" src="https://github.com/user-attachments/assets/4992a178-42f2-4ddd-9343-6e962bd2dde0" />
+                              </div>
+
+
+                              <div class="image-columns_3">
+                                    Lehnenwinkel Beispiel
+                                    <img width="300" height="160" alt="Blume" src="https://github.com/user-attachments/assets/4992a178-42f2-4ddd-9343-6e962bd2dde0" />    
+                              </div>
+                        </div>
+
+                        Beispiel Sitzverstellfeld
+                        <div class="bild-container_2">
+                                    <img width="300" height="160" alt="Blume" src="https://github.com/user-attachments/assets/4992a178-42f2-4ddd-9343-6e962bd2dde0" />   
+                        </div>
+     
+                  `},
+                  {id:'c6', cat: 'cat2', title: 'Position 3.3.3.1 Forward Facing Hybrid III 3 Year-Old Child Dummy on Booster Block', excerpt:'Passenger Positions with Seat-Mounted Airbags', content: `
+                  <h3>Anwendungsbereich:</h3>
+                  Sitzintegierte Seitenairbags gemeinsam mit Fensterairbag (wenn vorhanden) <br>
+
+                  <h3 style="color:blue">Versuchsziel:</h3>
+                  <p style="color:blue">Maximale Interaktion zwischen Airbag und Kopf-Genick durch Ausrichtung des Genicks mit der Oberkante des Airbagmoduls im Sitz. </p>
+
+                  <h3>Positionierung:</h3>
+                  Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Den Dummy auf der nach außen gerichteter Kante des Booster Blocks positionieren. 
+                  Obere Wirbelsäule in die Ausschuss-Richtung des Airbags positionieren. Den Kopf in neutraler Position zwischen Sitzpolster und Verkleidung positionieren.<br>
+                  <style>
+                        .container_4 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_4 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_4 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_4 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_4 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_4 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_4">
+                              <div class="main-row_4">
+                                    
+                                    <div class="image-columns_4">
+                                          <div class="image-block_4">
+                                                <div class="image-block-title_4">TWG-Abbildung</div>
+                                                <img width="398" height="152" alt="3 3 3 1" src="https://github.com/user-attachments/assets/2f2b9ec7-ca6c-44e8-955e-a097528715d9" />           
+                                          </div>
+                                          
+                                          <div class="image-block_4">
+                                                <div class="image-block-title_4">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="398" height="152" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+                                    </div>
+                              </div> 
+                        </div>    
+                        
+                        <h3>Besonderheiten bei der Positionierung in der 1. Sitzreihe</h3>
+                        In der Startposition nach TWG, Kap 3.3.1 lässt sich der <mark>FERNSEHER</mark> u.U. <mark>VIELE FERNSEHER UND FEUER</mark> positionieren
+                        (z.B. wg. Kontakt Schulter mit <mark>MEGAPHON</mark>. In diesem Fall muss der <mark>SCHAF</mark> so weit nach vorne verfahren werden, bis die <mark>VIELE FERNSEHER UND FEUER</mark> 
+                        positioniert werden kann. Eine Veränderung der <mark>SCHAF</mark> erfolgt nicht. Eine Abweichung von der Startposition gemäß 3.3.3.1 muss begründet und zusammen mit
+                        der angepassten Prüfposition des <mark>SCHAF</mark> im Prüfbericht dokumentiert werden.<br>
+                        Sollten die Füße nach der endgültigen Positionierung des <mark>FERNSEHER</mark> nicht auf den Heel-Placement-Points positioniert werden können, muss die finale Position der Füße 
+                        im Prüfbericht dokumentiert werden. Eine Fixierung mit Tape ist nicht zulässig. Alle <mark>SCHAFE</mark> müssen in Konstruktionslage verbleiben.<br><br>
+                        <i>Bei <mark>VIELE SCHAFE</mark> - insbesondere bei dadurch instabiler Positionierung des <mark>BUTTER</mark> - kann der <mark>VIEL BUTTER</mark> verwendet werden. 
+                        Dies muss zu Projektbeginn definiert und im Prüfbericht entsprechend begründet und dokumentiert werden. Eine 
+                        <mark>BUTTER</mark> ist nicht sinnvoll, wenn dadurch das Versuchsziel nicht mehr sicher erfüllt werden kann.</i>
+
+                        <style>
+                        .container_5 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_5 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_5 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_5 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_5 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_5 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_">
+                              <div class="main-row_5">
+                                    
+                                    <div class="image-columns_5">
+                                          <div class="image-block_5">
+                                                <div class="image-block-title_4">Beispiel aus aktuellen Fahrzeugen</div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />            
+                                          </div>
+                                          
+                                          <div class="image-block_5">
+                                                <div class="image-block-title_4"><mark>BUTTER </mark> nicht gedreht</div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                          <div class="image-block_5">
+                                                <div class="image-block-title_4"><mark>BUTTER </mark> gedreht</div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+                                    </div>
+                              </div> 
+                        </div>
+
+                        <h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+                        Wenn aufgrund fehlender Einstellmöglichkeiten am <mark>SCHAF</mark> die geforderte Prüfposition nicht erreicht werden kann, muss dies begründet
+                        und zusammen mit der angepassten Prüfposition des <mark>FERNSEHER</mark> im Prüfbericht dokumentiert werden.<br><br>
+                        <i>Bei sehr <mark>WÄSCHEKLAMMER</mark> kann es passieren, dass der <mark>FERNSEHER</mark> relativ flach gelegt werden muss, um den
+                        <mark>FERNSEHER</mark> auf die Oberkante des <mark>BARSCH</mark> zu bringen. Dabei kann unter Umständen die <mark>WÄSCHEKLAMMER</mark> nicht gewährleistet werden, 
+                        was zum Erreichen des übergeordneten Versuchsziels akzeptabel wäre.</i>
+
+                        <style>
+                        .container_6 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_6 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_6 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_6 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_6 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_6 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_6">
+                              <div class="main-row_6">
+                                    
+                                    <div class="image-columns_6">
+                                          <div class="image-block_6">
+                                                <div class="image-block-title_6">Beispiel aus aktuellen Fahrzeugen</div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />            
+                                          </div>
+                                          
+                                          <div class="image-block_6">
+                                                <div class="image-block-title_6"><mark>VIELE WÄSCHEKLAMMER UND FERNSEHER</mark></div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                    </div>
+                              </div> 
+                        </div>
+                  `},
+                  {id:'c7', cat: 'cat2', title: 'Position 3.3.3.2 Rearward Facing Hybrid III 3 Year-Old Child Dummy', excerpt:'Passenger Positions with Seat-Mounted Airbags', content: `
+                  <h3>Anwendungsbereich:</h3>
+                  Sitzintegrierte Seitenairbags gemeinsam mit Fensterairbag (wenn vorhanden)
+
+                  <h3 style="color: blue">Versuchsziel</h3>
+                  <p style="color: blue">Maximale Interaktion zwischen Airbag und Brust durch Ausrichtung des Sternums mit der Oberkante des Seitenairbagmoduls im Sitz. </p>
+                  
+                  <h3>Positionierung:</h3>
+                  Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Die senkrechte Mitte des Sternums so nah wie möglich an die Vorderkante des Sitzes positionieren. Das Sternum soll den Sitz berühren. 
+                  Dazu den Kopf in neutraler Position zwischen Sitzpolster und Verkleidung positionieren.
+
+                  <style>
+                        .container_7 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_7 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_7 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_7 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_7 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_7 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_7">
+                              <div class="main-row_7">
+                                    
+                                    <div class="image-columns_7">
+                                          <div class="image-block_7">
+                                                <div class="image-block-title_7">TWG-Abbildung</div>
+                                                <img width="397" height="150" alt="3 3 3 2" src="https://github.com/user-attachments/assets/e19e70b9-e8ab-476e-a00f-25b5b8543d36" />           
+                                          </div>
+                                          
+                                          <div class="image-block_7">
+                                                <div class="image-block-title_7">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                    </div>
+                              </div> 
+                        </div>
+                  
+                  <h3>Besonderheiten in der 1. Sitzreihe</h3>
+                  <i>Wenn sich die senkrechte Mitte des <mark>FERNSEHER</mark> nicht mit der Vorderkante der <mark>SCHAF</mark> auf eine Linie bringen lässt (z.B. wg. <mark>MEGAPHON</mark>),
+                  dann soll der <mark>SCHAF</mark> so weit nach vorne verfahren werden, bis das Kriterium erfüllt werden kann. Die <mark>SCHAF</mark> wird normal nicht verändert.<br>
+                  Eine <mark>WÄSCHEKLAMMER</mark> von der Startposition gemäß 3.3.1 muss begründet und im Prüfbericht dokumentiert werden. Sollte der außenseitige Arm die Oberkörperpositionierung 
+                  <mark>FERNSEHER UND SCHAFE</mark> behindern, dann kann <mark>VIELE FERNSEHER</mark> nach hinten gedreht werden. 
+                  Am Ende soll der <mark>VIELE FERNSEHER</mark> werden, dass der <mark>FERNSEHER</mark> nicht in Y verschoben wird bzw. die senkrechte Mitte des 
+                  <mark>FERNSEHER</mark> mit der Vorderkante der <mark>SCHAF</mark> auf eine Linie bleibt. Eine Positionierung des <mark>VIELE FERNSEHER</mark> ist nicht empfehlenswert, 
+                  da dies die <mark>FEUER</mark> beeinflussen kann. Die erreichbare <mark>FERNSEHER</mark> muss begründet und im Prüfbericht dokumentiert werden. <br>
+                  Das <mark>FERNSEHER</mark> soll möglichst immer auf die Außenkante der <mark>SCHAF</mark> gelegt werden. Das <mark>FERNSEHER</mark> soll Richtung <mark>SCHAF</mark> geschoben werden. 
+                  Bei hohen <mark>SCHAFEN</mark> kann es zur Stabilisierung des <mark>FERNSEHER</mark> notwendig sein, das <mark>VIELE FERNSEHER</mark> und gegen die <mark>SCHAFE</mark> abzustützen. 
+                  Oft ist es dann auch nicht möglich, die Linie durch die beiden <mark>FERNSEHER</mark> vertikal zur Fahrzeugmittelachse auszurichten, was für das übergeordnete Ziel akzeptabel wäre. 
+                  Sollte <mark>FERNSEHER</mark> nicht stabil auf der <mark>SCHAF</mark> positioniert werden können, müssten <mark>FERNSEHER UND SCHAFE</mark> positioniert werden.</i>
+                  
+                  <style>
+                        .container_8 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_8 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_8 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_8 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_8 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_8 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_8">
+                              <div class="main-row_8">
+                                    
+                                    <div class="image-columns_8">
+                                          <div class="image-block_8">
+                                                <div class="image-block-title_8">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="250" height="150" alt="3 3 3 2" src="https://github.com/user-attachments/assets/e19e70b9-e8ab-476e-a00f-25b5b8543d36" />           
+                                          </div>
+                                          
+                                          <div class="image-block_8">
+                                                <div class="image-block-title_7">Normal: <mark>FERNSEHER UND SCHAFE</mark></div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                          <div class="image-block_8">
+                                                <div class="image-block-title_7">Alternativ: <mark>FERNSEHER UND SCHAFE</mark></div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                    </div>
+                              </div> 
+                        </div>
+                  
+                  <h3>Besonderheiten in der Positionierung in der 2. Sitzreihe</h3>
+                  Wenn aufgrund fehlender Einstellmöglichkeiten am <mark>SCHAF</mark> die geforderte <mark>WÄSCHEKLAMMER</mark> nicht erreicht werden kann, muss dies begründet 
+                  und zusammen mit der angepassten <mark>WÄSCHEKLAMMER UND FERNSEHER</mark> im Prüfbericht dokumentiert werden.<br><br>
+                  <i>Bei sehr <mark>WÄSCHEKLAMMER UND FEUER</mark> ist es unter Umständen schwierig das <mark>FERNSEHER</mark> auszurichten. 
+                  Um das Ziel zu erfüllen, kann es notwendig sein, den <mark>FERNSEHER</mark> von der Führungskante des <mark>SCHAF</mark> zu entfernen. 
+                  Dies kann dazu führen, dass der <mark>FERNSEHER ALS SCHAF</mark> dienen muss und somit eine neutrale <mark>FERNSEHER</mark> nicht gewährleistet werden kann, 
+                  was zum Erreichen des übergeordneten Versuchsziels akzeptabel wäre.
+                  
+                  <style>
+                        .container_9 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_9 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_9 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_9 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_9 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_9 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_9">
+                              <div class="main-row_9">
+                                    
+                                    <div class="image-columns_9">
+                                          <div class="image-block_9">
+                                                <div class="image-block-title_9">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="250" height="150" alt="3 3 3 2" src="https://github.com/user-attachments/assets/e19e70b9-e8ab-476e-a00f-25b5b8543d36" />           
+                                          </div>
+                                          
+                                          <div class="image-block_9">
+                                                <div class="image-block-title_7"><mark>WÄSCHEKLAMMER UND FERNSEHER</mark></div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                    </div>
+                              </div> 
+                        </div>
+
+                  `},
+                  {id:'c8', cat: 'cat2', title: 'Position 3.3.3.3 Hybrid III 3 Year-Old Child Dummy Lying on Seat with Head on Armrest', excerpt:'Passenger Positions with Seat-Mounted Airbags', content:`
+                  <h3> Anwendungsbereich:</h3>
+                  Sitzintegrierte Seitenairbags gemeinsam mit Fensterairbag (wenn vorhanden)
+                  
+                  <h3 style="color: blue">Versuchsziel:</h3>
+                  <p style="color: blue">Maximale Interaktion zwischen Airbag und Kopf durch Ausrichtung des Kopfschwerpunktes mit der senkrechten Mitte des Seitenairbagmoduls im Sitz.</p>
+
+                  <h3>Positionierung:</h3>
+                  Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Hinterkopf liegt auf Armauflage und Kopfschwerpunkt möglichst ausgerichtet zur senkrechten Mitte des Seitenairbagmoduls. 
+                  Der Dummy-Rücken kann mit einem geeigneten Schaumkeil abgestützt werden. Dabei muss sich der Kopf in neutraler Position befinden und darf keine signifikante Kraft (<5N) auf 
+                  die Armlehne ausüben.
+
+                  <style>
+                        .container_10 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_10 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_10 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_10 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_10 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_10 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_10">
+                              <div class="main-row_10">
+                                    
+                                    <div class="image-columns_10">
+                                          <div class="image-block_10">
+                                                <div class="image-block-title_10">TWG - Abbildung</div>
+                                                <img width="397" height="150" alt="3 3 3 3" src="https://github.com/user-attachments/assets/1020149f-9219-4e01-a435-41d200f3203d" />          
+                                          </div>
+                                          
+                                          <div class="image-block_10">
+                                                <div class="image-block-title_10">Beispiel aus aktuellem Fahrzeug</mark></div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                    </div>
+                              </div> 
+                        </div>
+                  <h3>Besonderheiten in der Positionierung in der 1. Sitzreihe</h3>
+                  In der Startposition nach TWG, Kap 3.3.1 lässt sich der <mark>FERNSEHER</mark> u.U. nicht mit dem <mark>VIELE FERNSEHER UND BARSCHE</mark> positionieren. 
+                  In diesem Fall muss der <mark>SCHAF</mark> so weit nach vorne verfahren werden, bis der <mark>FERNSEHER AUF DER WÄSCHEKLAMMER</mark> positioniert werden kann, 
+                  bzw. der <mark>VIELE FERNSEHER UND BARSCHE</mark> liegt. Eine Veränderung der <mark>SCHAFE</mark> erfolgt nicht.<br>
+                  <i>Bei ausgeprägten <mark>SCHAFE</mark> definiert der <mark>FERNSEHER</mark> mit der <mark>SCHAFE</mark>, wie weit der <mark>FERNSEHER</mark> positioniert werden kann.
+                  Der CoG erreicht hier oft nicht <mark>WÄSCHEKLAMMER</mark> (siehe <a href="#" onclick="goTo('chapter','c5');return false">Definition Ersatz für senkrechte Modulmitte</a>).<br>
+                  Aufgrund der tiefen <mark>SCHAFE</mark> bei modernen Fahrzeugen, lässt sich der <mark>SCHAF FERNSEHER</mark> oft nicht mehr in Kontakt mit der <mark>SCHAF</mark> bringen. 
+                  Es sollte auch darauf geachtet werden, dass die Kabelführung am Dummyhals nicht im Entfaltungsbereich des Airbags liegt.</i><br><br>
+                  Die Ausführung und Positionierung des <mark>BUTTER</mark> sowie Abweichungen von der <mark>SCHAF</mark> gemäß 3.3.1 müssen im Prüfbericht begründet und dokumentiert werden.
+                  Wenn KEINE Interaktion mit dem Fensterairbag erfolgt, kann die Zündung des Fensterairbags nach Bestätigung durch den BTV entfallen. Dies ist geeignet nachzuweisen und im Prüfbericht 
+                  zu dokumentieren.
+
+                  <style>
+                        .container_11 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_11 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_11 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_11 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_11 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_11 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                  </style>
+                        
+                        <div class="container_11">
+                              <div class="main-row_11">
+                                    
+                                    <div class="image-columns_11">
+                                          <div class="image-block_11">
+                                                <div class="image-block-title_11">Beispiel aus aktuellem Fahrzeugen</div>
+                                                <img width="207" height="150" alt="3 3 3 3" src="https://github.com/user-attachments/assets/1020149f-9219-4e01-a435-41d200f3203d" />          
+                                          </div>
+                                          
+                                          <div class="image-block_11">
+                                                <div class="image-block-title_11"> </div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                          <div class="image-block_11">
+                                                <div class="image-block-title_11"> </div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                    </div>
+                              </div> 
+                        </div>
+                  
+                  <h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+                  Bei <mark>SCHAF</mark> hinten sollte immer mit der montierten Mittelkonsole getestet werden. Im Ausnahmefall kann die Mittelkonsole durch einen <mark>BUTTER</mark> nachgebildet werden. 
+                  Die Prüfumgebung muss im Prüfbericht dokumentiert werden. Es ist darauf zu achten, dass der <mark>FERNSEHER</mark> möglichst keine Kraft auf die <mark>MEGAPHON</mark> ausübt.<br>
+                  <i>Bei <mark>BARSCH</mark> in der <mark>MEGAPHON</mark> kann man den CoG oft nicht in der <mark>WÄSCHEKLAMMER</mark> positionieren. Hier soll der <mark>FERNSEHER</mark> nur so weit 
+                  wie möglich nach außen gesetzt werden.</i><br>
+                  Wenn aufgrund fehlender Einstellmöglichkeiten am <mark>SCHAF</mark> die geforderte <mark>WÄSCHEKLAMMER</mark> nicht erreicht werden kann, muss dies begründet und zusammen
+                  mit der angepassten <mark>FERNSEHER UND MEGAPHON</mark> im Prüfbericht dokumentiert werden.<br>
+                  Wenn <b>KEINE</b> Interaktion mit dem <mark>TEICH</mark> erfolgt, kann die Zündung des <mark>TEICH</mark> nach Bestätigung durch den BTV entfallen. Dies ist geeignet nachzuweisen
+                  und im Prüfbericht zu dokumentieren.
+                  
+                  <style>
+                        .container_12 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_12 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 20px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_12 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_12 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_12 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_12 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 50px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                  </style>
+                        
+                        <div class="container_12">
+                              <div class="main-row_12">
+                                    
+                                    <div class="image-columns_12">
+                                          <div class="image-block_12">
+                                                <div class="image-block-title_12">Beispiel aus aktuellem Fahrzeugen (<mark>BARSCH IN MEGAPHON</mark>)</div>
+                                                <img width="207" height="150" alt="3 3 3 3" src="https://github.com/user-attachments/assets/1020149f-9219-4e01-a435-41d200f3203d" />          
+                                          </div>
+                                          
+                                          <div class="image-block_12">
+                                                <div class="image-block-title_12"> </div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                    </div>
+                              </div> 
+
+                              <div class="main-row_12">
+                                    
+                                    <div class="image-columns_12">
+                                          <div class="image-block_12">
+                                                <div class="image-block-title_12">Beispiel aus aktuellem Fahrzeugen (<mark>BASCH in ANDERM MEGAPHON</mark>)</div>
+                                                <img width="207" height="150" alt="3 3 3 3" src="https://github.com/user-attachments/assets/1020149f-9219-4e01-a435-41d200f3203d" />          
+                                          </div>
+                                          
+                                          <div class="image-block_12">
+                                                <div class="image-block-title_12"> </div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                          <div class="image-block_12">
+                                                <div class="image-block-title_12"> </div>
+                                                <img width="250" height="150" alt="Blume" src="https://github.com/user-attachments/assets/951b94aa-af8e-4877-a64f-53e47d20952f" />   
+                                          </div>
+
+                                    </div>
+                              </div> 
+                        </div>
+
+
+
+
+
+
+                  `}
+            ],
+            faq: [
+                  {q:'Wie benutze ich die App?', a:'Wähle auf der Startseite eine Kategorie und dann ein Kapitel.'},
+                  {q:'Wo werden Daten gespeichert?', a:'Aktuell lokal im Browser (keine Server).'}
+            ]
+      };
+
+// -----------------------------
+// Einfacher Router / Renderer
+// -----------------------------
+      const app = document.getElementById('app');
+
+      function goTo(page, payload){
+            if(page === 'home') renderHome();
+            if(page === 'info') renderInfo();
+            if(page === 'faq') renderFAQ();
+            if(page === 'chapter') renderChapter(payload);
+            if(page === 'category') renderCategory(payload);
+      }
+
+      // Start: Home
+      function renderHome(){
+            app.innerHTML = `
+                  <div class="grid home-grid">
+                        <div class="card">
+                              <h2>Willkommen <mark> /USER </mark> </h2>            
+                              <p class="meta">Wähle zuerst eine Kategorie, dann das Kapitel.</p>
+
+                              <div style="margin-top:12px;" class="search">
+                                    <input id="q" placeholder="Suchen... (z.B. Kapitelname)" />
+                                    <button onclick="search()">Suche</button>
+                              </div>
+
+                              <h3 style="margin-top:14px">Kategorien</h3>
+                              <div class="category-list" id="category-list"></div>
+
+                              <h3 style="margin-top:12px">Zuletzt angesehen</h3>
+                              <div id="recent" class="meta">— noch nichts</div>
+                        </div>
+
+                        <aside>
+                              <div class="card">
+                                    <h3>Quick‑Links</h3>
+                                    <div class="meta">Schnellzugriff auf Info & FAQ</div>
+                                    <div style="margin-top:12px"><button onclick="goTo('info')">Info</button> <button onclick="goTo('faq')">FAQ</button></div>
+                              </div>
+
+                              <div class="card" style="margin-top:12px">
+                                    <h3>Kurze Kapitelübersicht</h3>
+                                    <div id="chap-preview" class="chapter-list"></div>
+                              </div>
+                        </aside>
+                  </div>
+            `;
+            
+            /*durchläuft jede Kategorie in Ihren Daten und erstellt für jede einen Button in der Seitenleiste, Startseite?*/
+            const cl = document.getElementById('category-list');
+            DATA.categories.forEach(cat=>{
+                  const btn = document.createElement('button');
+                  btn.textContent = cat.title;
+                  btn.onclick = ()=> goTo('category', cat.id);
+                  cl.appendChild(btn);
+            });
+
+            /*ersten fünf Kapitel erscheinen als klickbare Liste auf der Webseite.*/
+            const cp = document.getElementById('chap-preview');
+            DATA.chapters.slice(0,5).forEach(ch=>{
+                  const el = document.createElement('div'); el.className='chapter-item'; el.textContent = ch.title + ' — ' + ch.excerpt;
+                  el.onclick = ()=> goTo('chapter', ch.id);
+                  cp.appendChild(el);
+            });
+
+            // show recent from localStorage zuletzt angesehene Kapitel
+            const recent = JSON.parse(localStorage.getItem('recent')||'[]');
+            document.getElementById('recent').textContent = recent.length? recent.map(id=>DATA.chapters.find(c=>c.id===id)?.title||id).join(', '): '— noch nichts';
+
+            // wire search enter Suchfunktion
+            const q = document.getElementById('q'); q.addEventListener('keydown', (e)=>{ if(e.key==='Enter') search(); });
+      }
+
+      //Kategorie-Ansicht in Ihrer Anwendung dar, indem er alle Kapitel auflistet, die zu einer bestimmten Kategorie gehören
+      function renderCategory(catId){
+            const cat = DATA.categories.find(c=>c.id===catId);
+            const chapters = DATA.chapters.filter(ch=>ch.cat===catId);
+            app.innerHTML = `
+                  <div class="card">
+                        <a href="#" onclick="goTo('home');return false">← Zurück</a>
+                        <h2>${cat.title}</h2>
+                        <p class="meta">${chapters.length} Kapitel</p>
+                        <div class="chapter-list" id="chap-list"></div>
+                  </div>
+            `;
+            //durchläuft der Code die gefilterten Kapitel (chapters.forEach). Für jedes Kapitel erstellt er ein klickbares Element (el)
+            const list = document.getElementById('chap-list');
+            chapters.forEach(ch=>{
+                  const el = document.createElement('div'); el.className='chapter-item'; el.innerHTML = `<strong>${ch.title}</strong><div class='meta'>${ch.excerpt}</div>`;
+                  el.onclick = ()=> goTo('chapter', ch.id);
+                  list.appendChild(el);
+            });
+      }
+
+      //Kapitel-Detailansicht und verwaltet gleichzeitig den Verlauf der zuletzt angesehenen Kapitel.
+      function renderChapter(chId){
+            const ch = DATA.chapters.find(c=>c.id===chId);
+            if(!ch){ app.innerHTML='<div class="card">Kapitel nicht gefunden</div>'; return }
+            // save recent
+            let recent = JSON.parse(localStorage.getItem('recent')||'[]');
+            recent = [chId, ...recent.filter(x=>x!==chId)].slice(0,6);
+            localStorage.setItem('recent', JSON.stringify(recent));
+
+            app.innerHTML = `
+                  <div class="card">
+                        <a href="#" onclick="goTo('home');return false">← Start</a>
+                        <h2>${ch.title}</h2>
+                        <div class="meta">Kategorie: ${DATA.categories.find(c=>c.id===ch.cat)?.title||'-'}</div>
+                        <div style="margin-top:14px">${ch.content}</div>
+                  </div>
+            `;
+      }
+
+      function renderInfo(){
+            app.innerHTML = `
+                  <div class="card">
+                        <a href="#" onclick="goTo('home');return false">← Zurück</a>
+                        <h2>Info — Was kann die App?</h2>
+                        <p>
+                        <h3>Vorwort </h3>
+                        In der „RECOMMENDED PROCEDURES FOR EVALUATING OCCUPANT INJURY RISK FROM DEPLOYING SIDE AIRBAGS”, prepared by the Side Airbag Out-of-Position Injury Technical Working Group, 
+                        im Folgenden kurz “TWG” genannt, werden die verschiedenen OoP Prüf-Positionen beschrieben, dennoch ergeben sich in der täglichen Praxis häufig Fragestellungen, die in der TWG nicht 
+                        final oder eindeutig beantwortet werden.<br><br>
+                        Diese <mark>App</mark> beschreibt eine abgestimmte Vorgehensweise für das Einsetzen der Dummys in den verschiedenen Prüfpositionen für alle <mark>BAUM</mark> Projekte.
+                        </p>
+                  </div>
+            `;
+      }
+
+      function renderFAQ(){
+            app.innerHTML = `
+                  <div class="card">
+                        <a href="#" onclick="goTo('home');return false">← Zurück</a>
+                        <h2>FAQ</h2>
+                        <div id="faq-list"></div>
+                  </div>
+            `;
       const fl = document.getElementById('faq-list');
-      DATA.faq.forEach(f=>{
-        const q = document.createElement('div'); q.innerHTML = `<strong>${f.q}</strong><div class='meta'>${f.a}</div>`; q.style.marginBottom='10px'; fl.appendChild(q);
-      });
-    }
+            DATA.faq.forEach(f=>{
+                  const q = document.createElement('div'); q.innerHTML = `<strong>${f.q}</strong><div class='meta'>${f.a}</div>`; q.style.marginBottom='10px'; fl.appendChild(q);
+            });
+      }
 
-    function search(){
-      const q = document.getElementById('q').value.trim().toLowerCase();
-      if(!q) return renderHome();
-      const hits = DATA.chapters.filter(c=> (c.title + ' ' + c.excerpt + ' ' + (c.content||'')).toLowerCase().includes(q));
-      app.innerHTML = `
-        <div class="card">
-          <a href="#" onclick="goTo('home');return false">← Zurück</a>
-          <h2>Suche: ${q}</h2>
-          <div id="results"></div>
-        </div>
+      function search(){
+            const q = document.getElementById('q').value.trim().toLowerCase();
+            if(!q) return renderHome();
+            const hits = DATA.chapters.filter(c=> (c.title + ' ' + c.excerpt + ' ' + (c.content||'')).toLowerCase().includes(q));
+            app.innerHTML = `
+                  <div class="card">
+                        <a href="#" onclick="goTo('home');return false">← Zurück</a>
+                        <h2>Suche: ${q}</h2>
+                        <div id="results"></div>
+                  </div>
       `;
       const results = document.getElementById('results');
       if(!hits.length){ results.innerHTML = '<p class="meta">Keine Treffer</p>'; return }
       hits.forEach(h=>{
-        const el = document.createElement('div'); el.className='chapter-item'; el.innerHTML = `<strong>${h.title}</strong><div class='meta'>${h.excerpt}</div>`;
-        el.onclick = ()=> goTo('chapter', h.id);
-        results.appendChild(el);
+            const el = document.createElement('div'); el.className='chapter-item'; el.innerHTML = `<strong>${h.title}</strong><div class='meta'>${h.excerpt}</div>`;
+            el.onclick = ()=> goTo('chapter', h.id);
+            results.appendChild(el);
       });
-    }
+      }
 
-    // init
-    renderHome();
-  </script>
-</body>
+      // init
+      renderHome();
+      </script>
+</body>>
 </html>
