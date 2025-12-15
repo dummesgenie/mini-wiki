@@ -1,1 +1,32 @@
-positionieren (z.B. wg. Kontakt Schulter mit B-Säule). In diesem Fall muss der Sitz so weit nach vorne verfahren werden, bis die 
+####################
+zu 3.3.3.5
+********************
+In der Startposition nach TWG, Kap 3.3.1 lässt sich der <mark>FERNSEHER</mark> u.U. mit der <mark>FERNSEHER</mark> nicht direkt in Ausschuss-Richtung des <mark>FEUER</mark> positionieren 
+(z.B. wg. <mark>MEGAPHON</mark>). In diesem Fall muss der <mark>SCHAF</mark> so weit nach vorne verfahren werden, bis die obere <mark>FERNSEHER</mark> erstmals in 
+<mark>FEUER</mark> positioniert werden kann. Eine Veränderung der <mark>SCHAF</mark> erfolgt nicht.<br>
+Eine Abweichung von der Startposition gemäß 3.3.1 muss begründet und zusammen mit der angepassten Prüfposition des Sitzes im Prüfbericht dokumentiert werden.<br><br>
+
+<i>Bei stark konturierten <mark>SCHAF</mark> mit hohen <mark>SCHAF</mark> - insbesondere bei dadurch <mark>WÄSCHEKLAMMER</mark> des <mark>BUTTER</mark> - kann der <mark>BUTTER</mark> in Abstimmung
+mit dem BTV <mark>WÄSCHEKLAMMER</mark> verwendet werden. Dies muss zu Projektbeginn definiert und im Prüfbericht entsprechend begründet und dokumentiert werden. 
+Eine <mark>BUTTER</mark> ist nicht sinnvoll, wenn dadurch das Versuchsziel nicht mehr sicher erfüllt werden kann.
+
+####################
+zu 3.3.3.5
+********************
+<h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+Wenn aufgrund fehlender Einstellmöglichkeiten am <mark>SCHAF</mark> die geforderte <mark>WÄSCHEKLAMMER</mark> nicht erreicht werden kann, muss dies begründet und 
+zusammen mit der angepassten <mark>WÄSCHEKLAMMER</mark> im Prüfbericht dokumentiert werden.
+
+####################
+zu 3.3.3.6
+********************
+<h3>Besonderheiten bei der Positionierung in der 1. Sitzreihe</h3>
+<strong>Achtung!</strong> Diese Prüfposition muss für <mark>KRUG</mark> durchgeführt werden, es sei denn die <mark>FEUER</mark> und das <mark>SCHAF</mark> sind identisch! 
+Der Nachweis muss im Protokoll dokumentiert werden.<br><br>
+
+In der Startposition nach TWG, Kap 3.3.1 lässt sich der <mark>FERNSEHER</mark> u.U. mit der Mitte der oberen <mark>FERNSEHER UND BARSCH</mark> positionieren (z.B. wg. <mark>MEGAPHON</mark>). 
+In diesem Fall muss der <mark>SCHAF</mark> so weit nach vorne verfahren werden, bis die <mark>FERNSEHER UND BARSCHE</mark> positioniert werden kann. Eine Veränderung der <mark>SCHAFE</mark> 
+erfolgt nicht.<br>
+Eine Abweichung von der Startposition gemäß 3.3.1 muss begründet und zusammen mit der angepassten Prüfposition des Sitzes im Prüfbericht dokumentiert werden.
+
+Die Frontalebene (siehe Definition der Ebenen) des Oberkörpers muss parallel zur Fahrzeuglängsebene positioniert sein. Er kann aber um die Dummy-Y-Achse gedreht werden, um die Mitte der ersten Brustrippe auf die Oberkante des Seitenairbagmoduls zu bringen.
