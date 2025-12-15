@@ -27,6 +27,192 @@ Der Nachweis muss im Protokoll dokumentiert werden.<br><br>
 In der Startposition nach TWG, Kap 3.3.1 lässt sich der <mark>FERNSEHER</mark> u.U. mit der Mitte der oberen <mark>FERNSEHER UND BARSCH</mark> positionieren (z.B. wg. <mark>MEGAPHON</mark>). 
 In diesem Fall muss der <mark>SCHAF</mark> so weit nach vorne verfahren werden, bis die <mark>FERNSEHER UND BARSCHE</mark> positioniert werden kann. Eine Veränderung der <mark>SCHAFE</mark> 
 erfolgt nicht.<br>
-Eine Abweichung von der Startposition gemäß 3.3.1 muss begründet und zusammen mit der angepassten Prüfposition des Sitzes im Prüfbericht dokumentiert werden.
+Eine <mark>WÄSCHEKLAMMER</mark> gemäß 3.3.1 muss begründet und zusammen mit der angepassten <mark>SCHAF</mark> im Prüfbericht dokumentiert werden.
 
-Die Frontalebene (siehe Definition der Ebenen) des Oberkörpers muss parallel zur Fahrzeuglängsebene positioniert sein. Er kann aber um die Dummy-Y-Achse gedreht werden, um die Mitte der ersten Brustrippe auf die Oberkante des Seitenairbagmoduls zu bringen.
+Die <mark>WÄSCHEKLAMMER</mark> (siehe <a href="#" onclick="goTo('chapter','c3');return false">Definition der Ebenen</a>) des <mark>FERNSEHER und WÄSCHEKLAMMER</mark> positioniert sein. Er kann aber um die <mark>FERNSEHER</mark> gedreht werden, um die <mark>FERNSEHER UND BARSCHE</mark> zu bringen.
+
+####################
+zu 3.3.3.6
+********************
+<h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+Wenn aufgrund fehlender Einstellmöglichkeiten am <mark>SCHAF</mark> die geforderte <mark>WÄSCHEKLAMMER</mark> nicht erreicht werden kann, muss dies begründet und zusammen mit der angepassten <mark>FERNSEHER</mark> im Prüfbericht dokumentiert werden.<br><br>
+
+<i>Der <mark>FERNSEHER</mark> (<a href="#" onclick="goTo('chapter','c3');return false">Frontalebene</a>) muss parallel zur <mark>WÄSCHEKLAMMER</mark> positioniert sein. Er kann aber 
+um die <mark>FERNSEHER</mark> gedreht werden, um die <mark>VIELE FERNSEHER UND BARSCHE</mark> zu bringen.<br>
+Es kann vorkommen, dass der <mark>FERNSEHER</mark> nicht sicher auf der <mark>SCHAFE</mark> positioniert werden kann. In diesen Fällen kann das <mark>FERNSEHER und SCHAFE</mark> gesetzt werden
+und der <mark>FERNSEHER</mark> muss nach Outboard geneigt werden. <br>
+Wenn bei Positionierung ein Kontakt zw. <mark>FERNSEHER UND MEGAPHON</mark> entsteht, sollte das <mark>FERNSEHER</mark> nach Inboard bewegt und der <mark>FERNSEHER</mark> geneigt werden, um einen Abstand zw. <mark>FERNSHER UND MEGAPHON</mark> zu erzeugen.</i>
+
+####################
+zu 3.3.3.7
+********************
+<h3>Positionierung:</h3>
+Sitz in Position Mitte/unten. Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Dummy so weit nach außen positionieren, dass sich der Oberarm senkrecht und parallel zum Dummy-Torso befindet und der Ellbogen auf der Armauflage liegt. Der Oberarm muss an der Türverkleidung anliegen. Ggf. kann das Becken mit einem Schaumkissen unterstützt bzw. geneigt werden. Der Unterarm soll möglichst kraftfrei (<5N) auf der Armauflage liegen.
+
+####################
+zu 3.3.3.7
+********************
+<h3>Besonderheiten bei der Positionierung in der 1. Sitzreihe</h3>
+<strong>Achtung!</strong> Diese Prüfposition muss für <mark>KRUG</mark> durchgeführt werden, es sei denn die <mark>FEUER UND SCHAFE</mark> sind identisch! Der Nachweis muss im Protokoll dokumentiert werden.<br><br>
+
+<h3>Besonderheiten bei der Positionierung in der 1. und 2. Sitzreihe</h3>
+Eine Veränderung der <mark>SCHAFE</mark> erfolgt nicht.
+Um die <mark>FERNSEHER</mark> entsprechend der Vorgabe zu erreichen kann es notwendig sein das <mark>FERNSEHER</mark> mit einem <mark>BUTTER</mark> zu unterstützen bzw. das <mark>FERNSEHER</mark> zu neigen. <i>Das <mark>BUTTER</mark> sollte aber nur so dick sein, dass das <mark>FERNSEHER</mark> weiterhin Druck auf die <mark>SCHAFE</mark> ausübt.<br>
+Die angewendete Maßnahme muss detailliert im Protokoll dokumentiert werden. 
+
+####################
+zu 3.3.4.1
+********************
+<h3>Positionierung:</h3>
+<i>Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Mittels Sitz-Längsverstellung soll die vertikale Dummy-Sternum-Linie mit der vertikalen Airbag Mittellinie zusammenfallen. 
+Durch Verschiebung der Knie soll die Kante der oberen Dummy-Rippe mit der Oberkante des Airbagmoduls auf eine Höhe gebracht werden.</i>
+
+
+####################
+zu 3.3.4.1
+********************
+<h3>Besonderheiten bei der Positionierung in der 1. Sitzreihe</h3>
+<i>Die <mark>FERNSEHER</mark> soll auf die <mark>FERNSEHER</mark> des <mark>KARPFEN</mark> gelegt werden. Bei schräg verbauten und langen <mark>FEUER</mark> ist die <mark>FEUER</mark> an der Stelle der <mark>WÄSCHEKLAMMER</mark> zu verwenden – also dort wo auch der <mark>FERNSEHER</mark> positioniert ist. (siehe <a href="#" onclick="goTo"('chapter','c2');return false">Beschreibung Modulmitte und – oberkante</a>)<br><br>
+
+Als Tür- oder Seitenteilintegrierten Airbag gibt es aktuell nur <mark>KARPFEN</mark> bei <mark>AUTO</mark>. Ein Zusammenlegen der oberen <mark>FERNSEHER</mark> mit der Oberkante des <mark>KARPFEN</mark> ist nur mit <mark>SCHAFE</mark> möglich. <br>
+Die <mark>FERNSEHER</mark> sollten immer so weit wie möglich nach Outboard geschoben werden, um eine vertikale <mark>WÄSCHEKLAMMER</mark> und letztlich <mark>FERNSEHER</mark> sicherzustellen. Sollte der <mark>FERNSEHER</mark> mit beiden <mark>FERNSEHER UND SCHAFE</mark> nicht stabil positioniert werden können, dann empfiehlt es sich, das <mark>VIELE SCHAFE UND FERNSEHER</mark> und das andere <mark>WEITERE FERNSEHER UND SCHAFE</mark> zu positionieren.<br>
+Die <mark>SCHAFE</mark> kann zur Abstützung der <mark>SCHAFE</mark> genutzt werden.<br>
+Die <mark>MEGAPHON</mark> darf heruntergefahren werden, um einen minimalen Abstand zw. <mark>FERNSEHER UND MEGAPHON</mark> zu ermöglichen. </i>
+
+####################
+zu 3.3.4.1
+********************
+<h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+<i>Sebastian fragen </i>
+
+####################
+zu 3.3.4.2
+********************
+<h3>Positionierung:</h3>
+<i>Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Mittels Sitz-Längsverstellung soll die vertikale Mittellinie der Dummy Wirbelsäule mit der vertikalen Mittellinie des Airbagmoduls zusammenfallen. Durch Dummyverschiebung soll der Kopf-Nacken-Übergang auf die Höhe der Oberkante des Airbagmoduls gebracht werden.</i>
+
+####################
+zu 3.3.4.2
+********************
+<h3>Besonderheiten bei der Positionierung in der 1. Sitzreihe</h3>
+<i>Bei aktuellen Fahrzeugen wird man mit dem <mark>FERNSEHER</mark> Übergang selten auf die Oberkante des <mark>KARPFEN</mark> legen können. Es muss meist direkt auf den <mark>FERNSEHER</mark> gewechselt werden. Selbst mit erlaubter <mark>SCHAF</mark> kann diese Anforderung oft nicht komplett erfüllt werden. Wenn das <mark>FERNSEHER</mark> zusätzlich auf der <mark>SCHAFE</mark> stabil positioniert werden kann, könnte der <mark>FERNSEHER</mark> auf die Oberkante des <mark>KARPFEN</mark> gelegt werden. In den meisten Fällen rutscht das <mark>FERNSEHER</mark> aber von der <mark>SCHAFE</mark>. <br>
+Wenn der <mark>SCHAF</mark> in der Höhe verstellt wird, verändert sich auch die <mark>SCHAF</mark>. Dies wird im weiteren Verlauf so belassen.<br>
+Um den <mark>WÄSCHEKLAMMER UND FERNSEHER</mark> an der <mark>MEGAPHON</mark> anlehnen zu können, wird die <mark>SCHAF</mark> zur Abstützung der <mark>SCHAF UND FERNSEHER</mark> genutzt.</i>
+
+####################
+zu 3.3.4.2
+********************
+<h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+<i>Sebastian fragen </i>
+
+####################
+zu 3.3.4.3
+********************
+<h3>Positionierung:</h3>
+<i>Tür- oder Seitenteilintegrierte Airbags sind aktuell nur Kopfairbags in Cabrios oder Roadster mit Entfaltung aus der Verkleidung nach oben. Eine relevante Interaktion zw. diesem Airbagmodul und dem Dummy ist in der Position 3.3.4.3. unwahrscheinlich. 
+<strong>Dieser Versuch wird deshalb mit der Position 3.3.3.3 vergleichbar sein und muss nicht separat durchgeführt werden.</strong>
+</i>
+
+####################
+zu 3.3.4.4
+********************
+<h3>Positionierung:</h3>
+<i>Tür- oder Seitenteilintegrierte Airbags sind aktuell nur Kopfairbags in Cabrios oder Roadster mit Entfaltung aus der Verkleidung nach oben. Eine relevante Interaktion zw. diesem Airbagmodul und dem Dummy ist in der Position 3.3.4.4. unwahrscheinlich. 
+<strong>Dieser Versuch wird deshalb mit der Position 3.3.3.4 vergleichbar sein und muss nicht separat durchgeführt werden.</strong></i>
+
+####################
+zu 3.3.4.5
+********************
+<h3>Positionierung:</h3>
+<i>Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Der Tür-zugewandte Arm wird nach vorn gestreckt, so dass kein Kontakt zur Armlehne entsteht. Den Dummy nach außen schieben. Sitz längs verstellen bis die vertikale Torsomitte und die vertikale Modulmitte zusammenfallen. Sitzhöhe verstellen, bis die obere Thoraxrippe auf Höhe der Moduloberkante liegt.
+</i>
+
+####################
+zu 3.3.4.5
+********************
+<h3>Besonderheiten bei er Positionierung in der 1.Sitzreihe</h3>
+<i>In aktuell modernen Fahrzeugen kann der <mark>FERNSEHER</mark> nicht immer stabil auf den <mark>SCHAF</mark> nahe der <mark>MEGAPHON</mark> positioniert werden. Der <mark>FERNSEHER</mark> rutscht dann auf die <mark>SCHAFE</mark> und hat keine reelle Interaktion mit dem <mark>KARPFEN</mark>. Ein <mark>WÄSCHEKLAMMER UND FERNSEHER</mark> wird in der TWG ausgeschlossen. Die einzig mögliche Maßnahme ist die Verwendung eines <mark>BUTTER</mark> wie Alternativ in Pos. 3.3.3.7 beschrieben wird. <br><br>
+Bei Veränderung der <mark>SCHAFE</mark> muss beachtet werden, dass der <mark>FERNSEHER UND MEGAPHON</mark> nicht kontaktiert.</i>
+
+####################
+zu 3.3.4.5
+********************
+<h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+<i>Sebastian fragen </i>
+
+####################
+zu 3.3.5.1.
+********************
+<h3>Positionierung:</h3>
+Der <mark>SCHAFE</mark> muss sich in der höchsten Position befinden. Der <mark>FERNSEHER</mark> wird gemäß Vorgaben der TWG eingesetzt. Der <mark>FERNSEHER</mark> muss so eingesetzt werden, dass der minimale Abstand zwischen <mark>FERNSEHER</mark> und die maximale Interaktion des <mark>FERNSEHER UND FEUER</mark> erreicht wird und der <mark>FERNSEHER</mark> sich in der Ausschussrichtung des <mark>FEUER</mark> befindet. 
+
+####################
+zu 3.3.5.1.
+********************
+<h3>Besonderheiten bei der Positionierung in der 1. Sitzreihe</h3>
+Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der ersten Blasenbildung des <mark>FEUER</mark> beim Austritt aus dem <mark>MEGAPHON</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss durch Verfahren des <mark>SCHAFE und WÄSCHEKLAMMER</mark> so positioniert werden, dass er sich <mark>FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.<br>
+<i>Bei stark <mark>SCHAF</mark> - insbesondere bei dadurch instabiler <mark>WÄSCHEKLAMMER UND BUTTER</mark> - kann der <mark>BUTTER</mark> in Abstimmung mit dem BTV um 90° gedreht verwendet werden. Dies muss zu Projektbeginn definiert und im Prüfbericht entsprechend begründet und dokumentiert werden. Eine <mark>BUTTER</mark> ist nicht sinnvoll, wenn dadurch das Versuchsziel nicht mehr sicher erfüllt werden kann.<br>
+Beim Verschieben des <mark>FERNSEHER</mark> nach Außen muss darauf geachtet werden, dass der <mark>FERNSEHER UND MEGAPHONE</mark> berührt, der <mark>FERNSEHER</mark> bestmöglich in der Ausschussrichtung des <mark>TEICH</mark> liegt und gleichzeitig eine <mark>FERNSEHER</mark> ohne Vorspannung des <nark>FERNSEHER</mark> erreicht wird. </i>
+<h3>Allgemein:</3>
+Wenn sich der Airbag nach dem Auftreffen auf den Kopf nicht stabil vor oder hinter dem Kopf entfaltet, muss geprüft werden, ob die Entfaltungssteuerung diesbezüglich optimiert werden kann. Ist dies nicht möglich müssen die in der FuVo OOP geforderten Versuchsanzahlen ggf. in Abstimmung mit dem BTV erhöht werden.
+
+####################
+zu 3.3.5.1.
+********************
+<h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der ersten Blasenbildung des <mark>FEUER</mark> beim Austritt aus dem <mark>MEGAPHON</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss bestmöglich so positioniert werden, dass er sich <mark>WÄSCHEKLAMMER UND FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.<br><br>
+
+<p style="color:red">BUTTER?  Bild zeigt BUTTER!!</p>
+
+<h3>Allgemein:</h3>
+Wenn sich der <mark>FEUER</mark> nach dem Auftreffen auf den <mark>FERNSEHER</mark> nicht stabil <mark>FERNSEHER</mark> entfaltet, muss geprüft werden, ob die Entfaltungssteuerung diesbezüglich optimiert werden kann. Ist dies nicht möglich müssen die in der <mark>SPEZIAL MENÜ<mark> ggf. in Abstimmung mit dem BTV erhöht werden.
+
+####################
+zu 3.3.5.2
+********************
+<h3>Positionierung:</h3>
+Der Sitz muss sich in der höchsten Position befinden. Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Der Dummy muss so eingesetzt werden, dass der sich entfaltende Airbag die Mitte des Kopfes trifft. Dabei darf der Dummy nach außen geneigt werden indem das Becken nach innen verschoben wird. Der Dummy darf mit einem 25mm breiten Tape um den Hals in der Position fixiert werden.
+
+####################
+zu 3.3.5.2
+********************
+<h3>Besonderheiten bei der Positionierung in der 1. Sitzreihe</h3>
+Diese Prüfposition muss für <mark>KRUG</mark> durchgeführt werden, es sei denn die <mark>FEUER UND SCHAFE</mark> sind identisch! Der Nachweis muss im Protokoll dokumentiert werden.<br><br>
+
+Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der ersten <mark>FEUER</mark> beim Austritt aus dem <mark>MEGAPHON</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss durch Verfahren des <mark>SCHAFE</mark> so positioniert werden, dass er sich mittig unter der ersten Blase des <mark>FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.<br><br>
+
+<i>Um die maximale Belastung auf den <mark>FERNSEHER</mark> zu erzeugen, ist es wichtig, den <mark>FERNSEHER UND WÄSCHKLAMMER</mark> so zu neigen, dass die <mark>FERNSEHER</mark> in der Entfaltungsrichtung des <mark>TEICH</mark> liegt. Das wird meist nur möglich sein, wenn der <mark>FERNSEHER UND SCHAFE</mark> sitzt. Würde der <mark>FERNSEHER</mark> auf der <mark>SCHAFE</mark> sitzen, kann man ihn wegen des frühen <mark>FERNSEHER und MEGAPHON</mark> nicht weit genug seitlich neigen.</i>
+
+####################
+zu 3.3.5.2
+********************
+<h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+Diese Prüfposition muss für <mark>KRUG</mark> durchgeführt werden, es sei denn die <mark>FEUER UND SCHAFE</mark> sind identisch! Der Nachweis muss im Protokoll dokumentiert werden. <br><br>
+
+Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der ersten <mark>FEUER UND MEGAPHONE</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss bestmöglich so positioniert werden, dass er sich mittig unter der ersten <mark>FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.<br><br>
+
+Wenn sich der <mark>FEUER</mark> nach dem Auftreffen auf den <mark>FERNSEHER</mark> nicht stabil vor oder hinter dem <mark>FERNSEHER</mark> entfaltet, muss geprüft werden, ob die <mark>FEUER</mark> diesbezüglich optimiert werden kann. Ist dies nicht möglich müssen die in der <mark>SPEZIAL MENÜ</mark> ggf. in Abstimmung mit dem BTV erhöht werden.
+
+####################
+zu 3.3.5.3
+********************
+<h3>Positionierung:</h3>
+Der Sitz muss sich in der höchsten Position befinden. Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Der Dummy muss so eingesetzt werden, dass der minimale Abstand zwischen Kopf und Fensterairbag und die maximale Interaktion des Kopfes mit dem Bag erreicht wird und der Kopfschwerpunkt sich in der Ausschussrichtung des Airbags befindet. Der Dummy darf mit einem 25mm breiten Tape um den Hals in der Position fixiert werden.
+
+####################
+zu 3.3.5.3
+********************
+<h3>Besonderheiten bei der Positionierung in der 1. Sitzreihe</h3>
+Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der ersten <mark>FEUER UND MEGAPHON</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss durch Verfahren des <mark>SCHAF und WÄSCHEKLAMMER</mark> so positioniert werden, dass er sich <mark>WÄSCHEKLAMMER UND FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.
+
+####################
+zu 3.3.5.3
+********************
+<h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der <mark>FEUER UND MEGAPHON</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss bestmöglich so positioniert werden, dass er sich <mark>WÄSCHEKLAMMER UND FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.<br><br>
+
+<i>Normalerweise sitzt der <mark>FERNSEHER und SCHAFE</mark>, um die max. <mark>FERNSEHER UND TEICHE</mark> zu erzeugen. Würde das <mark>FERNSEHER</mark> auf der <mark>SCHAFE</mark> positioniert werden, führt dies zu einem größeren Abstand des <mark>FERNSEHER UND MEGAPHON</mark> und somit normalerweise zu geringen Belastungen.<br>
+Es kann aber Fahrzeugumgebungen geben, bei denen das <mark>FERNSEHER UND SCHAFE</mark> zurück geschoben werden muss, um den <mark>FERNSEHER UND WÄSCHEKLAMMER</mark> zu bringen. </i><br><br>
+
+Wenn sich der <mark>FEUER</mark> nach dem Auftreffen auf den <mark>FERNSEHER</mark> nicht stabil vor oder hinter dem <mark>FERNSEHER</mark> entfaltet, muss geprüft werden, ob die <mark>WÄSCHEKLAMMER</mark> diesbezüglich optimiert werden kann. Ist dies nicht möglich, müssen die in der <mark>SPEZIAL MENÜ</mark> ggf. in Abstimmung mit dem BTV erhöht werden. 
+
