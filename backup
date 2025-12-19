@@ -54,7 +54,8 @@
             categories: [
                   { id: 'cat1', title: 'Generelle Vorgehensweise'},
                   { id: 'cat2', title: 'Sitz-integrierte Seitenairbags' },
-                  { id: 'cat3', title: 'Tür- oder Seitenteilintegrierte Seitenairbags'}
+                  { id: 'cat3', title: 'Tür- oder Seitenteilintegrierte Seitenairbags'},
+                  { id: 'cat4', title: 'Fensterairbag'}
       ],
             chapters: [
                   {id: 'c0', cat: 'cat1', title: 'Versuchsdurchführung', excerpt: ' ', 
@@ -3044,7 +3045,7 @@
                               </div>    
                         </div>
                   `},
-                  {id:'c16', cat: 'cat3', title: 'Position 3.3.4.5 Forward Facing SID IIs', excerpt:'Driver and Passenger Positions with Door/Quarter Panel-Mounted Airbags', content:`
+                  {id:'c17', cat: 'cat3', title: 'Position 3.3.4.5 Forward Facing SID IIs', excerpt:'Driver and Passenger Positions with Door/Quarter Panel-Mounted Airbags', content:`
                   <h3>Anwendungsbereich:</h3>
                   <i>Tür- oder Seitenverkleidungsintegriertem Kopfairbag</i>
 
@@ -3136,6 +3137,7 @@
                   <i>In aktuell modernen Fahrzeugen kann der <mark>FERNSEHER</mark> nicht immer stabil auf den <mark>SCHAF</mark> nahe der <mark>MEGAPHON</mark> positioniert werden. Der <mark>FERNSEHER</mark> rutscht dann auf die <mark>SCHAFE</mark> und hat keine reelle Interaktion mit dem <mark>KARPFEN</mark>. Ein <mark>WÄSCHEKLAMMER UND FERNSEHER</mark> wird in der TWG ausgeschlossen. Die einzig mögliche Maßnahme ist die Verwendung eines <mark>BUTTER</mark> wie Alternativ in Pos. 3.3.3.7 beschrieben wird. <br><br>
                   Bei Veränderung der <mark>SCHAFE</mark> muss beachtet werden, dass der <mark>FERNSEHER UND MEGAPHON</mark> nicht kontaktiert.</i>
                   
+                  
                   <style>
                         .container_32 {
                                     /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
@@ -3189,7 +3191,7 @@
                               .image-block-title_32 {
                                     font-size: 0.8em;
                                     margin-top: -20px;
-                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    height: 70px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
                                     display: flex;
                                     align-items: center; /* Vertikale Zentrierung */
                                     text-align: center;      
@@ -3200,8 +3202,9 @@
                         <div class="container_32">
                               <div class="main-row_32">
                                     <div class="image-columns_32">
-                                          <div class="image-block-title_32">Beispiel aus aktuellem Fahrzeug</div>
-                                          <img width="406" height="152" alt="3 3 4 5" src="https://github.com/user-attachments/assets/9c17e89b-199b-4e9a-9c16-1cbd128307af" />
+                                          <div class="image-block_32">
+                                                <div class="image-block-title_32">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="406" height="152" alt="3 3 4 5" src="https://github.com/user-attachments/assets/9c17e89b-199b-4e9a-9c16-1cbd128307af" />
                                           </div>
                                     
                                           <div class="image-block_32">
@@ -3209,32 +3212,118 @@
                                                 <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
                                                 </div>
                                           </div>
-                              </div>    
-                        </div>
 
+                                          <div class="image-block_32">
+                                                <div class="image-block-title_32"> </div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+
+                              <div class="main-row_32">
+                                    <div class="image-columns_32">
+                                          <div class="image-block_32">
+                                                <div class="image-block-title_32">ohne <mark>BUTTER</mark> rutscht der <mark>FERNSEHER</mark> auf <mark>WÄSCHEKLAMMER</mark>. Hier entsteht keine Interaktion zum <mark>KARPFEN</mark>.</div>
+                                                <img width="406" height="152" alt="3 3 4 5" src="https://github.com/user-attachments/assets/9c17e89b-199b-4e9a-9c16-1cbd128307af" />
+                                          </div>
+                                    
+                                          <div class="image-block_32">
+                                                <div class="image-block-title_32">Ein seitlichens <mark>WÄSCHEKLAMMER</mark> des <mark>FERNSEHER</mark> wird in der TWG ausgeschlossen. Belastungswerte wären <mark>SPEZIAL MENÜ</mark></div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+
+                                          <div class="image-block_32">
+                                                <div class="image-block-title_32">Unter Verwendung eines <mark>BUTTER</mark> komt man dem TWG-Ziel am nächsten.</div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>         
+                        
+                  <h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+                  <i>Sebastian fragen </i>
+                  
+                  <style>
+                        .container_33 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_33 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_33 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_33 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_33 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_33 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
                         <div class="container_33">
                               <div class="main-row_33">
                                     <div class="image-columns_33">
-                                          <div class="image-block-title_33">ohne <mark>BUTTER</mark> rutscht der <mark>FERNSEHER</mark> auf <mark>WÄSCHEKLAMMER</mark>. Hier entsteht keine Interaktion mit <mark>KARPFEN</mark>/div>
-                                          <img width="406" height="152" alt="3 3 4 5" src="https://github.com/user-attachments/assets/9c17e89b-199b-4e9a-9c16-1cbd128307af" />
+                                          <div class="image-block_33">
+                                                <div class="image-block-title_33">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="406" height="152" alt="3 3 4 5" src="https://github.com/user-attachments/assets/9c17e89b-199b-4e9a-9c16-1cbd128307af" />
                                           </div>
                                     
                                           <div class="image-block_33">
-                                                <div class="image-block-title_33">Ein seitliches Neigen des <mark>FERNSEHER</mark> wird in der TWG ausgeschlossen. <mark>SPEZIAL MENÜ</mark> waren OK.</div>
-                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
-                                                </div>
-                                          </div>
-
-
-                                          <div class="image-block_33">
-                                                <div class="image-block-title_33">Unter Verwendung eines <mark>BUTTER</mark> kommt man dem TWG-Ziel am nächsten.</div>
+                                                <div class="image-block-title_33"> </div>
                                                 <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
                                                 </div>
                                           </div>
                               </div>    
-                        </div>                          
+                        </div>
                   `},
-            ],    
+                  {id:'c18', cat: 'cat4', title: 'Position 3.3.4.5 Forward Facing SID IIs', excerpt:'Driver and Passenger Positions with Door/Quarter Panel-Mounted Airbags', content:`
+                  `},
+                  ],    
                 faq: [
                   {q:'Wie benutze ich die App?', a:'Wähle auf der Startseite eine Kategorie und dann ein Kapitel.'},
                   {q:'Wo werden Daten gespeichert?', a:'Aktuell lokal im Browser (keine Server).'}
