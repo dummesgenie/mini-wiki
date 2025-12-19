@@ -2867,7 +2867,374 @@
                               </div>    
                         </div>
                   `},
-                  ],    
+                  {id:'c15', cat: 'cat3', title: 'Position 3.3.4.3 Hybrid III 3-Year Old Child Dummy Lying on Seat with Seat with Head on Armrest', excerpt:'Passenger Positions with Door/Quarter Panel-Mounted Airbags', content:`
+                  <h3>Anwendungsbereich:</h3>
+                  <i>Tür- oder Seitenverkleidungsintegriertem Kopfairbag</i>
+
+                  <h3 style="color:blue">Versuchsziel:</h3>
+                  <i><p style="color:blue">Maximale Kopf- und Nacken-Interaktion durch Ausrichtung von Kop mit der Mitte des Airbagmoduls</p></i>
+
+                  <h3>Positionierung:</h3>
+                  <i>Tür- oder Seitenteilintegrierte Airbags sind aktuell nur Kopfairbags in Cabrios oder Roadster mit Entfaltung aus der Verkleidung nach oben. Eine relevante Interaktion zw. diesem Airbagmodul und dem Dummy ist in der Position 3.3.4.3. unwahrscheinlich. 
+                  <strong>Dieser Versuch wird deshalb mit der Position 3.3.3.3 vergleichbar sein und muss nicht separat durchgeführt werden.</strong>
+                  </i>
+
+                  <style>
+                        .container_29 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_29 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_29 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_29 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_29 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_29 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_29">
+                              <div class="main-row_29">
+                                    <div class="image-columns_29">
+                                          <div class="image-block_29">
+                                                <div class="image-block-title_29">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="407" height="153" alt="3 3 4 3" src="https://github.com/user-attachments/assets/69fa12ee-4e0f-4f41-b910-63f22a23de74" />
+                                          </div>
+                                    
+                                          <div class="image-block_29">
+                                                <div class="image-block-title_29"> </div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
+                  `},
+                  {id:'c16', cat: 'cat3', title: 'Position 3.3.4.4 Hybrid III 3-Year Old Child Dummy Lying on Seat', excerpt:'Passenger Positions with Door/Quarter Panel-Mounted Airbags', content:`
+                  <h3>Anwendungsbereich:</h3>
+                  <i>Tür- oder Seitenverkleidungsintegriertem Kopfairbag</i>
+
+                  <h3 style="color:blue">Versuchsziel:</h3>
+                  <i><p style="color:blue">Maximale Kopf- und Nacken-Interaktion durch Ausrichtung von Kopf mit der vertikalen Mittellinie des Tür- oder Seitenteil-integrierten Airbagmoduls</p></i>
+
+                  <h3>Positionierung:</h3>
+                  <i>Tür- oder Seitenteilintegrierte Airbags sind aktuell nur Kopfairbags in Cabrios oder Roadster mit Entfaltung aus der Verkleidung nach oben. Eine relevante Interaktion zw. diesem Airbagmodul und dem Dummy ist in der Position 3.3.4.4. unwahrscheinlich. 
+                  <strong>Dieser Versuch wird deshalb mit der Position 3.3.3.4 vergleichbar sein und muss nicht separat durchgeführt werden.</strong></i>
+
+                  <style>
+                        .container_30 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_30 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_30 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_30 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_30 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_30 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_30">
+                              <div class="main-row_30">
+                                    <div class="image-columns_30">
+                                          <div class="image-block_30">
+                                                <div class="image-block-title_30">TWG-Abbildung</div>
+                                                <img width="404" height="153" alt="3 3 4 4" src="https://github.com/user-attachments/assets/cb59b3cf-652d-40f4-a93c-ec4fc6b14710" />
+                                          </div>
+                                    
+                                          <div class="image-block_30">
+                                                <div class="image-block-title_30">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
+                  `},
+                  {id:'c16', cat: 'cat3', title: 'Position 3.3.4.5 Forward Facing SID IIs', excerpt:'Driver and Passenger Positions with Door/Quarter Panel-Mounted Airbags', content:`
+                  <h3>Anwendungsbereich:</h3>
+                  <i>Tür- oder Seitenverkleidungsintegriertem Kopfairbag</i>
+
+                  <h3 style="color:blue">Versuchsziel:</h3>
+                  <i><p style="color:blue">Maximale Kopf- und Nacken- und Brust-Interaktion durch Ausrichtung der Brust mit der Tür- oder Seitenteil-integrierten Airbagmodul-Oberkante</p></i>
+
+                  <h3>Positionierung:</h3>
+                  <i>Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Der Tür-zugewandte Arm wird nach vorn gestreckt, so dass kein Kontakt zur Armlehne entsteht. Den Dummy nach außen schieben. Sitz längs verstellen bis die vertikale Torsomitte und die vertikale Modulmitte zusammenfallen. Sitzhöhe verstellen, bis die obere Thoraxrippe auf Höhe der Moduloberkante liegt.
+                  </i>
+
+                  <style>
+                        .container_31 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_31 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_31 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_31 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_31 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_31 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_31">
+                              <div class="main-row_31">
+                                    <div class="image-columns_31">
+                                          <div class="image-block_31">
+                                                <div class="image-block-title_31">TWG-Abbildung</div>
+                                                <img width="406" height="152" alt="3 3 4 5" src="https://github.com/user-attachments/assets/9c17e89b-199b-4e9a-9c16-1cbd128307af" />
+                                          </div>
+                                    
+                                          <div class="image-block_31">
+                                                <div class="image-block-title_31">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
+                  
+                  <h3>Besonderheiten bei er Positionierung in der 1.Sitzreihe</h3>
+                  <i>In aktuell modernen Fahrzeugen kann der <mark>FERNSEHER</mark> nicht immer stabil auf den <mark>SCHAF</mark> nahe der <mark>MEGAPHON</mark> positioniert werden. Der <mark>FERNSEHER</mark> rutscht dann auf die <mark>SCHAFE</mark> und hat keine reelle Interaktion mit dem <mark>KARPFEN</mark>. Ein <mark>WÄSCHEKLAMMER UND FERNSEHER</mark> wird in der TWG ausgeschlossen. Die einzig mögliche Maßnahme ist die Verwendung eines <mark>BUTTER</mark> wie Alternativ in Pos. 3.3.3.7 beschrieben wird. <br><br>
+                  Bei Veränderung der <mark>SCHAFE</mark> muss beachtet werden, dass der <mark>FERNSEHER UND MEGAPHON</mark> nicht kontaktiert.</i>
+                  
+                  <style>
+                        .container_32 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_32 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_32 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_32 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_32 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_32 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_32">
+                              <div class="main-row_32">
+                                    <div class="image-columns_32">
+                                          <div class="image-block-title_32">Beispiel aus aktuellem Fahrzeug</div>
+                                          <img width="406" height="152" alt="3 3 4 5" src="https://github.com/user-attachments/assets/9c17e89b-199b-4e9a-9c16-1cbd128307af" />
+                                          </div>
+                                    
+                                          <div class="image-block_32">
+                                                <div class="image-block-title_32"> </div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
+
+                        <div class="container_33">
+                              <div class="main-row_33">
+                                    <div class="image-columns_33">
+                                          <div class="image-block-title_33">ohne <mark>BUTTER</mark> rutscht der <mark>FERNSEHER</mark> auf <mark>WÄSCHEKLAMMER</mark>. Hier entsteht keine Interaktion mit <mark>KARPFEN</mark>/div>
+                                          <img width="406" height="152" alt="3 3 4 5" src="https://github.com/user-attachments/assets/9c17e89b-199b-4e9a-9c16-1cbd128307af" />
+                                          </div>
+                                    
+                                          <div class="image-block_33">
+                                                <div class="image-block-title_33">Ein seitliches Neigen des <mark>FERNSEHER</mark> wird in der TWG ausgeschlossen. <mark>SPEZIAL MENÜ</mark> waren OK.</div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+
+
+                                          <div class="image-block_33">
+                                                <div class="image-block-title_33">Unter Verwendung eines <mark>BUTTER</mark> kommt man dem TWG-Ziel am nächsten.</div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>                          
+                  `},
+            ],    
                 faq: [
                   {q:'Wie benutze ich die App?', a:'Wähle auf der Startseite eine Kategorie und dann ein Kapitel.'},
                   {q:'Wo werden Daten gespeichert?', a:'Aktuell lokal im Browser (keine Server).'}
