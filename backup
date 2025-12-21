@@ -55,7 +55,8 @@
                   { id: 'cat1', title: 'Generelle Vorgehensweise'},
                   { id: 'cat2', title: 'Sitz-integrierte Seitenairbags' },
                   { id: 'cat3', title: 'Tür- oder Seitenteilintegrierte Seitenairbags'},
-                  { id: 'cat4', title: 'Fensterairbag'}
+                  { id: 'cat4', title: 'Fensterairbag'},
+                  { id: 'cat5', title: 'Empfohlene Kamerapositionen' }
       ],
             chapters: [
                   {id: 'c0', cat: 'cat1', title: 'Versuchsdurchführung', excerpt: ' ', 
@@ -622,7 +623,7 @@
                                     <img width="300" height="160" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
                         </div>
      
-                  `},
+                  `},           
                   {id:'c6', cat: 'cat2', title: 'Position 3.3.3.1 Forward Facing Hybrid III 3 Year-Old Child Dummy on Booster Block', excerpt:'Passenger Positions with Seat-Mounted Airbags', content: `
                   <h3>Anwendungsbereich:</h3>
                   Sitzintegierte Seitenairbags gemeinsam mit Fensterairbag (wenn vorhanden) <br>
@@ -3840,8 +3841,1306 @@
                   <p style="color:blue">Minimale Interaktion zwischen Airbag und Kopf/Genick durch Ausrichtung des Kopfes weg in die Ausschussrichtung des Fensterairbags.</p>
 
                   <h3>Positionierung:</h3>
-                  Der Sitz muss sich in der höchsten Position befinden. Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Der Dummy muss so eingesetzt werden, dass der minimale Abstand zwischen Kopf und Fensterairbag und die maximale Interaktion des Kopfes mit dem Bag erreicht wird und der Kopfschwerpunkt sich in der Ausschussrichtung des Airbags befindet. Der Dummy darf mit einem 25mm breiten Tape um den Hals in der Position fixiert werden.
+                  Der <mark>SCHAF</mark> muss sich in der <mark>WÄSCHEKLAMMER</mark> befinden. Der <mark>FERNSERHER</mark> wird gemäß Vorgaben der TWG eingesetzt. Der <mark>FERNSEHER</mark> muss so eingesetzt werden, dass der <mark>WÄSCHEKLAMMER FERNSEHER UND TEICH</mark> und die maximale Interaktion des <mark>FERNSERHER</mark> mit dem <mark>TEICH</mark> erreicht wird und der <mark>FERNSERHER</mark> sich in der Ausschussrichtung des <mark>TEICH</mark> befindet. Der <mark>FERNSEHER</mark> darf mit einem 25mm breiten Tape um den <mark>FERNSEHER</mark> in der Position fixiert werden.
+                  
+                  <style>
+                        .container_40 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_40 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_40 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_40 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_40 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_40 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_40">
+                              <div class="main-row_40">
+                                    <div class="image-columns_40">
+                                          <div class="image-block_40">
+                                                <div class="image-block-title_40">TWG-Abbilung</div>
+                                                <img width="406" height="151" alt="3 3 5 3" src="https://github.com/user-attachments/assets/4118413a-ed91-4fcf-9ea6-85ab97db910e" />
+                                          </div>
+                                    
+                                          <div class="image-block_40">
+                                                <div class="image-block-title_40">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
+                  
+                  <h3>Besonderheiten bei der Positionierung in der 1. Sitzreihe</h3>
+                  Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der ersten <mark>FEUER UND MEGAPHON</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss durch Verfahren des <mark>SCHAF und WÄSCHEKLAMMER</mark> so positioniert werden, dass er sich <mark>WÄSCHEKLAMMER UND FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.
+                  
+                  <style>
+                        .container_41 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_41 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_41 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_41 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_41 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_41 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_41">
+                              <div class="main-row_41">
+                                    <div class="image-columns_41">
+                                          <div class="image-block_41">
+                                                <div class="image-block-title_41">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="406" height="151" alt="3 3 5 3" src="https://github.com/user-attachments/assets/4118413a-ed91-4fcf-9ea6-85ab97db910e" />
+                                          </div>
+                                    
+                                          <div class="image-block_41">
+                                                <div class="image-block-title_41"> </div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+
+                                          <div class="image-block_41">
+                                                <div class="image-block-title_41"> </div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
+
+                  <h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+                  Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der <mark>FEUER UND MEGAPHON</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss bestmöglich so positioniert werden, dass er sich <mark>WÄSCHEKLAMMER UND FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.<br><br>
+
+                  <i>Normalerweise sitzt der <mark>FERNSEHER und SCHAFE</mark>, um die max. <mark>FERNSEHER UND TEICHE</mark> zu erzeugen. Würde das <mark>FERNSEHER</mark> auf der <mark>SCHAFE</mark> positioniert werden, führt dies zu einem größeren Abstand des <mark>FERNSEHER UND MEGAPHON</mark> und somit normalerweise zu geringen Belastungen.<br>
+                  Es kann aber Fahrzeugumgebungen geben, bei denen das <mark>FERNSEHER UND SCHAFE</mark> zurück geschoben werden muss, um den <mark>FERNSEHER UND WÄSCHEKLAMMER</mark> zu bringen. </i><br><br>
+
+                  Wenn sich der <mark>FEUER</mark> nach dem Auftreffen auf den <mark>FERNSEHER</mark> nicht stabil vor oder hinter dem <mark>FERNSEHER</mark> entfaltet, muss geprüft werden, ob die <mark>WÄSCHEKLAMMER</mark> diesbezüglich optimiert werden kann. Ist dies nicht möglich, müssen die in der <mark>SPEZIAL MENÜ</mark> ggf. in Abstimmung mit dem BTV erhöht werden. 
+                  
+                  <style>
+                        .container_42 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_42 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_42 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_42 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_42 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_42 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_42">
+                              <div class="main-row_42">
+                                    <div class="image-columns_42">
+                                          <div class="image-block_42">
+                                                <div class="image-block-title_42">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="406" height="151" alt="3 3 5 3" src="https://github.com/user-attachments/assets/4118413a-ed91-4fcf-9ea6-85ab97db910e" />
+                                          </div>
+                                    
+                                          <div class="image-block_42">
+                                                <div class="image-block-title_42"> </div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
                   `},
+                  {id:'c21', cat: 'cat5', title: '3.3.3.1', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                  <style>
+                        .container_43 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_43 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_43 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_43 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_43 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_43 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_43">
+                              <div class="main-row_43">
+                                    
+                                    <div class="image-columns_43">
+                                          <div class="image-block_43">
+                                                <div class="image-block-title_43">Pos. 3.3.3.1</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_43">
+                                                <div class="image-block-title_43"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_43">
+                                                <div class="image-block-title_43"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        `},
+                  {id:'c22', cat: 'cat5', title: '3.3.3.2', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                        <style>
+                        .container_44 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_44 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_44 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_44 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_44 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_44 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+
+                        <div class="container_44">
+                              <div class="main-row_44">
+                                    
+                                    <div class="image-columns_44">
+                                          <div class="image-block_44">
+                                                <div class="image-block-title_44">Pos. 3.3.3.2</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_44">
+                                                <div class="image-block-title_44"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_44">
+                                                <div class="image-block-title_44"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_44">
+                                                <div class="image-block-title_44"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        `},
+                  {id:'c23', cat: 'cat5', title: '3.3.3.3', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                 
+
+                        <style>
+                        .container_45 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_45 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_45 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_45 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_45 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_45 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+
+                        <div class="container_45">
+                              <div class="main-row_45">
+                                    
+                                    <div class="image-columns_45">
+                                          <div class="image-block_45">
+                                                <div class="image-block-title_45">Pos. 3.3.3.3</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_45">
+                                                <div class="image-block-title_45"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_45">
+                                                <div class="image-block-title_45"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_45">
+                                                <div class="image-block-title_45"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_45">
+                                                <div class="image-block-title_45"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+
+                        `},
+                  {id:'c24', cat: 'cat5', title: '3.3.3.4', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                  
+
+                        <style>
+                        .container_46 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_46 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_46 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_46 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_46 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_46 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+
+                        <div class="container_46">
+                              <div class="main-row_46">
+                                    
+                                    <div class="image-columns_46">
+                                          <div class="image-block_46">
+                                                <div class="image-block-title_46">Pos. 3.3.3.4</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_46">
+                                                <div class="image-block-title_46"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_46">
+                                                <div class="image-block-title_46"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_46">
+                                                <div class="image-block-title_46"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+
+                        
+                        `},
+                  {id:'c26', cat: 'cat5', title: '3.3.3.5', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                        <style>
+                        .container_47 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_47 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_47 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_47 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_47 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_47 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+
+                        <div class="container_47">
+                              <div class="main-row_47">
+                                    
+                                    <div class="image-columns_47">
+                                          <div class="image-block_47">
+                                                <div class="image-block-title_47">Pos. 3.3.3.5</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_47">
+                                                <div class="image-block-title_47"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_47">
+                                                <div class="image-block-title_47"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_47">
+                                                <div class="image-block-title_47"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>                        
+                        `},
+                  {id:'c27', cat: 'cat5', title: '3.3.3.6', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                  <
+
+                        <style>
+                        .container_48 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_48 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_48 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_48 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_48 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_48 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+
+                        <div class="container_48">
+                              <div class="main-row_48">
+                                    
+                                    <div class="image-columns_48">
+                                          <div class="image-block_48">
+                                                <div class="image-block-title_48">Pos. 3.3.3.6</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_48">
+                                                <div class="image-block-title_48"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_48">
+                                                <div class="image-block-title_48"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_48">
+                                                <div class="image-block-title_48"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+
+                        `},
+                  {id:'c28', cat: 'cat5', title: '3.3.3.7', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                  
+
+                        <style>
+                        .container_49 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_49 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_49 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_49 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_49 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_49 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+
+                        <div class="container_49">
+                              <div class="main-row_49">
+                                    
+                                    <div class="image-columns_49">
+                                          <div class="image-block_49">
+                                                <div class="image-block-title_49">Pos. 3.3.3.7</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_49">
+                                                <div class="image-block-title_49"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_49">
+                                                <div class="image-block-title_49"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_49">
+                                                <div class="image-block-title_49"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+
+                       
+                        `},
+                  {id:'c29', cat: 'cat5', title: '3.3.4.1', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                  
+
+                         <style>
+                        .container_50 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_50 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_50 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_50 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_50 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_50 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+
+                        <div class="container_50">
+                              <div class="main-row_50">
+                                    
+                                    <div class="image-columns_50">
+                                          <div class="image-block_50">
+                                                <div class="image-block-title_50">Pos. 3.3.4.1</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_50">
+                                                <div class="image-block-title_50"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_50">
+                                                <div class="image-block-title_50"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_50">
+                                                <div class="image-block-title_50"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        
+                        
+                        `},
+                  {id:'c30', cat: 'cat5', title: '3.3.4.5', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                 
+                        <style>
+                        .container_52 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_52 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_52 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_52 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_52 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_52 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+
+                        <div class="container_52">
+                              <div class="main-row_52">
+                                    
+                                    <div class="image-columns_52">
+                                          <div class="image-block_52">
+                                                <div class="image-block-title_52">Pos. 3.3.4.5</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_52">
+                                                <div class="image-block-title_52"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_52">
+                                                <div class="image-block-title_52"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                          <div class="image-block_52">
+                                                <div class="image-block-title_52"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+
+`},
+                  {id:'c31', cat: 'cat5', title: '3.3.5.1', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                  
+
+                        <style>
+                        .container_53 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_53 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_53 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_53 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_53 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_53 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+
+                        <div class="container_53">
+                              <div class="main-row_53">
+                                    
+                                    <div class="image-columns_53">
+                                          <div class="image-block_53">
+                                                <div class="image-block-title_53">Pos. 3.3.5.1</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_53">
+                                                <div class="image-block-title_53"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+
+                                    </div>
+                              </div>
+                        </div>
+                        `},
+                  {id:'c32', cat: 'cat5', title: '3.3.5.2', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                        <style>
+                        .container_54 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_54 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_54 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_54 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_54 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_54 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+
+                        <div class="container_54">
+                              <div class="main-row_54">
+                                    
+                                    <div class="image-columns_54">
+                                          <div class="image-block_54">
+                                                <div class="image-block-title_54">Pos. 3.3.5.2</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_54">
+                                                <div class="image-block-title_54"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  `},
+                  {id:'c33', cat: 'cat5', title: '3.3.5.3', excerpt: ' ', content:`
+                  Die Kamerapersperspektiven sollten immer auf die Sichtbarkeit der Interaktion aus dem Test-Ziel positioniert werden.
+                  
+                        <style>
+                        .container_55 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_55 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: flex-start; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_55 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_55 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_55 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;
+                                    justify-content: space-between; /* Horizontale Zentrierung */
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_55 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+
+                        <div class="container_55">
+                              <div class="main-row_55">
+                                    
+                                    <div class="image-columns_55">
+                                          <div class="image-block_55">
+                                                <div class="image-block-title_55">Pos. 3.3.5.3</div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />            
+                                          </div>
+                                          
+                                          <div class="image-block_55">
+                                                <div class="image-block-title_55"> </div>
+                                                <img width="398" height="152" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />      
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+            `}     
             ],    
                 faq: [
                   {q:'Wie benutze ich die App?', a:'Wähle auf der Startseite eine Kategorie und dann ein Kapitel.'},
