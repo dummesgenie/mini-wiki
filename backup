@@ -3321,9 +3321,528 @@
                               </div>    
                         </div>
                   `},
-                  {id:'c18', cat: 'cat4', title: 'Position 3.3.4.5 Forward Facing SID IIs', excerpt:'Driver and Passenger Positions with Door/Quarter Panel-Mounted Airbags', content:`
+                  {id:'c18', cat: 'cat4', title: 'Position 3.3.5.1 Inboard Facing Hybrid III 6-Year-Old Child Dummy on Booster', excerpt:'Passenger Positions with Roof-Rail-Mounted Airbags', content:`
+                  <h3>Anwendungsbereich:</h3>
+                  Fensterairbags gemeinsam mit Seitenairbagmodul im Seitenairmodul im Sitz, dem Seitenteil oder in der Tür.
+
+                  <h3 style="color:blue">Versuchsziel:</h3>
+                  <p style="color:blue">Maximale Interaktion zwischen Airbag und Kopf/Genick durch Ausrichtung des Kopfes in die Ausschussrichtung des Fensterairbags.</p>
+
+                  <h3>Positionierung:</h3>
+                  Der <mark>SCHAFE</mark> muss sich in der höchsten Position befinden. Der <mark>FERNSEHER</mark> wird gemäß Vorgaben der TWG eingesetzt. Der <mark>FERNSEHER</mark> muss so eingesetzt werden, dass der minimale Abstand zwischen <mark>FERNSEHER</mark> und die maximale Interaktion des <mark>FERNSEHER UND FEUER</mark> erreicht wird und der <mark>FERNSEHER</mark> sich in der Ausschussrichtung des <mark>FEUER</mark> befindet. 
+                  
+                  <style>
+                        .container_34 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_34 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_34 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_34 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_34 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_34 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_34">
+                              <div class="main-row_34">
+                                    <div class="image-columns_34">
+                                          <div class="image-block_34">
+                                                <div class="image-block-title_34">TWG-Abbildung</div>
+                                                <img width="408" height="148" alt="3 3 5 1" src="https://github.com/user-attachments/assets/dd162272-7bc5-4250-bd27-77a989c488cb" />
+                                          </div>
+                                    
+                                          <div class="image-block_34">
+                                                <div class="image-block-title_34">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
+                  
+                  <h3>Besonderheiten bei der Positionierung in der 1. Sitzreihe</h3>
+                  Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der ersten Blasenbildung des <mark>FEUER</mark> beim Austritt aus dem <mark>MEGAPHON</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss durch Verfahren des <mark>SCHAFE und WÄSCHEKLAMMER</mark> so positioniert werden, dass er sich <mark>FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.<br>
+                  <i>Bei stark <mark>SCHAF</mark> - insbesondere bei dadurch instabiler <mark>WÄSCHEKLAMMER UND BUTTER</mark> - kann der <mark>BUTTER</mark> in Abstimmung mit dem BTV um 90° gedreht verwendet werden. Dies muss zu Projektbeginn definiert und im Prüfbericht entsprechend begründet und dokumentiert werden. Eine <mark>BUTTER</mark> ist nicht sinnvoll, wenn dadurch das Versuchsziel nicht mehr sicher erfüllt werden kann.<br>
+                  Beim Verschieben des <mark>FERNSEHER</mark> nach Außen muss darauf geachtet werden, dass der <mark>FERNSEHER UND MEGAPHONE</mark> berührt, der <mark>FERNSEHER</mark> bestmöglich in der Ausschussrichtung des <mark>TEICH</mark> liegt und gleichzeitig eine <mark>FERNSEHER</mark> ohne Vorspannung des <nark>FERNSEHER</mark> erreicht wird. </i>
+                  <h3>Allgemein:</3>
+                  Wenn sich der Airbag nach dem Auftreffen auf den Kopf nicht stabil vor oder hinter dem Kopf entfaltet, muss geprüft werden, ob die Entfaltungssteuerung diesbezüglich optimiert werden kann. Ist dies nicht möglich müssen die in der FuVo OOP geforderten Versuchsanzahlen ggf. in Abstimmung mit dem BTV erhöht werden.
+                  
+                  <style>
+                        .container_35 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_35 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_35 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_35 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_35 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_35 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_35">
+                              <div class="main-row_35">
+                                    <div class="image-columns_35">
+                                          <div class="image-block_35">
+                                                <div class="image-block-title_35">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="408" height="148" alt="3 3 5 1" src="https://github.com/user-attachments/assets/dd162272-7bc5-4250-bd27-77a989c488cb" />
+                                          </div>
+                                    
+                                          <div class="image-block_35">
+                                                <div class="image-block-title_35"> </div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
+                  
+                        <h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+                        Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der ersten Blasenbildung des <mark>FEUER</mark> beim Austritt aus dem <mark>MEGAPHON</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss bestmöglich so positioniert werden, dass er sich <mark>WÄSCHEKLAMMER UND FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.<br><br>
+
+                        <p style="color:red">BUTTER?  Bild zeigt BUTTER!!</p>
+
+                        <h3>Allgemein:</h3>
+                        Wenn sich der <mark>FEUER</mark> nach dem Auftreffen auf den <mark>FERNSEHER</mark> nicht stabil <mark>FERNSEHER</mark> entfaltet, muss geprüft werden, ob die Entfaltungssteuerung diesbezüglich optimiert werden kann. Ist dies nicht möglich müssen die in der <mark>SPEZIAL MENÜ<mark> ggf. in Abstimmung mit dem BTV erhöht werden.
+                        
+                        <style>
+                        .container_36 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_36 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_36 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_36 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_36 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_36 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_36">
+                              <div class="main-row_36">
+                                    <div class="image-columns_36">
+                                          <div class="image-block_36">
+                                                <div class="image-block-title_36">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="408" height="148" alt="3 3 5 1" src="https://github.com/user-attachments/assets/dd162272-7bc5-4250-bd27-77a989c488cb" />
+                                          </div>
+                                    
+                                          <div class="image-block_36">
+                                                <div class="image-block-title_36"> </div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
+                        `},
+                  {id:'c19', cat: 'cat4', title: 'Position 3.3.5.2 Forward Facing SID IIs on Raised Seat', excerpt:'Driver and Passenger Positions with Roof-Rail-Mounted Airbags', content:`
+                  <h3>Anwendungsbereich:</h3>
+                  Fensterairbags gemeinsam mit Seitenairbagmodul im Seitenairmodul im Sitz, dem Seitenteil oder in der Tür.
+
+                  <h3 style="color:blue">Versuchsziel:</h3>
+                  <p style="color:blue">Maximale Interaktion zwischen Airbag und Kopf/Genick durch Ausrichtung des Kopfes in die Ausschussrichtung des Fensterairbags.</p>
+
+                  <h3>Positionierung:</h3>
+                  Der Sitz muss sich in der höchsten Position befinden. Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Der Dummy muss so eingesetzt werden, dass der sich entfaltende Airbag die Mitte des Kopfes trifft. Dabei darf der Dummy nach außen geneigt werden indem das Becken nach innen verschoben wird. Der Dummy darf mit einem 25mm breiten Tape um den Hals in der Position fixiert werden.
+                  
+                  <style>
+                        .container_37 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_37 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_37 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_37 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_37 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_37 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_37">
+                              <div class="main-row_37">
+                                    <div class="image-columns_37">
+                                          <div class="image-block_37">
+                                                <div class="image-block-title_37">TWG-Abbildung</div>
+                                                <img width="405" height="153" alt="3 3 5 2" src="https://github.com/user-attachments/assets/1e5733f5-69d6-4609-8455-7d0be69753a9" />
+                                          </div>
+                                    
+                                          <div class="image-block_37">
+                                                <div class="image-block-title_37">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
+                  
+                  <h3>Besonderheiten bei der Positionierung in der 1. Sitzreihe</h3>
+                  Diese Prüfposition muss für <mark>KRUG</mark> durchgeführt werden, es sei denn die <mark>FEUER UND SCHAFE</mark> sind identisch! Der Nachweis muss im Protokoll dokumentiert werden.<br><br>
+
+                  Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der ersten <mark>FEUER</mark> beim Austritt aus dem <mark>MEGAPHON</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss durch Verfahren des <mark>SCHAFE</mark> so positioniert werden, dass er sich mittig unter der ersten Blase des <mark>FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.<br><br>
+
+                  <i>Um die maximale Belastung auf den <mark>FERNSEHER</mark> zu erzeugen, ist es wichtig, den <mark>FERNSEHER UND WÄSCHKLAMMER</mark> so zu neigen, dass die <mark>FERNSEHER</mark> in der Entfaltungsrichtung des <mark>TEICH</mark> liegt. Das wird meist nur möglich sein, wenn der <mark>FERNSEHER UND SCHAFE</mark> sitzt. Würde der <mark>FERNSEHER</mark> auf der <mark>SCHAFE</mark> sitzen, kann man ihn wegen des frühen <mark>FERNSEHER und MEGAPHON</mark> nicht weit genug seitlich neigen.</i>
+                  
+                  <style>
+                        .container_38 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_38 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_38 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_38 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_38 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_38 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_38">
+                              <div class="main-row_38">
+                                    <div class="image-columns_38">
+                                          <div class="image-block_38">
+                                                <div class="image-block-title_38">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="405" height="153" alt="3 3 5 2" src="https://github.com/user-attachments/assets/1e5733f5-69d6-4609-8455-7d0be69753a9" />
+                                          </div>
+                                    
+                                          <div class="image-block_38">
+                                                <div class="image-block-title_38"><mark>SCHAF und FERNSEHER</mark> sitzt neben hoher <mark>SCHAF</mark></div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
+                  
+                  <h3>Besonderheiten bei der Positionierung in der 2. Sitzreihe</h3>
+                  Diese Prüfposition muss für <mark>KRUG</mark> durchgeführt werden, es sei denn die <mark>FEUER UND SCHAFE</mark> sind identisch! Der Nachweis muss im Protokoll dokumentiert werden. <br><br>
+
+                  Aus den Systemstandversuchen ohne <mark>FERNSEHER</mark> muss der Bereich der ersten <mark>FEUER UND MEGAPHONE</mark> ermittelt werden. Der <mark>FERNSEHER</mark> muss bestmöglich so positioniert werden, dass er sich mittig unter der ersten <mark>FEUER</mark> befindet. Dieses Vorgehen muss detailliert beschrieben und mit den Referenzfilmen im Protokoll dokumentiert werden.<br><br>
+
+                  Wenn sich der <mark>FEUER</mark> nach dem Auftreffen auf den <mark>FERNSEHER</mark> nicht stabil vor oder hinter dem <mark>FERNSEHER</mark> entfaltet, muss geprüft werden, ob die <mark>FEUER</mark> diesbezüglich optimiert werden kann. Ist dies nicht möglich müssen die in der <mark>SPEZIAL MENÜ</mark> ggf. in Abstimmung mit dem BTV erhöht werden.
+                  
+                  <style>
+                        .container_39 {
+                                    /* Grundlegendes Layout: zwei Hauptzeilen (Dummykabel und Dummy-Tape) */
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 100px; /* Abstand zwischen den Hauptzeilen */
+                              }
+                              
+                              /* Allgemeine Klasse für die grauen Balken (Hauptzeilen) */
+                              .main-row_39 {
+                                    background-color: #e0e0e0; /* Das Hellgrau der Balken */
+                                    padding: 20px;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    gap: 20px; /* Abstand zwischen den Spalten innerhalb der Zeile */
+                                    align-items: center; /* Elemente oben ausrichten */
+                                    margin-top: 10px;
+                              }
+                              
+                              /* Die Info-Spalte (links) */
+                              .info-column_39 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    padding-right: 10px;
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    margin-left: 50px;
+                              }
+                                                         
+                              /* Die Bild-Spalten (rechts) */
+                              .image-columns_39 {
+                                    flex: 0 0 300px; /* Feste Breite für die linke Spalte */
+                                    display: flex;
+                                    margin-left: 50px;
+                                    justify-content: space-between; /* Gleichmäßigen Abstand zwischen den Bildern */
+                                    gap: 60px;
+                                    vertical-align: middle;
+                                    
+                              }
+                                    
+                              /* Definition eines einzelnen Bild-Blocks */
+                              .image-block_39 {
+                                    position: relative; 
+                                    text-align: center; /* Zentriert den Text unter dem Bild */
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1; /* Macht alle Bild-Blöcke gleich breit */
+                                    align-items: center;   
+                              }
+                              
+                              /* Die Überschrift über dem Bild */
+                              .image-block-title_39 {
+                                    font-size: 0.8em;
+                                    margin-top: -20px;
+                                    height: 30px; /* Feste Höhe für Zeilenumbrüche, damit die Bilder auf gleicher Höhe starten */
+                                    display: flex;
+                                    align-items: center; /* Vertikale Zentrierung */
+                                    text-align: center;      
+                              }
+                              
+                        </style>
+                        
+                        <div class="container_39">
+                              <div class="main-row_39">
+                                    <div class="image-columns_39">
+                                          <div class="image-block_39">
+                                                <div class="image-block-title_39">Beispiel aus aktuellem Fahrzeug</div>
+                                                <img width="405" height="153" alt="3 3 5 2" src="https://github.com/user-attachments/assets/1e5733f5-69d6-4609-8455-7d0be69753a9" />
+                                          </div>
+                                    
+                                          <div class="image-block_39">
+                                                <div class="image-block-title_39"> </div>
+                                                <img width="250" height="150" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />    
+                                                </div>
+                                          </div>
+                              </div>    
+                        </div>
                   `},
-                  ],    
+                  {id:'c20', cat: 'cat4', title: 'Position 3.3.5.3 Inboard Facing SID IIs on Raised Seat', excerpt:'Driver and Passenger Positions with Roof-Rail-Mounted Airbags', content:`
+                  <h3>Anwendungsbereich:</h3>
+                  Fensterairbags gemeinsam mit Seitenairbagmodul im Seitenairmodul im Sitz, dem Seitenteil oder in der Tür.
+
+                  <h3 style="color:blue">Versuchsziel:</h3>
+                  <p style="color:blue">Minimale Interaktion zwischen Airbag und Kopf/Genick durch Ausrichtung des Kopfes weg in die Ausschussrichtung des Fensterairbags.</p>
+
+                  <h3>Positionierung:</h3>
+                  Der Sitz muss sich in der höchsten Position befinden. Der Dummy wird gemäß Vorgaben der TWG eingesetzt. Der Dummy muss so eingesetzt werden, dass der minimale Abstand zwischen Kopf und Fensterairbag und die maximale Interaktion des Kopfes mit dem Bag erreicht wird und der Kopfschwerpunkt sich in der Ausschussrichtung des Airbags befindet. Der Dummy darf mit einem 25mm breiten Tape um den Hals in der Position fixiert werden.
+                  `},
+            ],    
                 faq: [
                   {q:'Wie benutze ich die App?', a:'Wähle auf der Startseite eine Kategorie und dann ein Kapitel.'},
                   {q:'Wo werden Daten gespeichert?', a:'Aktuell lokal im Browser (keine Server).'}
