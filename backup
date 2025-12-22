@@ -29,10 +29,10 @@
 </head>
 <body>
       <header>
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
-            <rect width="24" height="24" rx="6" fill="#0b74de" />
-            <text x="12" y="16" font-size="11" fill="white" text-anchor="middle" font-family="Arial">W</text>
-            </svg>
+            <div class="header-logo-container" style="display: flex; align-items: center; gap: 10px;">
+            <img width="111" height="43" alt="Logo" src="https://github.com/user-attachments/assets/266fcb2c-04fc-4804-a779-f711d225f011" />
+            </div>
+
             <h1>Einsetzprozedur gemäß TWG – empfohlene Vorgehensweise</h1>
             <nav style="margin-left:auto">
                   <a href="#" onclick="goTo('home');return false">Start</a> ·
@@ -48,7 +48,7 @@
 
 <script>
       // -----------------------------
-      // DATEN: hier pflegst du Kapitel/Kategorien
+      // DATEN: hier pflegst du Kapitelorien
       // -----------------------------
       const DATA = {
             categories: [
@@ -5144,7 +5144,8 @@
             ],    
                 faq: [
                   {q:'Wie benutze ich die App?', a:'Wähle auf der Startseite eine Kategorie und dann ein Kapitel.'},
-                  {q:'Wo werden Daten gespeichert?', a:'Aktuell lokal im Browser (keine Server).'}
+                  {q:'Wo werden Daten gespeichert?', a:'Aktuell lokal im Browser (keine Server).'},
+                  {q:'Wird die TWG für die 2. Sitzreihe benötigt?', a:'Ja, die TWG ist erforderlich für die 2. Sitzreihe.'}
             ]
       };
 
@@ -5167,7 +5168,7 @@
                   <div class="grid home-grid">
                         <div class="card">
                               <h2>Willkommen <mark> /USER </mark> </h2>            
-                              <p class="meta">Wähle zuerst eine Kategorie, dann das Kapitel.</p>
+                              <p class="meta">Wähle zuerst eine Kategorie, dann das Kapitel. <br> Nähere Informationen findest du in der Info-Seite.</p>
 
                               <div style="margin-top:12px;" class="search">
                                     <input id="q" placeholder="Suchen... (z.B. Kapitelname)" />
