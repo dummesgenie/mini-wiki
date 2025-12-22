@@ -1,1 +1,58 @@
+Idee/Brainstorming:
 
+	• Datenbank/Wiki
+	• Startseite >> Personalisiert >> Verknüpfung mit USERID
+	• Checkliste zur Einsetzprozedur
+	• Checkliste zu gängigen Fehlern
+	• Links zu Diagrammen und Bildern Tabellen
+	• FAQs >>Zitate der TWG und Querverweis >> als Liste
+	• Direkte Doku von Abweichungen in App >> Foto/Video und Notizen
+	• Direkte Vergleichsmethoden und -möglichkeiten zu anderen bereits geschossenen BR
+	• Zugriff auf alle Versuche >> online und offline Funktion
+	• Definition von offline und online Inhalten
+	• Suchfunktion >> Volltextsuche 
+	• Vor- und zurück Button
+	• Pop-Up Funktionen
+	• Sprechfunktionen
+	• Verlinkung Fachbegriffe, z.B. Frontalebene
+	• Integration Inhalte FuVo
+	• Favoriten anlegen/markieren/häufig benutzt
+-TWG Tabelle und Übersicht
+
+Datenbank Möglichkeiten
+	• Mutmaßlich statisch
+	• Mutmaßlich offline
+	• Mutmaßlich nur die Inhalte aus L
+	• Mutmaßlich nur die TWG
+	• Implementierung durch JSON-Datei oder 
+	• Implementierung durch SQLite oder
+	• Implementierung durch HTML Datenbanken
+
+Aufbau APP
+	• Authentifizierung Ping ID/Face ID
+	• Startseite
+		○ Begrüßung des USERS
+		○ Kurze Info der App
+		○ 3 Kategorien als Button
+		○ Suchfunktion
+		○ Verlinkung zu FAQ
+	• Anleitung/Handlungsempfehlung der APP
+	• Allgemeine Themen
+	• Gliederung der Kategorien
+	• Untergliederung der Kapitel
+		○ Button zur Startseite
+		○ Button für Suchfunktion
+		○ Einbettung von Diagrammen
+		○ Einbettung von Bildern
+		○ Einbettung von Tabellen
+		○ Einbettung von Videos
+	• FAQ
+	• Versteckte Admin Funktion
+		○ Authentifizierung
+		○ Synchronisierung/Speichern?
+	• Weitere Funktionen
+		○ Automatische Updates bei Verbindung mit dem Netzwerk ggf. Abfrage: "Gibt es neue Inhalte?" -> Ja? -> Download -> User informieren
+		○ Feedback geben
+
+Feedback 
+Zu Formatierungsfehlern, Leerzeichen, Rechtschreibfehler etc.
