@@ -2,7 +2,23 @@
 // -----------------------------
 // Einfacher Router / Renderer
 // -----------------------------
+
+
+// -----------------------------
+document: Das ist das gesamte Browser-Fenster bzw. die geladene Webseite.
+
+getElementById('app'): Diese Funktion durchsucht dein HTML-Dokument nach einem Element, das die ID app hat.
+
+const app = ...: Das Ergebnis (also das gefundene Element) wird in der Variable namens app gespeichert.
+// -----------------------------
       const app = document.getElementById('app');
+
+
+// -----------------------------
+zentrale Steuerung für die Navigation innerhalb der App
+Je nachdem, welcher Seitenname (page) übergeben wird
+payload liefert dabei zusätzliche Informationen, wie zum Beispiel die ID eines spezifischen Kapitels oder einer Kategorie
+// -----------------------------
 
       function goTo(page, payload){
             if(page === 'home') renderHome();
