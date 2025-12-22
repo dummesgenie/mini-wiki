@@ -28,6 +28,12 @@ payload liefert dabei zusätzliche Informationen, wie zum Beispiel die ID eines 
             if(page === 'category') renderCategory(payload);
       }
 
+// -----------------------------
+Grundgerüst der Startseite, indem sie den HTML-Inhalt des app-Containers mit einer neuen Struktur überschreibt. 
+Layout mit Willkommenstext, Suchfeld, Platzhaltern für Kategorien sowie einer Seitenleiste für Quick-Links und 
+eine Kapitelvorschau. 
+Buttons mit onclick-Ereignissen verknüpft, um die Navigation zu anderen Bereichen der App
+// -----------------------------
       // Start: Home
       function renderHome(){
             app.innerHTML = `
@@ -63,6 +69,12 @@ payload liefert dabei zusätzliche Informationen, wie zum Beispiel die ID eines 
                   </div>
             `;
             
+            // -----------------------------
+            identifiziert den Container für die Kategorienliste und durchläuft alle in den Daten hinterlegten Kategorien
+            für jeden Eintrag wird dynamisch ein Button erstellt
+            Anklicken eines Buttons wird die goTo-Funktion aufgerufen
+            // -----------------------------
+
             /*durchläuft jede Kategorie in Ihren Daten und erstellt für jede einen Button in der Seitenleiste, Startseite?*/
             const cl = document.getElementById('category-list');
             DATA.categories.forEach(cat=>{
@@ -72,6 +84,13 @@ payload liefert dabei zusätzliche Informationen, wie zum Beispiel die ID eines 
                   cl.appendChild(btn);
             });
 
+            // -----------------------------
+            wählt die ersten fünf Kapitel aus dem Datensatz aus und erstellt für jedes einen interaktiven Listeneintrag 
+            dem Container für die Kapitelvorschau hinzugefügt und 
+            Durch die slice(0,5)-Methode wird sichergestellt, dass die Ansicht kompakt bleibt und 
+            nur eine Auswahl der neuesten oder wichtigsten Inhalte
+            // -----------------------------
+
             /*ersten fünf Kapitel erscheinen als klickbare Liste auf der Webseite.*/
             const cp = document.getElementById('chap-preview');
             DATA.chapters.slice(0,5).forEach(ch=>{
@@ -80,14 +99,30 @@ payload liefert dabei zusätzliche Informationen, wie zum Beispiel die ID eines 
                   cp.appendChild(el);
             });
 
+            // -----------------------------
+            lädt eine Liste der zuletzt besuchten Kapitel-IDs aus dem localStorage des Browsers, um sie dauerhaft zu speichern
+            wandelt die IDs in die entsprechenden Kapiteltitel um und zeigt diese kommagetrennt
+            Falls noch keine Kapitel angesehen wurden, wird stattdessen der Hinweistext „— noch nichts“ ausgegeben.
+            // -----------------------------
+
             // show recent from localStorage zuletzt angesehene Kapitel
             const recent = JSON.parse(localStorage.getItem('recent')||'[]');
             document.getElementById('recent').textContent = recent.length? recent.map(id=>DATA.chapters.find(c=>c.id===id)?.title||id).join(', '): '— noch nichts';
 
+            // -----------------------------
+            fügt dem Suchfeld einen "Zuhörer" hinzu, der auf Tastatureingaben reagiert
+            Enter-Taste drückt, wird automatisch die Suchfunktion (search()) ausgelöst
+            // -----------------------------
             // wire search enter Suchfunktion
             const q = document.getElementById('q'); q.addEventListener('keydown', (e)=>{ if(e.key==='Enter') search(); });
       }
 
+
+      // -----------------------------
+      sucht die gewählte Kategorie und alle zugehörigen Kapitel aus den Daten heraus
+      entsprechende Übersicht anzuzeigen
+      ein leerer Container vorbereitet, in den die Liste der Kapitel anschließend dynamisch eingefügt
+      // -----------------------------
       //Kategorie-Ansicht in Ihrer Anwendung dar, indem er alle Kapitel auflistet, die zu einer bestimmten Kategorie gehören
       function renderCategory(catId){
             const cat = DATA.categories.find(c=>c.id===catId);
@@ -100,6 +135,12 @@ payload liefert dabei zusätzliche Informationen, wie zum Beispiel die ID eines 
                         <div class="chapter-list" id="chap-list"></div>
                   </div>
             `;
+
+            // -----------------------------
+            durchläuft alle Kapitel einer gewählten Kategorie und erstellt für jedes einen interaktiven Listeneintrag
+            werden dem Container hinzugefügt - bei einem Klick die Navigation 
+            übersichtliche, dynamisch generierte Liste aller Themenbereiche innerhalb einer Kategorie
+            // -----------------------------
             //durchläuft der Code die gefilterten Kapitel (chapters.forEach). Für jedes Kapitel erstellt er ein klickbares Element (el)
             const list = document.getElementById('chap-list');
             chapters.forEach(ch=>{
@@ -109,6 +150,14 @@ payload liefert dabei zusätzliche Informationen, wie zum Beispiel die ID eines 
             });
       }
 
+
+      // -----------------------------
+      zeigt den vollständigen Inhalt eines ausgewählten Kapitels an
+      aktualisiert gleichzeitig die Liste der „zuletzt angesehenen“ Kapitel im localStorage
+      aktuelle Kapitel-ID an den Anfang der Liste gesetzt, Duplikate werden entfernt
+      die Liste wird auf maximal sechs Einträge begrenzt 
+      Zurück-Link, dem Titel, der Kategorie und dem eigentlichen Kapiteltext generiert
+      // -----------------------------
       //Kapitel-Detailansicht und verwaltet gleichzeitig den Verlauf der zuletzt angesehenen Kapitel.
       function renderChapter(chId){
             const ch = DATA.chapters.find(c=>c.id===chId);
@@ -127,7 +176,11 @@ payload liefert dabei zusätzliche Informationen, wie zum Beispiel die ID eines 
                   </div>
             `;
       }
+      
 
+      // -----------------------------
+      Info
+      // -----------------------------
       function renderInfo(){
             app.innerHTML = `
                   <div class="card">
@@ -144,6 +197,12 @@ payload liefert dabei zusätzliche Informationen, wie zum Beispiel die ID eines 
             `;
       }
 
+
+      // -----------------------------
+      erstellt die FAQ-Seite, indem sie zuerst ein Grundgerüst mit einem Zurück-Link und dem Titel „FAQ“ in den Hauptcontainer
+      durchläuft sie alle gespeicherten Fragen und Antworten und fügt diese als formatierte Textblöcke dynamisch in die Liste ein
+      alle häufig gestellten Fragen übersichtlich untereinander dargestellt.
+      // -----------------------------
       function renderFAQ(){
             app.innerHTML = `
                   <div class="card">
@@ -158,6 +217,12 @@ payload liefert dabei zusätzliche Informationen, wie zum Beispiel die ID eines 
             });
       }
 
+
+      // -----------------------------
+      implementiert die Suchlogik, eingegebenen Suchbegriff mit Titeln, Kurzbeschreibungen und Inhalten aller Kapitel abgleicht
+      leeren Suchfeldern wird die Startseite angezeigt, ansonsten werden die gefundenen Treffer („hits“) ermittelt. 
+      Layout generiert, das den Suchbegriff anzeigt und einen Container für die Suchergebnisse bereitstellt.
+      // -----------------------------
       function search(){
             const q = document.getElementById('q').value.trim().toLowerCase();
             if(!q) return renderHome();
