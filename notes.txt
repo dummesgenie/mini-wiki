@@ -14,7 +14,7 @@ Idee/Brainstorming:
 -Vor- und zurück Button
 -Pop-Up Funktionen
 -Sprechfunktionen
--Verlinkung Fachbegriffe, z.B. Frontalebene
+-Verlinkung Fachbegriffe und Positionen, z.B. Frontalebene
 -Integration Inhalte FuVo
 -Favoriten anlegen/markieren/häufig benutzt
 -TWG Tabelle und Übersicht
@@ -56,3 +56,9 @@ Aufbau APP
 
 Feedback 
 Zu Formatierungsfehlern, Leerzeichen, Rechtschreibfehler etc.
+Feedback zur Suchfunktion
+Feedback zu Quicklinks? Notwendig?
+Feedback zu Vor und Zurück Button?
+Feeback zu Buttons generell, Funktion und Darstellung
+Feedback zu Verlinkungen 
+

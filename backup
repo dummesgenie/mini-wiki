@@ -5226,6 +5226,7 @@
       function renderCategory(catId){
             const cat = DATA.categories.find(c=>c.id===catId);
             const chapters = DATA.chapters.filter(ch=>ch.cat===catId);
+            /*
             app.innerHTML = `
                   <div class="card">
                         <a href="#" onclick="goTo('home');return false">← Zurück</a>
@@ -5233,7 +5234,22 @@
                         <p class="meta">${chapters.length} Kapitel</p>
                         <div class="chapter-list" id="chap-list"></div>
                   </div>
+            `;*/
+
+            app.innerHTML = `
+            <div class="card">
+                  <!-- Hier wurde "Zurück" durch "Start" ersetzt -->
+                  <a href="#" onclick="goTo('home');return false" style="text-decoration: none; color: #1d4ed8; font-weight: 500;">← Start</a>
+                  
+                  <h2 style="margin-top: 15px;">${cat.title}</h2>
+                  <p class="meta" style="color: #666; margin-bottom: 20px;">${chapters.length} Kapitel in dieser Kategorie</p>
+                  
+                  <div class="chapter-list" id="chap-list">
+                  <!-- Hier werden die Kapitel-Links eingefügt -->
+                  </div>
+            </div>
             `;
+      
             //durchläuft der Code die gefilterten Kapitel (chapters.forEach). Für jedes Kapitel erstellt er ein klickbares Element (el)
             const list = document.getElementById('chap-list');
             chapters.forEach(ch=>{

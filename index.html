@@ -5226,6 +5226,7 @@
       function renderCategory(catId){
             const cat = DATA.categories.find(c=>c.id===catId);
             const chapters = DATA.chapters.filter(ch=>ch.cat===catId);
+            /*
             app.innerHTML = `
                   <div class="card">
                         <a href="#" onclick="goTo('home');return false">← Zurück</a>
@@ -5233,7 +5234,22 @@
                         <p class="meta">${chapters.length} Kapitel</p>
                         <div class="chapter-list" id="chap-list"></div>
                   </div>
+            `;*/
+
+            app.innerHTML = `
+            <div class="card">
+                  <!-- Hier wurde "Zurück" durch "Start" ersetzt -->
+                  <a href="#" onclick="goTo('home');return false" style="text-decoration: none; color: #1d4ed8; font-weight: 500;">← Start</a>
+                  
+                  <h2 style="margin-top: 15px;">${cat.title}</h2>
+                  <p class="meta" style="color: #666; margin-bottom: 20px;">${chapters.length} Kapitel in dieser Kategorie</p>
+                  
+                  <div class="chapter-list" id="chap-list">
+                  <!-- Hier werden die Kapitel-Links eingefügt -->
+                  </div>
+            </div>
             `;
+      
             //durchläuft der Code die gefilterten Kapitel (chapters.forEach). Für jedes Kapitel erstellt er ein klickbares Element (el)
             const list = document.getElementById('chap-list');
             chapters.forEach(ch=>{
@@ -5245,7 +5261,7 @@
 
       //Kapitel-Detailansicht und verwaltet gleichzeitig den Verlauf der zuletzt angesehenen Kapitel.
       function renderChapter(chId){
-            const ch = DATA.chapters.find(c=>c.id===chId);
+            /*const ch = DATA.chapters.find(c=>c.id===chId);
             if(!ch){ app.innerHTML='<div class="card">Kapitel nicht gefunden</div>'; return }
             // save recent
             let recent = JSON.parse(localStorage.getItem('recent')||'[]');
@@ -5259,8 +5275,87 @@
                         <div class="meta">Kategorie: ${DATA.categories.find(c=>c.id===ch.cat)?.title||'-'}</div>
                         <div style="margin-top:14px">${ch.content}</div>
                   </div>
+            `;}*/
+            const cat = DATA.categories.find(c => c.id === catId);
+            const chapters = DATA.chapters.filter(ch => ch.cat === catId);
+
+            if (!cat) {
+                  app.innerHTML = '<div class="card">Kategorie nicht gefunden</div>';
+                  return;
+            }
+
+            app.innerHTML = `
+                  <div class="card">
+                        <a href="#" onclick="goTo('home');return false" style="text-decoration: none; color: #1d4ed8; font-weight: 500;">← Start</a>
+                        
+                        <h2 style="margin-top: 15px;">${cat.title}</h2>
+                        <p class="meta" style="color: #666; margin-bottom: 20px;">${chapters.length} Kapitel in dieser Kategorie</p>
+                        
+                        <div class="chapter-list" id="chap-list">
+                        <!-- Hier werden die Kapitel-Links eingefügt -->
+                        </div>
+                  </div>
             `;
-      }
+
+            const cl = document.getElementById('chap-list');
+            chapters.forEach(ch => {
+                  const div = document.createElement('div');
+                  div.className = 'chapter-item';
+                  div.style.padding = '10px 0';
+                  div.style.borderBottom = '1px solid #eee';
+                  div.style.cursor = 'pointer';
+                  div.innerHTML = `<strong>${ch.title}</strong>`;
+                  div.onclick = () => goTo('chapter', ch.id);
+                  cl.appendChild(div);
+            });
+            }
+
+            // Kapitel-Detailansicht mit Vor-, Zurück- und Start-Navigation
+            function renderChapter(chId) {
+            const ch = DATA.chapters.find(c => c.id === chId);
+            if (!ch) {
+                  app.innerHTML = '<div class="card">Kapitel nicht gefunden</div>';
+                  return;
+            }
+
+            // Verlauf speichern (Recent Chapters)
+            let recent = JSON.parse(localStorage.getItem('recent') || '[]');
+            recent = [chId, ...recent.filter(x => x !== chId)].slice(0, 6);
+            localStorage.setItem('recent', JSON.stringify(recent));
+
+            // Navigation berechnen (ID-basiert)
+            const prevId = chId > 1 ? chId - 1 : null;
+            const nextId = chId < DATA.chapters.length ? chId + 1 : null;
+
+            app.innerHTML = `
+                  <div class="card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <!-- Oben Links: Zurück (ID - 1) -->
+                        <div style="width: 80px;">
+                              ${prevId ? `<a href="#" onclick="goTo('chapter', ${prevId});return false" style="text-decoration: none; color: #1d4ed8;">← Zurück</a>` : ''}
+                        </div>
+
+                        <!-- Oben Mitte: Startseite -->
+                        <div style="text-align: center;">
+                              <a href="#" onclick="goTo('home');return false" style="text-decoration: none; background: #f0f4ff; padding: 5px 15px; border-radius: 20px; color: #1d4ed8; font-weight: 500;">Startseite</a>
+                        </div>
+
+                        <!-- Oben Rechts: Weiter (ID + 1) -->
+                        <div style="width: 80px; text-align: right;">
+                              ${nextId ? `<a href="#" onclick="goTo('chapter', ${nextId});return false" style="text-decoration: none; color: #1d4ed8;">Weiter →</a>` : ''}
+                        </div>
+                        </div>
+
+                        <h2 style="margin-top: 10px;">${ch.title}</h2>
+                        <div class="meta" style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">
+                        Kategorie: ${DATA.categories.find(c => c.id === ch.cat)?.title || '-'}
+                        </div>
+                        <div class="content" style="line-height: 1.6; color: #333;">
+                        ${ch.content}
+                        </div>
+                  </div>
+            `;
+            }
 
       function renderInfo(){
             app.innerHTML = `
