@@ -5260,7 +5260,7 @@
       }
 
       //Kapitel-Detailansicht und verwaltet gleichzeitig den Verlauf der zuletzt angesehenen Kapitel.
-      function renderChapter(chId){
+      /*function renderChapter(chId){
             const ch = DATA.chapters.find(c=>c.id===chId);
             if(!ch){ app.innerHTML='<div class="card">Kapitel nicht gefunden</div>'; return }
             // save recent
@@ -5275,8 +5275,57 @@
                         <div class="meta">Kategorie: ${DATA.categories.find(c=>c.id===ch.cat)?.title||'-'}</div>
                         <div style="margin-top:14px">${ch.content}</div>
                   </div>
-            `;
-      }
+            `;}*/
+
+            function renderChapter(chId){
+                  const ch = DATA.chapters.find(c => c.id === chId);
+                  if(!ch){
+                  app.innerHTML = '<div class="card">Kapitel nicht gefunden</div>';
+                  return;
+                  }
+
+                  // 🔹 alle Kapitel derselben Kategorie
+                  const catChapters = DATA.chapters.filter(c => c.cat === ch.cat);
+
+                  // 🔹 Position innerhalb der Kategorie
+                  const index = catChapters.findIndex(c => c.id === chId);
+
+                  const prev = catChapters[index - 1];
+                  const next = catChapters[index + 1];
+
+                  app.innerHTML = `
+                  <div class="card">
+
+                        <div style="display:flex;justify-content:space-between;margin-bottom:14px">
+
+                        <div>
+                        ${prev ? `<a href="#" onclick="goTo('chapter','${prev.id}');return false">← Zurück</a>` : ``}
+                        </div>
+
+                        <div>
+                        <a href="#" onclick="goTo('home');return false">Startseite</a>
+                        </div>
+
+                        <div>
+                        ${next ? `<a href="#" onclick="goTo('chapter','${next.id}');return false">Weiter →</a>` : ``}
+                        </div>
+
+                        </div>
+
+                        <h2>${ch.title}</h2>
+                        <div class="meta">
+                        Kategorie: ${DATA.categories.find(c=>c.id===ch.cat)?.title || '-'}
+                        </div>
+
+                        <div style="margin-top:14px">
+                        ${ch.content}
+                        </div>
+
+                  </div>
+                  `;
+                  }
+
+
 
       function renderInfo(){
             app.innerHTML = `
