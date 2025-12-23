@@ -16,6 +16,7 @@ Idee/Brainstorming:
 -Sprechfunktionen
 -Verlinkung Fachbegriffe und Positionen, z.B. Frontalebene
 -Integration Inhalte FuVo
+-Integration TWG ENG/DT >>erledigt
 -Favoriten anlegen/markieren/häufig benutzt
 -TWG Tabelle und Übersicht
 
@@ -63,4 +64,5 @@ Feedback zu Vor und Zurück Button?
 Feeback zu Buttons generell, Funktion und Darstellung
 Feedback zu Verlinkungen 
 Feedback zu FAQ >> Fragen sammeln
-Welche Diagramme und Reports machen sinn?
+Welche Diagramme und Reports machen Sinn?
+gibt es Redundanzen?
