@@ -34,7 +34,7 @@ Aufbau APP
 		○ Begrüßung des USERS >>erledigt
 		○ Kurze Info der App >>erledigt
 		○ 3 Kategorien als Button >>erledigt
-		○ Suchfunktion
+		○ Suchfunktion >> erledigt
 		○ Verlinkung zu FAQ >>erledigt
 - Anleitung/Handlungsempfehlung der APP >>erledigt
 - Allgemeine Themen >>erledigt
@@ -46,6 +46,7 @@ Aufbau APP
 		○ Einbettung von Bildern
 		○ Einbettung von Tabellen
 		○ Einbettung von Videos
+- Favoriten Funktion
 - FAQ
 - Versteckte Admin Funktion
 		○ Authentifizierung
@@ -62,3 +63,4 @@ Feedback zu Vor und Zurück Button?
 Feeback zu Buttons generell, Funktion und Darstellung
 Feedback zu Verlinkungen 
 Feedback zu FAQ >> Fragen sammeln
+Welche Diagramme und Reports machen sinn?
