@@ -43,7 +43,7 @@
 
 <main class="container">
       <div id="app"></div>
-      <footer class="meta">Diese Demo speichert Daten lokal im Browser (kein Server). Weiterentwicklung läuft! Bitte Feedback abgeben. </footer>
+      <footer class="meta">Dieses Demo speichert keine Daten. Noch nicht für mobile Endgeräte konzipiert. Weiterentwicklung läuft! Bitte Feedback an Thuy RD/KSR abgeben.</footer>
 </main>
 
 <script>
@@ -57,7 +57,7 @@
                   { id: 'cat3', title: 'Tür- oder Seitenteilintegrierte Seitenairbags'},
                   { id: 'cat4', title: 'Fensterairbag'},
                   { id: 'cat5', title: 'Empfohlene Kamerapositionen' },
-                  {id:'cat6', title: 'TWG Originaldokumente' }
+                  { id:'cat6', title: 'TWG Originaldokumente' }
       ],
             chapters: [
                   {id: 'c0', cat: 'cat1', title: 'Versuchsdurchführung', excerpt: ' ', 
@@ -5142,9 +5142,16 @@
                               </div>
                         </div>
             `}     
-                  ,{id: 'c_pdf', cat: 'cat6', title: 'TWG – Englisch',  excerpt: ' ',  content: `
+                  ,{id: 'c_pdf_1', cat: 'cat6', title: 'TWG – Englisch',  excerpt: ' ',  content: `
                   <iframe
                         src="TWG_ENG.pdf"
+                        style="width:100%; height:80vh; border:1px solid #ccc; border-radius:8px;"
+                  ></iframe>
+                  `
+                  },
+                  {id: 'c_pdf_2', cat: 'cat6', title: 'TWG – Deutsch',  excerpt: ' ',  content: `
+                  <iframe
+                        src="TWG_DT.pdf"
                         style="width:100%; height:80vh; border:1px solid #ccc; border-radius:8px;"
                   ></iframe>
                   `
@@ -5166,6 +5173,7 @@
       function goTo(page, payload){
             if(page === 'home') renderHome();
             if(page === 'info') renderInfo();
+            if (page === 'overview') renderOverview();
             if(page === 'faq') renderFAQ();
             if(page === 'chapter') renderChapter(payload);
             if(page === 'category') renderCategory(payload);
@@ -5194,12 +5202,12 @@
                         <aside>
                               <div class="card">
                                     <h3>Quick‑Links</h3>
-                                    <div class="meta">Schnellzugriff auf Info & FAQ</div>
-                                    <div style="margin-top:12px"><button onclick="goTo('info')">Info</button> <button onclick="goTo('faq')">FAQ</button></div>
+                                    <div class="meta">Schnellzugriff auf Info, Übersicht & FAQ</div>
+                                    <div style="margin-top:12px"><button onclick="goTo('info')">Info</button> <button onclick="goTo('overview')">Übersicht</button></div> <button onclick="goTo('faq')">FAQ</button></div>
                               </div>
 
                               <div class="card" style="margin-top:12px">
-                                    <h3>Kurze Kapitelübersicht</h3>
+                                    <h3>Kurze Kapitelübersicht!!!!!!!!!!!</h3>
                                     <div id="chap-preview" class="chapter-list"></div>
                               </div>
                         </aside>
@@ -5215,7 +5223,7 @@
                   cl.appendChild(btn);
             });
 
-            /*ersten fünf Kapitel erscheinen als klickbare Liste auf der Webseite.*/
+            /*ersten fünf Kapitel erscheinen als klickbare Liste auf der Webseite.!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
             const cp = document.getElementById('chap-preview');
             DATA.chapters.slice(0,5).forEach(ch=>{
                   const el = document.createElement('div'); el.className='chapter-item'; el.textContent = ch.title + ' — ' + ch.excerpt;
@@ -5269,23 +5277,6 @@
       }
 
       //Kapitel-Detailansicht und verwaltet gleichzeitig den Verlauf der zuletzt angesehenen Kapitel.
-      /*function renderChapter(chId){
-            const ch = DATA.chapters.find(c=>c.id===chId);
-            if(!ch){ app.innerHTML='<div class="card">Kapitel nicht gefunden</div>'; return }
-            // save recent
-            let recent = JSON.parse(localStorage.getItem('recent')||'[]');
-            recent = [chId, ...recent.filter(x=>x!==chId)].slice(0,6);
-            localStorage.setItem('recent', JSON.stringify(recent));
-
-            app.innerHTML = `
-                  <div class="card">
-                        <a href="#" onclick="goTo('home');return false">← Start</a>
-                        <h2>${ch.title}</h2>
-                        <div class="meta">Kategorie: ${DATA.categories.find(c=>c.id===ch.cat)?.title||'-'}</div>
-                        <div style="margin-top:14px">${ch.content}</div>
-                  </div>
-            `;}*/
-
             function renderChapter(chId){
                   const ch = DATA.chapters.find(c => c.id === chId);
                   if(!ch){
@@ -5338,7 +5329,7 @@
       function renderInfo(){
             app.innerHTML = `
                   <div class="card">
-                        <a href="#" onclick="goTo('home');return false">← Zurück</a>
+                        <a href="#" onclick="goTo('home');return false">← Start</a>
                         <h2>Info — Was kann die App?</h2>
                         <p>
                         <h3>Vorwort </h3>
@@ -5351,10 +5342,26 @@
             `;
       }
 
+      function renderOverview(){
+            app.innerHTML = `
+                  
+                  <div class="card">
+                        <a href="#" onclick="goTo('home');return false">← Start</a>
+                        <div class="image-block-53">
+                        <img width="1741" height="1014" alt="overview" src="https://github.com/user-attachments/assets/1c0b9f49-9b66-45d8-b0ed-2dfafbbfbc2b" />
+                        </div>
+                        <iframe
+                        src="TWG_ Overview.pdf"
+                        style="width:100%; height:80vh; border:1px solid #ccc; border-radius:8px;"
+                  ></iframe>
+                  </div>
+            `;
+      }
+
       function renderFAQ(){
             app.innerHTML = `
                   <div class="card">
-                        <a href="#" onclick="goTo('home');return false">← Zurück</a>
+                        <a href="#" onclick="goTo('home');return false">← Start</a>
                         <h2>FAQ</h2>
                         <div id="faq-list"></div>
                   </div>

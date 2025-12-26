@@ -57,7 +57,7 @@
                   { id: 'cat3', title: 'Tür- oder Seitenteilintegrierte Seitenairbags'},
                   { id: 'cat4', title: 'Fensterairbag'},
                   { id: 'cat5', title: 'Empfohlene Kamerapositionen' },
-                  {id:'cat6', title: 'TWG Originaldokumente' }
+                  { id:'cat6', title: 'TWG Originaldokumente' }
       ],
             chapters: [
                   {id: 'c0', cat: 'cat1', title: 'Versuchsdurchführung', excerpt: ' ', 
@@ -5343,15 +5343,13 @@
       }
 
       function renderOverview(){
-            <div class="container_55">
-                  <div class="image-image-block_55">
-                        <img width="1741" height="1014" alt="overview" src="https://github.com/user-attachments/assets/1c0b9f49-9b66-45d8-b0ed-2dfafbbfbc2b" />          
-                  </div>
-            </div>
-            
             app.innerHTML = `
+                  
                   <div class="card">
                         <a href="#" onclick="goTo('home');return false">← Start</a>
+                        <div class="image-block-53">
+                        <img width="1741" height="1014" alt="overview" src="https://github.com/user-attachments/assets/1c0b9f49-9b66-45d8-b0ed-2dfafbbfbc2b" />
+                        </div>
                         <iframe
                         src="TWG_ Overview.pdf"
                         style="width:100%; height:80vh; border:1px solid #ccc; border-radius:8px;"
