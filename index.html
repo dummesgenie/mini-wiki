@@ -25,6 +25,9 @@
             .diagram{border-radius:8px;padding:12px;border:1px dashed #e6eefc;background:#fbfdff}
             footer{margin:26px 0;color:var(--muted);font-size:13px;text-align:center}
             @media (max-width:880px){.home-grid{grid-template-columns:1fr} .container{padding:12px}}
+            .nav-row{display:flex; justify-content:space-between;align-items:center;margin-bottom:10px;}
+            .fav-list{list-style:none; padding-left:0;}
+            .fav-list li{margin:6px 0;}
       </style>
 </head>
 <body>
@@ -5181,6 +5184,7 @@
 
       // Start: Home
       function renderHome(){
+            
             app.innerHTML = `
                   <div class="grid home-grid">
                         <div class="card">
@@ -5206,13 +5210,16 @@
                                     <div style="margin-top:12px"><button onclick="goTo('info')">Info</button> <button onclick="goTo('overview')">Übersicht</button></div> <button onclick="goTo('faq')">FAQ</button></div>
                               </div>
 
+                              
                               <div class="card" style="margin-top:12px">
-                                    <h3>Kurze Kapitelübersicht!!!!!!!!!!!</h3>
+                                    <h3>Favoriten</h3>
                                     <div id="chap-preview" class="chapter-list"></div>
                               </div>
                         </aside>
                   </div>
             `;
+            
+                        
             
             /*durchläuft jede Kategorie in Ihren Daten und erstellt für jede einen Button in der Seitenleiste, Startseite?*/
             const cl = document.getElementById('category-list');
@@ -5224,12 +5231,12 @@
             });
 
             /*ersten fünf Kapitel erscheinen als klickbare Liste auf der Webseite.!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-            const cp = document.getElementById('chap-preview');
+            /*const cp = document.getElementById('chap-preview');
             DATA.chapters.slice(0,5).forEach(ch=>{
                   const el = document.createElement('div'); el.className='chapter-item'; el.textContent = ch.title + ' — ' + ch.excerpt;
                   el.onclick = ()=> goTo('chapter', ch.id);
                   cp.appendChild(el);
-            });
+            });*/
 
             // show recent from localStorage zuletzt angesehene Kapitel
             const recent = JSON.parse(localStorage.getItem('recent')||'[]');
@@ -5237,7 +5244,30 @@
 
             // wire search enter Suchfunktion
             const q = document.getElementById('q'); q.addEventListener('keydown', (e)=>{ if(e.key==='Enter') search(); });
+      
+            rightColumn.innerHTML = renderFavorites();
+
       }
+
+      function renderFavorites(){
+            const fav = JSON.parse(localStorage.getItem('favorites') || '[]');
+            if(fav.length === 0){
+                  return `<div class="card">Keine Favoriten</div>`;
+            }
+
+            return `
+            <div class="card">
+                  <h3>⭐ Favoriten</h3>
+                  <ul class="fav-list">
+                        ${fav.map(id=>{
+                        const ch = DATA.chapters.find(c=>c.id===id);
+                        if(!ch) return '';
+                        return `<li><a href="#" onclick="goToChapter(${id});return false">${ch.title}</a></li>`;
+                        }).join('')}
+                  </ul>
+            </div>`;
+            }
+
 
       //Kategorie-Ansicht in Ihrer Anwendung dar, indem er alle Kapitel auflistet, die zu einer bestimmten Kategorie gehören
       function renderCategory(catId){
@@ -5275,6 +5305,26 @@
                   list.appendChild(el);
             });
       }
+      
+      //neu - Favoritenfunktion
+      function toggleFavorite(chId){
+            let fav = JSON.parse(localStorage.getItem('favorites') || '[]');
+
+            if(fav.includes(chId)){
+                  fav = fav.filter(id => id !== chId);
+            } else {
+                  fav.push(chId);
+            }
+
+            localStorage.setItem('favorites', JSON.stringify(fav));
+            renderChapter(chId); // UI aktualisieren
+            }
+
+            function isFavorite(chId){
+            const fav = JSON.parse(localStorage.getItem('favorites') || '[]');
+            return fav.includes(chId);
+            }
+
 
       //Kapitel-Detailansicht und verwaltet gleichzeitig den Verlauf der zuletzt angesehenen Kapitel.
             function renderChapter(chId){
@@ -5322,7 +5372,36 @@
                         </div>
 
                   </div>
-                  `;                 }
+                  `;
+            const favActive = isFavorite(ch.id);
+
+                  app.innerHTML = `
+                  <div class="card">
+                  <div class="nav-row">
+                        ${ch.id > 1 ? `<button onclick="goToChapter(${ch.id-1})">← Zurück</button>` : `<span></span>`}
+
+                        <button onclick="goTo('home')">🏠 Home</button>
+
+                        ${DATA.chapters.find(c=>c.id===ch.id+1) 
+                              ? `<button onclick="goToChapter(${ch.id+1})">Weiter →</button>` 
+                              : `<span></span>`}
+                  </div>
+
+                  <h2>
+                        ${ch.title}
+                        <span 
+                              style="cursor:pointer; margin-left:10px"
+                              onclick="toggleFavorite(${ch.id})"
+                              title="Favorit">
+                              ${favActive ? '★' : '☆'}
+                        </span>
+                  </h2>
+
+                  <div class="meta">Kategorie: ${DATA.categories.find(c=>c.id===ch.cat)?.title||'-'}</div>
+                  <div style="margin-top:14px">${ch.content}</div>
+                  </div>
+                  `;
+                 }
 
 
 
@@ -5398,3 +5477,4 @@
       </script>
 </body>>
 </html>
+
