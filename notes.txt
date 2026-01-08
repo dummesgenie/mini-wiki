@@ -2,7 +2,7 @@ Idee/Brainstorming:
 
 -Datenbank/Wiki
 -Startseite >> Personalisiert >> Verknüpfung mit USERID
--Checkliste zur Einsetzprozedur
+-Checkliste zur Einsetzprozedur 
 -Checkliste zu gängigen Fehlern
 -Links zu Diagrammen und Bildern Tabellen
 -FAQs >>Zitate der TWG und Querverweis >> als Liste
@@ -10,15 +10,15 @@ Idee/Brainstorming:
 -Direkte Vergleichsmethoden und -möglichkeiten zu anderen bereits geschossenen BR
 -Zugriff auf alle Versuche >> online und offline Funktion
 -Definition von offline und online Inhalten
--Suchfunktion >> Volltextsuche 
--Vor- und zurück Button
+-Suchfunktion >> Volltextsuche >> erledigt
+-Vor- und zurück Button >> erledigt
 -Pop-Up Funktionen
 -Sprechfunktionen
 -Verlinkung Fachbegriffe und Positionen, z.B. Frontalebene
 -Integration Inhalte FuVo
 -Integration TWG ENG/DT >>erledigt
--Favoriten anlegen/markieren/häufig benutzt
--TWG Tabelle und Übersicht
+-Favoriten anlegen/markieren/häufig benutzt >>erledigt
+-TWG Tabelle und Übersicht >>erledigt
 
 Datenbank Möglichkeiten
 -Mutmaßlich statisch
