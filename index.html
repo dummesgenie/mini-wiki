@@ -25,9 +25,6 @@
             .diagram{border-radius:8px;padding:12px;border:1px dashed #e6eefc;background:#fbfdff}
             footer{margin:26px 0;color:var(--muted);font-size:13px;text-align:center}
             @media (max-width:880px){.home-grid{grid-template-columns:1fr} .container{padding:12px}}
-            .nav-row{display:flex; justify-content:space-between;align-items:center;margin-bottom:10px;}
-            .fav-list{list-style:none; padding-left:0;}
-            .fav-list li{margin:6px 0;}
       </style>
 </head>
 <body>
@@ -5176,7 +5173,7 @@
       function goTo(page, payload){
             if(page === 'home') renderHome();
             if(page === 'info') renderInfo();
-            if (page === 'overview') renderOverview();
+            if(page === 'overview') renderOverview();
             if(page === 'faq') renderFAQ();
             if(page === 'chapter') renderChapter(payload);
             if(page === 'category') renderCategory(payload);
@@ -5231,12 +5228,12 @@
             });
 
             /*ersten fünf Kapitel erscheinen als klickbare Liste auf der Webseite.!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-            /*const cp = document.getElementById('chap-preview');
+            const cp = document.getElementById('chap-preview');
             DATA.chapters.slice(0,5).forEach(ch=>{
                   const el = document.createElement('div'); el.className='chapter-item'; el.textContent = ch.title + ' — ' + ch.excerpt;
                   el.onclick = ()=> goTo('chapter', ch.id);
                   cp.appendChild(el);
-            });*/
+            });
 
             // show recent from localStorage zuletzt angesehene Kapitel
             const recent = JSON.parse(localStorage.getItem('recent')||'[]');
@@ -5245,11 +5242,11 @@
             // wire search enter Suchfunktion
             const q = document.getElementById('q'); q.addEventListener('keydown', (e)=>{ if(e.key==='Enter') search(); });
       
-            rightColumn.innerHTML = renderFavorites();
+            //rightColumn.innerHTML = renderFavorites();
 
       }
 
-      function renderFavorites(){
+      /*function renderFavorites(){
             const fav = JSON.parse(localStorage.getItem('favorites') || '[]');
             if(fav.length === 0){
                   return `<div class="card">Keine Favoriten</div>`;
@@ -5266,14 +5263,13 @@
                         }).join('')}
                   </ul>
             </div>`;
-            }
+            }*/
 
 
       //Kategorie-Ansicht in Ihrer Anwendung dar, indem er alle Kapitel auflistet, die zu einer bestimmten Kategorie gehören
       function renderCategory(catId){
             const cat = DATA.categories.find(c=>c.id===catId);
             const chapters = DATA.chapters.filter(ch=>ch.cat===catId);
-            /*
             app.innerHTML = `
                   <div class="card">
                         <a href="#" onclick="goTo('home');return false">← Zurück</a>
@@ -5281,22 +5277,22 @@
                         <p class="meta">${chapters.length} Kapitel</p>
                         <div class="chapter-list" id="chap-list"></div>
                   </div>
-            `;*/
-
-            app.innerHTML = `
-            <div class="card">
-                  <!-- Hier wurde "Zurück" durch "Start" ersetzt -->
-                  <a href="#" onclick="goTo('home');return false" style="text-decoration: none; color: #1d4ed8; font-weight: 500;">← Start</a>
-                  
-                  <h2 style="margin-top: 15px;">${cat.title}</h2>
-                  <p class="meta" style="color: #666; margin-bottom: 20px;">${chapters.length} Kapitel in dieser Kategorie</p>
-                  
-                  <div class="chapter-list" id="chap-list">
-                  <!-- Hier werden die Kapitel-Links eingefügt -->
-                  </div>
-            </div>
             `;
-      
+            
+            //app.innerHTML = `
+            //<div class="card">
+            //      <!-- Hier wurde "Zurück" durch "Start" ersetzt -->
+            //      <a href="#" onclick="goTo('home');return false" style="text-decoration: none; color: #1d4ed8; font-weight: 500;">← Start</a>
+                  
+            //      <h2 style="margin-top: 15px;">${cat.title}</h2>
+            //      <p class="meta" style="color: #666; margin-bottom: 20px;">${chapters.length} Kapitel in dieser Kategorie</p>
+                  
+            //      <div class="chapter-list" id="chap-list">
+            //      <!-- Hier werden die Kapitel-Links eingefügt -->
+            //      </div>
+            //</div>
+            //`;
+
             //durchläuft der Code die gefilterten Kapitel (chapters.forEach). Für jedes Kapitel erstellt er ein klickbares Element (el)
             const list = document.getElementById('chap-list');
             chapters.forEach(ch=>{
@@ -5307,7 +5303,7 @@
       }
       
       //neu - Favoritenfunktion
-      function toggleFavorite(chId){
+      /*function toggleFavorite(chId){
             let fav = JSON.parse(localStorage.getItem('favorites') || '[]');
 
             if(fav.includes(chId)){
@@ -5323,11 +5319,29 @@
             function isFavorite(chId){
             const fav = JSON.parse(localStorage.getItem('favorites') || '[]');
             return fav.includes(chId);
-            }
+            }*/
 
 
       //Kapitel-Detailansicht und verwaltet gleichzeitig den Verlauf der zuletzt angesehenen Kapitel.
-            function renderChapter(chId){
+       function renderChapter(chId){
+            const ch = DATA.chapters.find(c=>c.id===chId);
+            if(!ch){ app.innerHTML='<div class="card">Kapitel nicht gefunden</div>'; return }
+            // save recent
+            let recent = JSON.parse(localStorage.getItem('recent')||'[]');
+            recent = [chId, ...recent.filter(x=>x!==chId)].slice(0,6);
+            localStorage.setItem('recent', JSON.stringify(recent));
+
+            app.innerHTML = `
+                  <div class="card">
+                        <a href="#" onclick="goTo('home');return false">← Start</a>
+                        <h2>${ch.title}</h2>
+                        <div class="meta">Kategorie: ${DATA.categories.find(c=>c.id===ch.cat)?.title||'-'}</div>
+                        <div style="margin-top:14px">${ch.content}</div>
+                  </div>
+            `;
+      }      
+      
+            /*function renderChapter(chId){
                   const ch = DATA.chapters.find(c => c.id === chId);
                   if(!ch){
                   app.innerHTML = '<div class="card">Kapitel nicht gefunden</div>';
@@ -5343,7 +5357,7 @@
                   const prev = catChapters[index - 1];
                   const next = catChapters[index + 1];
 
-                  app.innerHTML = `
+                  /*app.innerHTML = `
                   <div class="card">
 
                         <div style="display:flex;justify-content:space-between;margin-bottom:14px">
@@ -5401,7 +5415,7 @@
                   <div style="margin-top:14px">${ch.content}</div>
                   </div>
                   `;
-                 }
+                 }*/
 
 
 
