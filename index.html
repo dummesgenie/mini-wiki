@@ -73,7 +73,7 @@
             }
 
             .checklist-btn{
-            float:right;
+            float:center;
             margin-top:-40px;
             background:#2563eb;
             color:white;
@@ -5221,7 +5221,7 @@
                   {q:'Wo werden Daten gespeichert?', a:'Aktuell lokal im Browser (keine Server).'},
                   {q:'Wird die TWG für die 2. Sitzreihe benötigt?', a:'Ja, die TWG ist erforderlich für die 2. Sitzreihe.'},
                   {q:'Ist die TWG ein Gesetz?', a:'Die TWG ist wie ein Gesetz zu behandeln und muss eingehalten werden.'},
-                  {q:'Seit wann gibt es die TWG?', a:'Seit 2003'}
+                  {q:'Seit wann gibt es die TWG?', a:'Seit Juli 2003'}
             ],
       
       };
@@ -5352,8 +5352,8 @@
       function renderChapter(chId){
             const ch = DATA.chapters.find(c => c.id === chId);
             if(!ch){
-                  app.innerHTML = '<div class="card">Kapitel nicht gefunden</div>';
-                  return;
+            app.innerHTML = '<div class="card">Kapitel nicht gefunden</div>';
+            return;
             }
 
             // recent speichern
@@ -5361,7 +5361,6 @@
             recent = [chId, ...recent.filter(x => x !== chId)].slice(0,6);
             localStorage.setItem('recent', JSON.stringify(recent));
 
-            // Kapitel innerhalb der Kategorie
             const catChapters = DATA.chapters.filter(c => c.cat === ch.cat);
             const index = catChapters.findIndex(c => c.id === chId);
             const prev = catChapters[index - 1];
@@ -5369,54 +5368,53 @@
 
             const favActive = isFavorite(ch.id);
             const catTitle = DATA.categories.find(c => c.id === ch.cat)?.title || '-';
-
             const hasChecklist = !!CHECKLISTS[chId];
 
             app.innerHTML = `
-                  <div class="card">
+            <div class="card">
 
-                        <div style="display:flex; justify-content:space-between; margin-bottom:14px">
-                        <div>
-                              ${prev ? `<a href="#" onclick="goTo('chapter','${prev.id}');return false">← Zurück</a>` : ``}
-                        </div>
-                        <div>
-                              <a href="#" onclick="goTo('home');return false">Startseite</a>
-                        </div>
-                        <div>
-                              ${next ? `<a href="#" onclick="goTo('chapter','${next.id}');return false">Weiter →</a>` : ``}
-                        </div>
-                        </div>
+                  <div style="display:flex; justify-content:space-between; margin-bottom:14px">
+                  <div>
+                  ${prev ? `<a href="#" onclick="goTo('chapter','${prev.id}');return false">← Zurück</a>` : ``}
+                  </div>
+                  <div>
+                  <a href="#" onclick="goTo('home');return false">Startseite</a>
+                  </div>
+                  <div>
+                  ${next ? `<a href="#" onclick="goTo('chapter','${next.id}');return false">Weiter →</a>` : ``}
+                  </div>
+                  </div>
 
-                        <h2>
-                        ${ch.title}
-                        <span
-                              style="cursor:pointer; margin-left:10px; color:${favActive ? 'gold' : '#ccc'}; font-size:24px"
-                              onclick="toggleFavAndReload('${ch.id}')"
-                              title="Favorit">
-                              ${favActive ? '★' : '☆'}
-                        </span>
-                        </h2>
+                  <h2>
+                  ${ch.title}
+                  <span
+                  style="cursor:pointer; margin-left:10px; color:${favActive ? 'gold' : '#ccc'}; font-size:24px"
+                  onclick="toggleFavAndReload('${ch.id}')"
+                  title="Favorit">
+                  ${favActive ? '★' : '☆'}
+                  </span>
+                  </h2>
 
-                        <div class="meta">Kategorie: ${catTitle}</div>
+                  <div class="meta">Kategorie: ${catTitle}</div>
 
-                        <h2>
-                        ${ch.title}
-
-                        ${hasChecklist ? `
-                        <button
+                  <h2>                       
+                  ${hasChecklist ? `
+                  <div>
+                  <button
                         type="button"
                         class="checklist-btn"
                         onclick="openChecklist('${chId}')">
-                        ✔ Checkliste starten
-                        </button>
-                        ` : ``}
-                        </h2>
-
-                        <div style="margin-top:14px">
-                        ${ch.content}
-                        </div>
-                       
+                        ✔ Einsetzen starten
+                  </button>
                   </div>
+                  ` : ``}
+                  </h2>
+
+                  <div style="margin-top:14px">
+                  ${ch.content}
+                  </div>
+
+            </div>
             `;
             }
 
@@ -5515,24 +5513,23 @@
             });
       }
     
-      
       function openModal(data){
-      closeModal(); // ← wichtig
-      const modalHtml = `
-      <div class="modal-overlay" onclick="closeModal(event)">
-            <div class="modal" onclick="event.stopPropagation()">
-            <h3>${data.title}</h3>
-            <p>${data.intro}</p>
+            closeModal(); // ← wichtig
+            const modalHtml = `
+            <div class="modal-overlay" onclick="closeModal(event)">
+                  <div class="modal" onclick="event.stopPropagation()">
+                  <h3>${data.title}</h3>
+                  <p>${data.intro}</p>
 
-            <div id="question-area"></div>
+                  <div id="question-area"></div>
 
-            <div class="modal-actions">
-            <button onclick="closeModal()">Abbrechen</button>
+                  <div class="modal-actions">
+                  <button onclick="closeModal()">Abbrechen</button>
+                  </div>
+                  </div>
             </div>
-            </div>
-      </div>
-      `;
-      document.body.insertAdjacentHTML('beforeend', modalHtml);
+            `;
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
       }
 
       function renderQuestion(){
@@ -5558,42 +5555,36 @@
       let currentQuestion = null;
 
       function openChecklist(chId){
-            console.log('Checklist clicked for', chId);
             const data = CHECKLISTS[chId];
-            if(!data){
-            return; // bewusst KEIN Popup
-            }
+            if(!data) return;
 
+            // Modal einmal öffnen
             openModal(data);
-            //activeChecklist = data.questions;
-            activeChecklist = CHECKLISTS[chId];
-            if(!activeChecklist) return;
+
+            // Fragen setzen
+            activeChecklist = data.questions;
             currentQuestion = activeChecklist[0];
-            openModal();
+
             renderQuestion();
       }
 
-      function answer(choice){
-            if(!currentQuestion) return;
+     function answer(choice){
+      if(!currentQuestion) return;
 
-            const nextId = currentQuestion[choice];
+      const nextId = currentQuestion[choice];
+      if(!nextId) return;
 
-            if(!nextId){
-            return; // z. B. Endfrage ohne yes/no
-            }
+      const next = activeChecklist.find(q => q.id === nextId);
+      if(!next) return;
 
-            const next = activeChecklist.find(q => q.id === nextId);
-            currentQuestion = next;
-            renderQuestion();
+      currentQuestion = next;
+      renderQuestion();
       }
 
       function closeModal(){
             const overlay = document.querySelector('.modal-overlay');
             if(overlay) overlay.remove();
       }
-
-      
-       /// Checklisten-Datenstruktur
 
       const CHECKLISTS = {
       c0: {
@@ -5604,7 +5595,16 @@
             { id:'q2', text:'Handelt es sich um einen Kombiversuch?', end:true },
             { id:'end_no', text:'Vorbereitung abschließen.', end:true }
       ]
-      }
+      },
+      c1: {
+      title: 'Dummy',
+      intro: 'Bitte beantworte die folgenden Fragen.',
+      questions: [
+            { id:'q1', text:'Wurde der Verdsuch gemäß TWG vorbereitet?', yes:'q2', no:'end_no' },
+            { id:'q2', text:'Handelt es sich um einen Kombiversuch?', end:true },
+            { id:'end_no', text:'Vorbereitung abschließen.', end:true }
+      ]
+      },
       };
 
               // init
