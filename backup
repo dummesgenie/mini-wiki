@@ -5216,12 +5216,23 @@
                   }
 
       ],    
-                faq: [
+            faq: [
                   {q:'Wie benutze ich die App?', a:'Wähle auf der Startseite eine Kategorie und dann ein Kapitel.'},
                   {q:'Wo werden Daten gespeichert?', a:'Aktuell lokal im Browser (keine Server).'},
-                  {q:'Wird die TWG für die 2. Sitzreihe benötigt?', a:'Ja, die TWG ist erforderlich für die 2. Sitzreihe.'},
+                  {q:'Wird die TWG für die 2. Sitzreihe benötigt?', a:'Ja, die TWG ist erforderlich für die 2. Sitzreihe. [TWG S.13]'},
                   {q:'Ist die TWG ein Gesetz?', a:'Die TWG ist wie ein Gesetz zu behandeln und muss eingehalten werden.'},
-                  {q:'Seit wann gibt es die TWG?', a:'Seit Juli 2003'}
+                  {q:'Seit wann gibt es die TWG?', a:'Seit Juli 2003, wobei das erste Meeting der TWG im Juli 1999 stattfand.'},
+                  {q:'Müssen OoP in der Karosse oder im Fahrzeug geprüft werden?', a:'Die TWG besagt: XXX . Die FuVo XXX besagt: "xxx".'},
+                  {q:'Auf welcher Seite finden die Versuche statt?', a:'Die TWG besagt, dass die Versuche auf einer Seite durchgeführt werden, sofern die Module in der 1.SR und 2.SR spiegelsymmetrisch sind: "If driver and passenger side airbag systems are mirror images of one another (front or rear seats), then specified tests need be conducted on only one side of the vehicle."[TWG S.13]. Die FuVo besagt, dass die Versuche in der 1.SR auf der Beifahrerseite stattfinden. In der 2. SR auf der XXX, sofern es sich um XXX handelt.'},
+                  {q:'Sind die Vorgaben der TWG strikt einzuhalten?', a:'Die TWG gibt einen gewissen Handlungsspielraum vor: "However, the TWG encourages vehicle manufacturers and their suppliers to verify whether these conclusions are appropriate for a given vehicle configuration./Die TWG fordert jedoch Fahrzeughersteller und deren Zulieferer auf, zu überprüfen, ob diese Schlussfolgerungen für eine bestimmte Fahrzeugkonfiguration angemessen sind." [TWG S.6]. ⇒ Riskobewertung'},
+                  {q:'Gibt es widersprüchliche Angaben in der TWG?', a:'Es gibt durchaus widersprüchliche Angaben in der TWG. Bsp. die Verwendung des HIII 6 Year Dummy: However, the 6-year old dummy does require the development of a neck shield because of a non-humanlike junction at the back of the head and the neck in which the inflating airbag could become partially trapped. This junction could produce nonbiofidelic load patterns on the dummy, particularly the neck transducers. [Auszug TWG S.6]'},
+                  {q:'Warum gibt es zwei verschiedene Verletzungswerte und welcher ist relevant?', a:'Es gibt einerseits den "Research Value" und andererseits den "Reference Value". Die Unterscheidung erfolgt, weil die wissenschaftliche Datengrundlage für verschiedene Verletzungsarten unterschiedlich stark gesichert ist. Werte mit fundierter Basis dienen als verbindliche Referenz, während die begrenzten Werte der Forschung dienen, um vielversprechende Airbag-Entwicklungen nicht unnötig zu behindern. [TWG S. 10]'},
+                  {q:'Gibt es eine Vorgabe wie lange die Auswertezeit sein soll?', a: '???'},
+                  {q:'Was empfiehlt die TWG, wenn die zu prüfende Position nicht in der TWG beschrieben ist?', a:'Die TWG empfiehlt, dass jeder Hersteller prüfen sollte, ob dies für sein jeweiliges System zutrifft, und die Testpositionen gegebenenfalls anpassen. Die TWG empfiehlt den Herstellern zu prüfen, ob zusätzliche OOP-Tests ihrer Systeme angemessen sind, bei denen die Testpositionen etwas von den in diesen Empfehlungen angegebenen Positionen abweichen. [TWG S.13]'},
+                  {q:'Ist es nach der TWG verboten die Sitzverstellung einzusetzen?', a:'The TWG emphasizes that these instructions apply to initial  positioning efforts. Test engineers must determine if these instructions are consistent with their particular system and modify them as appropriate to meet the objectives of the individual test.[Auszug TWG S.14]'},
+                  {q:'Gibt es eine Vorgabe zur Einstellung des Sitzlehnenwinkels?', a:'Es wird ein Torsowinkel von nach Konstruktionslage des OEMs oder 25° empfohlen. Eine Anpassung um den "Worst Case" Fall wird in der TWG empfohlen.[TWG S.14] "f any of these adjustments is found to interfere with the inflation of the airbag or with the stated test objective, then the seat track position and or seat back angle may be adjusted the minimum amount necessary to avoid obstruction and fulfill the required test objective with the seat still in a nominally normal position for travel. [Auszug TWG S.14]'},
+                  {q:'Gibt es weitere Vorgaben zur Testumgebung?', a:'Neben der Sitzeinstellung und dem Dummy-Setting, gibt es noch Empfehlungen zu den Scheiben und dem Gurtschloss. [TWG S.14] '},
+                  {q:'Müssen unterdrückte Airbags ("Suppressed Systems") geprüft werden?', a:'Nein, unterdrückte Airbags müssen nicht geprüft werden, jedoch empfieht die TWG weitere mögliche Szenarien zu untersuchen. Hierfür wurde ein Beispiel genannt. [TWG S.14]'}       
             ],
       
       };
@@ -5266,13 +5277,15 @@
                               <div class="card">
                                     <h3>Quick‑Links</h3>
                                     <div class="meta">Schnellzugriff auf Info, Übersicht & FAQ</div>
-                                    <div style="margin-top:12px"><button onclick="goTo('info')">Info</button> <button onclick="goTo('overview')">Übersicht</button></div> <button onclick="goTo('faq')">FAQ</button></div>
+                                    <div style="margin-top:12px"> <button onclick="goTo('info')">Info</button> <button onclick="goTo('overview')">Übersicht</button> <button onclick="goTo('faq')">FAQ</button>
+                                          </div>
+                              </div>            
                               
+                        
                               <div class="card" style="margin-top:12px">
                                     <h3>Favoriten</h3>
                                     <div id="fav-list-container" class="chapter-list"></div>
                               </div>
-                              
                         </aside>
                   </div>
             `
@@ -5524,7 +5537,7 @@
                   <div id="question-area"></div>
 
                   <div class="modal-actions">
-                  <button onclick="closeModal()">Abbrechen</button>
+                  <button id="cancel-btn" onclick="closeModal()">Abbrechen</button>
                   </div>
                   </div>
             </div>
@@ -5534,15 +5547,19 @@
 
       function renderQuestion(){
             const area = document.getElementById('question-area');
+            const cancelBtn = document.getElementById('cancel-btn');
             if(!area || !currentQuestion) return;
 
             if(currentQuestion.end){
+                  if(cancelBtn) cancelBtn.style.display = 'none';
             area.innerHTML = `
             <p>${currentQuestion.text}</p>
             <button onclick="closeModal()">Schließen</button>
             `;
             return;
             }
+
+            if(cancelBtn) cancelBtn.style.display = 'inline-block';
 
             area.innerHTML = `
             <p>${currentQuestion.text}</p>
@@ -5568,7 +5585,7 @@
             renderQuestion();
       }
 
-     function answer(choice){
+      function answer(choice){
       if(!currentQuestion) return;
 
       const nextId = currentQuestion[choice];
@@ -5587,26 +5604,60 @@
       }
 
       const CHECKLISTS = {
-      c0: {
+      c6: {
       title: 'Versuchsvorbereitung',
-      intro: 'Bitte beantworte die folgenden Fragen.',
+      intro: 'Test Objective: <br>To <strong>maximize the head/neck interaction</strong> by aligning the neck with the top of the side airbag module.',
       questions: [
-            { id:'q1', text:'Wurde der Verdsuch gemäß TWG vorbereitet?', yes:'q2', no:'end_no' },
-            { id:'q2', text:'Handelt es sich um einen Kombiversuch?', end:true },
-            { id:'end_no', text:'Vorbereitung abschließen.', end:true }
+            { id:'q1', text:'Wurde der richtige Booster Block verwendet? <br><br>300 mm deep<br>450 mm wide<br>75 mm thick<br>density 40-80 g/l', yes:'q2', no:'end_no' },
+            { id:'q2', text:'Wurde der Sitz entsprechend präpariert? <br><br>H-Punkt-Maschine<br>Sitzlehne<br>Sitzhöhe<br>Markierungen am Sitz<br>Markierung Moduloberkante', yes: 'q3', no:'end_no'},
+            {id: 'q3', text:'Wurde der Dummy entsprechend präpariert? <br><br>Baumwoll-Kleidung<br>Kopfnaht mit 4 mm Tape abgeklebt<br>mit Alkohol gereinigt<br>mit Puder bestreut', yes:'q4',no:'end_no'},
+            {id: 'q4', text: 'Wurde der Dummy am äußeren Rand des Booster Blocks positioniert?', yes:'q5', no:'end_no'},
+            {id: 'q5', text: 'Wurde die obere Wirbelsäule mit der Ausschussrichtung des Moduls in einer Linie ausgerichtet?<br><br>Bsp. mit der Vorderkante des Sitzpolster oder des Airbagmoduls',yes:'q6', no:'end_no1'},
+            {id: 'end_no1', text: 'Wenn die obere Wirbelsäule des Dummys aufgrund von Störungen durch die Säulen-/Seitenverkleidung nicht ausgerichtet werden kann<br>⇒ Position der Sitzschiene entsprechend anpassen.', yes: 'q6', no:'end_no'},
+            {id: 'q6', text: 'Wurde der Dummykopf zwischen Sitzpolster und Säulen-/Seitenverkleidung positioniert?<br>⇒Minimierung des Abstands zwischen Nacken und Rückenlehne in Längsrichtung', yes: 'q7', no:'end_no'},
+            {id: 'q7', text: 'Ist der Kopf in seiner neutralen Ausrichtung und nicht in Beugung oder Streckung?', yes: 'q8', no:'end_no'},
+            {id: 'q8', text: 'Sind die Fersen an den Fersenplatzierungspunkten?', yes: 'q9', no:'end_no'},
+            {id: 'q9', text: 'Ist das Becken nach vorne und parallel zur Mittellinie des Fahrzeugs?', yes: 'q10', no:'end_no'},
+            {id: 'q10', text: 'Ist die Kopf-Hals-Verbindung (d. h. die Unterkante der Haut an der Basis des Kopfes) vertikal mit der Oberkante des Airbagmoduls ausgerichtet?', yes: 'q11', no:'end_no'},
+            {id: 'q11', text: 'Sind die Fersen und das Becken noch in Position?<br>Bei Bedarf über den Platzierungspunkten neupositionieren.', yes: 'q12', no:'end_no'},
+            {id: 'q12', text: 'Ist die die Fahrzeugtür geschlossen?<br>Ist der äußere Arm angehoben (um die Armlehne freizugeben)?', yes: 'q13', no:'end_no'},
+            {id: 'q13', text: 'Ist das Becken und Oberkörper nach außen geschoben und berühren die Tür?', yes: 'q14', no:'end_no'},
+            {id: 'q14', text: 'Ist die Verbindung zwischen Hals und Oberkörper höchstens 20 mm nach unten verschoben?', yes: 'q15', no:'end_no'},
+            {id: 'q15', text: 'Ist der äußere Arm auf der Armlehme?', yes: 'q16', no:'end_no'},
+            {id: 'q16', text: 'Wurde der innere Arm so gebeugt, dass der Oberarm die Rückenlehne berührt und die Fingerspitzen den Booster berühren?', yes: 'end_yes', no:'end_no'},
+            {id:'end_no', text:'Einsetzen abbrechen und korrigieren!', end:true},
+            {id: 'end_yes', text: 'Einsetzen erfolgreich abgeschlossen! - Viel Glück!', end:true }
       ]
       },
-      c1: {
-      title: 'Dummy',
-      intro: 'Bitte beantworte die folgenden Fragen.',
+      c7: {
+      title: 'Versuchsvorbereitung',
+      intro: 'Test Objective: <br>To <strong>maximize chest interaction</strong> by aligning the sternum with the top of the seat-mounted side airbag module.',
       questions: [
-            { id:'q1', text:'Wurde der Verdsuch gemäß TWG vorbereitet?', yes:'q2', no:'end_no' },
-            { id:'q2', text:'Handelt es sich um einen Kombiversuch?', end:true },
-            { id:'end_no', text:'Vorbereitung abschließen.', end:true }
+            { id:'q1', text:'Wurde der richtige Booster Block verwendet? <br><br>300 mm deep<br>450 mm wide<br>75 mm thick<br>density 40-80 g/l', yes:'q2', no:'end_no' },
+            { id:'q2', text:'Wurde der Sitz entsprechend präpariert? <br><br>H-Punkt-Maschine<br>Sitzlehne<br>Sitzhöhe<br>Markierungen am Sitz<br>Markierung Moduloberkante', yes: 'q3', no:'end_no'},
+            {id: 'q3', text:'Wurde der Dummy entsprechend präpariert? <br><br>Baumwoll-Kleidung<br>Kopfnaht mit 4 mm Tape abgeklebt<br>mit Alkohol gereinigt<br>mit Puder bestreut', yes:'q4',no:'end_no'},
+            {id: 'q4', text: 'Wurde der Dummy entlang der Außenkante des Sitzpolsters, kniend und mit dem Rücken zur Fahrtrichtung positioniert?<br><br>Die Füße können über die Vorderkante des Sitzpolsters hinausragen.', yes:'q5', no:'end_no'},
+            {id: 'q5', text: 'Ist die vertikale Mittellinie des Brustbeins/Sternums so nah wie möglich an der Vorderkante oder der vordersten Konturlinie der Sitzlehne',yes:'q6', no:'end_no'},
+            {id: 'q6', text: 'Berüht das Brustbein/das Sternum den Sitz?', yes: 'q7', no:'end_no1'},
+            {id: 'end_no1', text: 'Wenn das Sternum aufgrund einer Kollision mit der Säule nicht ausgerichtet werden kann<br>⇒Position der Sitzschiene angepassen, um das Test Objective zu erreichen.', yes: 'q7', no:'end_no'},
+            {id: 'q7', text: 'Wurde der Dummykopf zwischen Sitzpolster und Säulen-/Seitenverkleidung positioniert?<br>⇒Maximierung des Kontakts zwischen Brustbein und Rückenlehne', yes: 'q8', no:'end_no'},
+            {id: 'q8', text: 'Ist der Kopf in seiner neutralen Ausrichtung und nicht in Beugung oder Streckung?', yes: 'q9', no:'end_no'},
+            {id: 'q9', text: 'Ist das äußere Bein an der Außenkante des Sitzkissens und parallel zur Sitzmittellinie positioniert?<br><br>Sitzkissen mit Polstern sollte das äußere Bein so nah wie möglich an der Außenkante des Sitzkissenpolsters platziert werden, dabei jedoch auf dem Kissen bleiben.', yes: 'q10', no:'end_no'},
+            {id: 'q10', text: 'Ist das äußere Knie und der Unterschenkel in Richtung der Sitzmulde (d. h. der Verbindung zwischen Rückenlehne und Sitzpolster) geschoben worden?<br><br>Bei Fahrzeugen, bei denen der Dummy die Oberkante des Airbagmoduls nicht erreicht, wird das äußere Knie an der Sitzmulde, an der Außenkante des Sitzpolsters, platziert.', yes: 'q11', no:'end_no'},
+            {id: 'q11', text: 'Ist die Oberkante der oberen Rippe horizontal mit der Oberkante des Airbagmoduls ausgerichtet?', yes: 'q12', no:'end_no'},
+            {id: 'q12', text: 'Hat das Sternum Kontakt mit der Vorderkante der Rückenlehnenpolsterung?', yes: 'q13', no:'end_no'},
+            {id: 'q13', text: 'Wurde der innere Schenkel so ausgerichtet, dass er parallel zur Mittellinie des Sitzpolsters verläuft?', yes: 'q14', no:'end_no'},
+            {id: 'q14', text: 'Wurde das innere Knie und der Unterschenkel in Richtung Sitzmulde geschoben?', yes: 'q15', no:'end_no'},
+            {id: 'q15', text: 'Verläuft eine imaginär gezogene Linie durch beide Schulterbolzen senkrecht zur Fahrzeugmittellinie?', yes: 'q16', no:'end_no'},
+            {id: 'q16', text: 'Wurde der innere Arm in Richtung Rückenlehne gedreht? Berührt der Daumen die Rückenlehne?', yes: 'q17', no:'end_no'},
+            {id: 'q17', text: 'Wurde der äußere Arm und die Hand so gedreht, dass sie möglichst senkrecht nach unten hängen?', yes: 'end_yes', no:'end_no'},
+            {id:'end_no', text:'Einsetzen abbrechen und korrigieren!', end:true},
+            {id: 'end_yes', text: 'Einsetzen erfolgreich abgeschlossen! - Viel Glück!', end:true }
       ]
       },
       };
 
+      //{id: 'q', text: '', yes: 'q', no:'end_no'},
               // init
       renderHome();
 
