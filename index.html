@@ -5836,13 +5836,79 @@
       intro: 'Test Objective: <br>To <strong>maximize the head and neck interaction</strong> by aligning the head with the vertical centerline of the door/quarter panel-mounted airbag module.',
       questions: [
             {id: 'q1', text:'Wurde der Dummy entsprechend präpariert? <br><br>Baumwoll-Kleidung<br>Kopfnaht mit 4 mm Tape abgeklebt<br>mit Alkohol gereinigt<br>mit Puder bestreut', yes:'q2',no:'end_no'},
-            
-            {id: 'q3', text: 'Wurde der Dummy mit dem Rücken auf den Sitz positioniert, sodass die Arme seitlich ausgestreckt sind und der hintere Arm die Rückenlehne berührt?',yes:'q4', no:'end_no1'},
-            {id: 'q4', text:'Wurde die Position der Sitzschiene so eingestellt, dass die horizontale Mittellinie des Kopfes des Dummys so nah wie möglich an der vertikalen Mittellinie des Airbagmoduls ausgerichtet ist?<br>Die geometrischen Grenzen des Airbagmoduls sind durch ein MO/SSV Versuch zu bestimmen. ', yes:'q5', no:'end_no'},
-            {id: 'q5', text:'Wurde der Dummy nach außen geschoben, bis der Kopf gerade das Modul berührt (der Kontakt zur Armlehne muss erhalten bleiben)?', yes:'q6', no:'end_no'},
-            {id: 'q6', text:'Ist der Kopf in seiner neutralen Ausrichtung und nicht in Beugung oder Streckung?<br>Wirkt keine nennenswerte Kraft (< 5 N) nach unten auf die Armlehne aus?', yes:'q7', no:'end_no'},
-            {id: 'q7', text:'Ist der Arm, der der Vorderkante des Sitzes am nächsten ist, so eingestellt, dass er parallel zum Oberkörper verläuft und auf dem Schaumstoffblock aufliegt?<br>Berühren die Fingerspitzen das Sitzkissen gerade noch?', yes:'q8', no:'end_no'},
-            {id: 'q8', text:'Ist der hintere Oberarm auf 45 Grad vor der Mittellinie des Rumpfes und der jeweilige Unterarm auf 90 Grad eingestellt?', yes:'end_yes', no:'end_no'},
+            {id: 'q2', text: 'Wurde der Dummy mit dem Rücken auf den Sitz positioniert, sodass die Arme seitlich ausgestreckt sind und der hintere Arm die Rückenlehne berührt?',yes:'q3', no:'end_no1'},
+            {id: 'q3', text:'Wurde die Position der Sitzschiene so eingestellt, dass die horizontale Mittellinie des Kopfes des Dummys so nah wie möglich an der vertikalen Mittellinie des Airbagmoduls ausgerichtet ist?<br>Die geometrischen Grenzen des Airbagmoduls sind durch ein MO/SSV Versuch zu bestimmen. ', yes:'q4', no:'end_no'},
+            {id: 'q5', text:'Wurde die Sitzhöhe so eingestellt, dass die Instrumentenebene des Kopfes des Dummys möglichst nahe an der horizontalen Mitte des Airbagmoduls liegt?', yes:'q6', no:'end_no'},
+            {id: 'q6', text:'Wurde der Dummy nach außen geschoben, bis der Kopf gerade das Airbagmodul berührt?', yes:'q7', no:'end_no'},
+            {id: 'q7', text:'Bei Bedarf ist der Dummy mit einen Block aus leichtem Schaumstoff unter ihre Beine zu stabilisieren.', yes:'end_yes', no:'end_no'},
+            {id:'end_no', text:'Einsetzen abbrechen und korrigieren! Besonderheiten der Handlungsempfehlung beachten!', end:true},
+            {id: 'end_yes', text: 'Einsetzen erfolgreich abgeschlossen! - Viel Glück!', end:true }
+      ]
+      },
+      c17: {
+      title: 'Versuchsvorbereitung',
+      intro: 'Test Objective: <br>To <strong>maximize the head, neck and chest interactions</strong> by aligning the chest with the top edge of the airbag module.',
+      questions: [
+            {id: 'q1', text:'Wurde der Dummy entsprechend präpariert? <br><br>Baumwoll-Kleidung<br>Kopfnaht mit 4 mm Tape abgeklebt<br>mit Alkohol gereinigt<br>mit Puder bestreut', yes:'q2',no:'end_no'},
+            {id: 'q2', text: 'Wurde der Dummy in die Mitte des Sitzes positioniert?',yes:'q3', no:'end_no1'},
+            {id: 'q3', text:'Wurde der Außenarm horizontal in Vorwärtsrichtung gedreht?<br>⇒um die Armlehne freizugeben.', yes:'q4', no:'end_no'},
+            {id: 'q5', text:'Wurde die Position der Sitzschiene so eingestellt, dass die Mittellinie des seitlichen Brustkorbs mit der vertikalen Mittellinie des Moduls übereinstimmt?', yes:'q6', no:'end_no'},
+            {id: 'q6', text:'Wurde der Dummy nach außen geschoben, ohne sie zur Seite zu neigen oder den Oberkörper zu verdrehen, bis der Dummy die Türverkleidung berührt?<br>Die vertikale Ebene durch die Mittellinie der Rippenversteifung und der Schulterbolzen des Dummmys sollte senkrecht zur Mittellinie des Fahrzeugs stehen.', yes:'q7', no:'end_no'},
+            {id: 'q7', text:'Wurde die Sitzhöhe so eingestellt, dass die Mitte der ersten Brustwirbelrippe mit der Oberkante des Airbagmoduls übereinstimmt?', yes:'q8', no:'end_no'},
+            {id: 'q8', text:'Bei Bedarf kann der Dummy mit Klebeband (25 mm) um den Hals des Dummys in vertikaler Position gehalten werden. Bei erneutem Bedarf wiederholen.', yes:'end_yes', no:'end_no'},
+            {id:'end_no', text:'Einsetzen abbrechen und korrigieren! Besonderheiten der Handlungsempfehlung beachten!', end:true},
+            {id: 'end_yes', text: 'Einsetzen erfolgreich abgeschlossen! - Viel Glück!', end:true }
+      ]
+      },
+      c18: {
+      title: 'Versuchsvorbereitung',
+      intro: 'Test Objective: <br>To <strong>maximize the head/neck interaction</strong> by positioning the head in the path of the deploying airbag',
+      questions: [
+            {id: 'q1', text: 'Wurde der richtige Booster Block verwendet? <br><br>300 mm deep<br>450 mm wide<br>75 mm thick<br>density 40-80 g/l<br>kein Klebeband oder anders fixieren!',yes:'q2', no:'end_no'},
+            { id:'q2', text:'Wurde der Sitz auf die höchste Position eingestellt?', yes: 'q3', no:'end_no'},
+            {id: 'q3', text:'Wurde der Dummy entsprechend präpariert? <br><br>Baumwoll-Kleidung<br>Kopfnaht mit 4 mm Tape abgeklebt<br>mit Alkohol gereinigt<br>mit Puder bestreut', yes:'q4',no:'end_no'},
+            {id: 'q4', text:'Wurde der Dummy mit seitlich herabhängenden Armen auf den Booster positioniert, sodass sie mit dem Gesicht zur Innenseite liegt und die Beine ausgestreckt sind?', yes:'q5', no:'end_no'},
+            {id: 'q5', text:'Wurde die Position der Sitzschiene nach vorne eingestellt, um den vertikalen Abstand zwischen dem Kopf des Dummys und dem dachintegrierten-Modul zu minimieren und die Wechselwirkung zwischen Polster und Kopf zu maximieren.', yes:'q6', no:'end_no'},
+            {id: 'q6', text:'Ist der Kopf in seiner neutralen Ausrichtung und nicht in Beugung oder Streckung?', yes:'q7', no:'end_no'},
+            {id: 'q7', text:'Wurde das Becken des Dummys nach außen geschoben, bis der Rücken des Dummys die Türverkleidung oder Armlehne berührt?', yes:'q8', no:'end_no'},
+            {id: 'q8', text:'Ist der COG in der Auslösebahn des Airbags zentriert?<br>Bei Bedarf ist es erforderlich, den Dummy nach außen zu neigen, um eine korrekte Ausrichtung des Kopfes zu erreichen.', yes:'q9', no:'end_no'},
+            {id: 'q9', text:'Verläuft eine vertikale Ebene durch die Mittellinie der Schulterbolzen des Dummys parallel zur Fahrzeugmittellinie?', yes:'q10', no:'end_no'},
+            {id: 'q10', text:'Wurden die Arme des Dummys am Ellbogen gebeugt?<br>Berühren die Finger gerade noch den Booster?', yes:'end_yes', no:'end_no'},
+            {id:'end_no', text:'Einsetzen abbrechen und korrigieren! Besonderheiten der Handlungsempfehlung beachten!', end:true},
+            {id: 'end_yes', text: 'Einsetzen erfolgreich abgeschlossen! - Viel Glück!', end:true }
+      ]
+      },
+      c19: {
+      title: 'Versuchsvorbereitung',
+      intro: 'Test Objective: <br>To <strong>maximize the head/neck interaction</strong> by positioning the head in the path of the deploying airbag.',
+      questions: [
+            {id: 'q1', text:'Ist das Airbagmodul wirklich spiegelsymmetrisch?<br>Andernfalls werden hier explizit andere Anforderungen an Fahrer- und Beifahrerseite gefordert.', yes:'q2', no:'end_no'},      
+            { id:'q2', text:'Wurde der Sitz auf die höchste Position eingestellt?', yes: 'q3', no:'end_no'},
+            {id: 'q3', text:'Wurde der Dummy entsprechend präpariert? <br><br>Baumwoll-Kleidung<br>mit Alkohol gereinigt<br>mit Puder bestreut', yes:'q4',no:'end_no'},
+            {id: 'q4', text:'Wurden die Arme des Dummys am Ellbogen gebeugt?<br>Berühren die Finger gerade noch den Booster?', yes:'q5', no:'end_no'},
+            {id: 'q5', text:'Wurde der Außenarm horizontal in Vorwärtsrichtung gedreht?<br>⇒um die Armlehne freizugeben', yes:'q6', no:'end_no'},
+            {id: 'q6', text:'Wurde die Position der Sitzschiene nach vorne eingestellt, um den vertikalen Abstand zwischen dem Kopf des Dummys und dem dachintegrierten-Modul zu minimieren und die Wechselwirkung zwischen Polster und Kopf zu maximieren.', yes:'q7', no:'end_no'},
+            {id: 'q7', text:'Wurde der Dummy nach außen geschoben, bis sie die Türverkleidung berührt, sodass die Entfaltungsbahn des Airbags die Mittellinie des Kopfes schneidet?<br>⇒möglicherweise muss das Becken nach innen verstellt werden', yes:'q8', no:'end_no'},
+            {id: 'q8', text:'Bei Bedarf kann der Dummy mit einem Klebeband (25 mm) um den Hals in der Testposition fixiert werden.', yes:'end_yes', no:'end_no'},            
+            {id:'end_no', text:'Einsetzen abbrechen und korrigieren! Besonderheiten der Handlungsempfehlung beachten!', end:true},
+            {id: 'end_yes', text: 'Einsetzen erfolgreich abgeschlossen! - Viel Glück!', end:true }
+      ]
+      },
+      c20: {
+      title: 'Versuchsvorbereitung',
+      intro: 'Test Objective: <br>To <strong>maximize the head/neck interaction</strong> by positioning the head in the path of the deploying airbag.',
+      questions: [
+            {id: 'q1', text:'Ist das Airbagmodul wirklich spiegelsymmetrisch?<br>Andernfalls werden hier explizit andere Anforderungen an Fahrer- und Beifahrerseite gefordert.', yes:'q2', no:'end_no'},            
+            { id:'q2', text:'Wurde der Sitz auf die höchste Position eingestellt?', yes: 'q3', no:'end_no'},
+            {id: 'q3', text:'Wurde der Dummy entsprechend präpariert? <br><br>Baumwoll-Kleidung<br>Kopfnaht mit 4 mm Tape abgeklebt<br>mit Alkohol gereinigt<br>mit Puder bestreut', yes:'q4',no:'end_no'},
+            {id: 'q4', text:'Wurde der Dummy mit dem Gesicht zur Fahrzeugmitte und dem Arm an der Rückenlehne positioniert?', yes:'q5', no:'end_no'},
+            {id: 'q5', text:'Wurde der Arm des Dummys horizontal nach vorne gedreht?', yes:'q6', no:'end_no'},
+            {id: 'q6', text:'Wurde die Position der Sitzschiene nach vorne eingestellt, um den vertikalen Abstand zwischen dem Kopf des Dummys und dem dachintegrierten-Modul zu minimieren und die Wechselwirkung zwischen Polster und Kopf zu maximieren.', yes:'q7', no:'end_no'},
+            {id: 'q7', text:'Ist der Kopf in seiner neutralen Ausrichtung und nicht in Beugung oder Streckung?', yes:'q8', no:'end_no'},
+            {id: 'q8', text:'Wurde das Becken des Dummys nach außen geschoben, bis der Rücken des Dummys die Türverkleidung oder Armlehne berührt?', yes:'q9', no:'end_no'},
+            {id: 'q9', text:'Ist der COG in der Auslösebahn des Airbags zentriert?<br>Bei Bedarf ist es erforderlich, den Dummy nach außen zu neigen, um eine korrekte Ausrichtung des Kopfes zu erreichen.', yes:'q10', no:'end_no'},
+            {id: 'q10', text:'Verläuft eine vertikale Ebene durch die Mittellinie der Schulterbolzen des Dummys parallel zur Fahrzeugmittellinie?', yes:'q11', no:'end_no'},
+            {id: 'q11', text:'Bei Bedarf kann der Dummy mit einem Klebeband (25 mm) um den Hals in der Testposition fixiert werden.', yes:'end_yes', no:'end_no'},            
             {id:'end_no', text:'Einsetzen abbrechen und korrigieren! Besonderheiten der Handlungsempfehlung beachten!', end:true},
             {id: 'end_yes', text: 'Einsetzen erfolgreich abgeschlossen! - Viel Glück!', end:true }
       ]
